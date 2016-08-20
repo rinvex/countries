@@ -72,7 +72,7 @@ class Country
     /**
      * Find all countries.
      *
-     * @param array  $attributes
+     * @param array $attributes
      *
      * @return \Illuminate\Support\Collection
      */

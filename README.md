@@ -32,9 +32,9 @@ $japan = (new Country)->find('JP', ['name', 'demonym', 'currency']);
 
 ---
 
-** Mission accomplished! You're good to use this package right now! :white_check_mark: **
+**Mission accomplished! You're good to use this package right now! :white_check_mark:**
 
-** Unless you're new to this kind of stuff, you can skip the following steps! :wink: **
+**Unless you're new to this kind of stuff, you can skip the following steps! :wink:**
 
 ---
 

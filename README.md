@@ -4,7 +4,7 @@
 
 [![Packagist](https://img.shields.io/packagist/v/rinvex/country.svg?label=Packagist&style=flat-square)](https://packagist.org/packages/rinvex/country)
 [![License](https://img.shields.io/packagist/l/rinvex/country.svg?label=License&style=flat-square)](https://github.com/rinvex/country/blob/develop/LICENSE)
-[![VersionEye Dependencies](https://img.shields.io/versioneye/d/php/rinvex:repository.svg?label=Dependencies&style=flat-square)](https://www.versioneye.com/php/rinvex:repository/)
+[![VersionEye Dependencies](https://img.shields.io/versioneye/d/php/rinvex:country.svg?label=Dependencies&style=flat-square)](https://www.versioneye.com/php/rinvex:country/)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/rinvex/country.svg?label=Scrutinizer&style=flat-square)](https://scrutinizer-ci.com/g/rinvex/country/)
 [![Code Climate](https://img.shields.io/codeclimate/github/rinvex/country.svg?label=CodeClimate&style=flat-square)](https://codeclimate.com/github/rinvex/country)
 [![StyleCI](https://styleci.io/repos/66037019/shield)](https://styleci.io/repos/66037019)
@@ -99,7 +99,7 @@ On your terminal run `composer install` or `composer update` command according t
 
 ## Integration
 
-**Rinvex Repository** package is framework-agnostic and as such can be integrated easily natively or with your favorite framework.
+**Rinvex Country** package is framework-agnostic and as such can be integrated easily natively or with your favorite framework.
 
 ### Native Integration
 

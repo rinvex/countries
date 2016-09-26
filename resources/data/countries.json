@@ -3878,6 +3878,12 @@
                 "iso_4217_numeric": 974,
                 "iso_4217_name": "Belarussian Ruble",
                 "iso_4217_minor_unit": 0
+            },
+            "BYN": {
+                "iso_4217_code": "BYN",
+                "iso_4217_numeric": 933,
+                "iso_4217_name": "Belarussian Ruble",
+                "iso_4217_minor_unit": 2
             }
         },
         "tld": [

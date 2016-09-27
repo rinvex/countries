@@ -20,7 +20,7 @@ use Rinvex\Country\Models\Country;
 // Find a country by it's ISO 3166-1 alpha-2
 $egypt = (new Country)->find('EG');
 
-// Find a country by one of it's attributes
+// Find a country by one of its attributes
 $usa = (new Country)->findBy('capital', 'Washington D.C.');
 
 // Find all countries
@@ -293,7 +293,9 @@ $japan = (new Country)->find('JP', ['name', 'demonym', 'currency']);
             "ar5": "MAF",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇪🇬",
+            "emoji_unicode": "U+1F1EA U+1F1EC"
         }
     }
 }
@@ -380,6 +382,8 @@ $japan = (new Country)->find('JP', ['name', 'demonym', 'currency']);
     - `address_format` - Address forma
     - `eu_member` - European Union Member
     - `vat_rates` - Value-Added Tax
+    - `emoji` - Emoji Flag
+    - `emoji_unicode` - Emoji Flag Unicode
 
 
 ## Inspired By

@@ -133,7 +133,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇦🇼",
+            "emoji_unicode": "U+1F1E6 U+1F1FC"
         }
     },
     "AF": {
@@ -288,7 +290,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇦🇫",
+            "emoji_unicode": "U+1F1E6 U+1F1EB"
         }
     },
     "AO": {
@@ -431,7 +435,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇦🇴",
+            "emoji_unicode": "U+1F1E6 U+1F1F4"
         }
     },
     "AI": {
@@ -563,7 +569,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇦🇮",
+            "emoji_unicode": "U+1F1E6 U+1F1EE"
         }
     },
     "AX": {
@@ -694,7 +702,9 @@
             "ar5": "OECD1990",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇦🇽",
+            "emoji_unicode": "U+1F1E6 U+1F1FD"
         }
     },
     "AL": {
@@ -840,7 +850,9 @@
             "ar5": "EIT",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇦🇱",
+            "emoji_unicode": "U+1F1E6 U+1F1F1"
         }
     },
     "AD": {
@@ -984,7 +996,9 @@
             "ar5": "OECD1990",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇦🇩",
+            "emoji_unicode": "U+1F1E6 U+1F1E9"
         }
     },
     "AE": {
@@ -1124,7 +1138,9 @@
             "ar5": "MAF",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇦🇪",
+            "emoji_unicode": "U+1F1E6 U+1F1EA"
         }
     },
     "AR": {
@@ -1274,7 +1290,9 @@
             "ar5": "LAM",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{region}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇦🇷",
+            "emoji_unicode": "U+1F1E6 U+1F1F7"
         }
     },
     "AM": {
@@ -1423,7 +1441,9 @@
             "ar5": "EIT",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇦🇲",
+            "emoji_unicode": "U+1F1E6 U+1F1F2"
         }
     },
     "AS": {
@@ -1563,7 +1583,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇦🇸",
+            "emoji_unicode": "U+1F1E6 U+1F1F8"
         }
     },
     "AQ": {
@@ -1684,7 +1706,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇦🇶",
+            "emoji_unicode": "U+1F1E6 U+1F1F6"
         }
     },
     "TF": {
@@ -1811,7 +1835,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇫",
+            "emoji_unicode": "U+1F1F9 U+1F1EB"
         }
     },
     "AG": {
@@ -1947,7 +1973,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇦🇬",
+            "emoji_unicode": "U+1F1E6 U+1F1EC"
         }
     },
     "AU": {
@@ -2083,7 +2111,9 @@
             "ar5": "OECD1990",
             "address_format": "{{recipient}}\n{{street}}\n{{city}} {{region_short}} {{postalcode}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇦🇺",
+            "emoji_unicode": "U+1F1E6 U+1F1FA"
         }
     },
     "AT": {
@@ -2245,7 +2275,9 @@
                 ],
                 "super_reduced": null,
                 "parking": 12
-            }
+            },
+            "emoji": "🇦🇹",
+            "emoji_unicode": "U+1F1E6 U+1F1F9"
         }
     },
     "AZ": {
@@ -2395,7 +2427,9 @@
             "ar5": "EIT",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇦🇿",
+            "emoji_unicode": "U+1F1E6 U+1F1FF"
         }
     },
     "BI": {
@@ -2543,7 +2577,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇮",
+            "emoji_unicode": "U+1F1E7 U+1F1EE"
         }
     },
     "BE": {
@@ -2711,7 +2747,9 @@
                 ],
                 "super_reduced": null,
                 "parking": 12
-            }
+            },
+            "emoji": "🇧🇪",
+            "emoji_unicode": "U+1F1E7 U+1F1EA"
         }
     },
     "BJ": {
@@ -2854,7 +2892,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇯",
+            "emoji_unicode": "U+1F1E7 U+1F1EF"
         }
     },
     "BF": {
@@ -2997,7 +3037,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇫",
+            "emoji_unicode": "U+1F1E7 U+1F1EB"
         }
     },
     "BD": {
@@ -3138,7 +3180,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇩",
+            "emoji_unicode": "U+1F1E7 U+1F1E9"
         }
     },
     "BG": {
@@ -3291,7 +3335,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇧🇬",
+            "emoji_unicode": "U+1F1E7 U+1F1EC"
         }
     },
     "BH": {
@@ -3429,7 +3475,9 @@
             "ar5": "MAF",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇭",
+            "emoji_unicode": "U+1F1E7 U+1F1ED"
         }
     },
     "BS": {
@@ -3566,7 +3614,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇸",
+            "emoji_unicode": "U+1F1E7 U+1F1F8"
         }
     },
     "BA": {
@@ -3718,7 +3768,9 @@
             "ar5": "EIT",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇦",
+            "emoji_unicode": "U+1F1E7 U+1F1E6"
         }
     },
     "BL": {
@@ -3849,7 +3901,9 @@
             "ar5": 0,
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇱",
+            "emoji_unicode": "U+1F1E7 U+1F1F1"
         }
     },
     "BY": {
@@ -4009,7 +4063,9 @@
             "ar5": "EIT",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇾",
+            "emoji_unicode": "U+1F1E7 U+1F1FE"
         }
     },
     "BZ": {
@@ -4158,7 +4214,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇿",
+            "emoji_unicode": "U+1F1E7 U+1F1FF"
         }
     },
     "BM": {
@@ -4297,7 +4355,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇲",
+            "emoji_unicode": "U+1F1E7 U+1F1F2"
         }
     },
     "BO": {
@@ -4468,7 +4528,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇴",
+            "emoji_unicode": "U+1F1E7 U+1F1F4"
         }
     },
     "BR": {
@@ -4619,7 +4681,9 @@
             "ar5": "LAM",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}} {{region_short}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇷",
+            "emoji_unicode": "U+1F1E7 U+1F1F7"
         }
     },
     "BB": {
@@ -4755,7 +4819,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇧",
+            "emoji_unicode": "U+1F1E7 U+1F1E7"
         }
     },
     "BN": {
@@ -4896,7 +4962,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇳",
+            "emoji_unicode": "U+1F1E7 U+1F1F3"
         }
     },
     "BT": {
@@ -5043,7 +5111,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇹",
+            "emoji_unicode": "U+1F1E7 U+1F1F9"
         }
     },
     "BV": {
@@ -5171,7 +5241,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇻",
+            "emoji_unicode": "U+1F1E7 U+1F1FB"
         }
     },
     "BW": {
@@ -5315,7 +5387,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇼",
+            "emoji_unicode": "U+1F1E7 U+1F1FC"
         }
     },
     "CF": {
@@ -5465,7 +5539,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇫",
+            "emoji_unicode": "U+1F1E8 U+1F1EB"
         }
     },
     "CA": {
@@ -5608,7 +5684,9 @@
             "ar5": "OECD1990",
             "address_format": "{{recipient}}\n{{street}}\n{{city}} {{region_short}} {{postalcode}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇦",
+            "emoji_unicode": "U+1F1E8 U+1F1E6"
         }
     },
     "CC": {
@@ -5746,7 +5824,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇨",
+            "emoji_unicode": "U+1F1E8 U+1F1E8"
         }
     },
     "CH": {
@@ -5917,7 +5997,9 @@
             "ar5": "OECD1990",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇭",
+            "emoji_unicode": "U+1F1E8 U+1F1ED"
         }
     },
     "CL": {
@@ -6066,7 +6148,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇱",
+            "emoji_unicode": "U+1F1E8 U+1F1F1"
         }
     },
     "CN": {
@@ -6232,7 +6316,9 @@
             "ar5": "ASIA",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}} {{region_short}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇳",
+            "emoji_unicode": "U+1F1E8 U+1F1F3"
         }
     },
     "CI": {
@@ -6374,7 +6460,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇮",
+            "emoji_unicode": "U+1F1E8 U+1F1EE"
         }
     },
     "CM": {
@@ -6524,7 +6612,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇲",
+            "emoji_unicode": "U+1F1E8 U+1F1F2"
         }
     },
     "CD": {
@@ -6694,7 +6784,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇩",
+            "emoji_unicode": "U+1F1E8 U+1F1E9"
         }
     },
     "CG": {
@@ -6848,7 +6940,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇬",
+            "emoji_unicode": "U+1F1E8 U+1F1EC"
         }
     },
     "CK": {
@@ -6990,7 +7084,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇰",
+            "emoji_unicode": "U+1F1E8 U+1F1F0"
         }
     },
     "CO": {
@@ -7135,7 +7231,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇴",
+            "emoji_unicode": "U+1F1E8 U+1F1F4"
         }
     },
     "KM": {
@@ -7285,7 +7383,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇰🇲",
+            "emoji_unicode": "U+1F1F0 U+1F1F2"
         }
     },
     "CV": {
@@ -7423,7 +7523,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇻",
+            "emoji_unicode": "U+1F1E8 U+1F1FB"
         }
     },
     "CR": {
@@ -7564,7 +7666,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇷",
+            "emoji_unicode": "U+1F1E8 U+1F1F7"
         }
     },
     "CU": {
@@ -7708,7 +7812,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇺",
+            "emoji_unicode": "U+1F1E8 U+1F1FA"
         }
     },
     "CW": {
@@ -7843,7 +7949,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇼",
+            "emoji_unicode": "U+1F1E8 U+1F1FC"
         }
     },
     "CX": {
@@ -7976,7 +8084,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇨🇽",
+            "emoji_unicode": "U+1F1E8 U+1F1FD"
         }
     },
     "KY": {
@@ -8112,7 +8222,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇰🇾",
+            "emoji_unicode": "U+1F1F0 U+1F1FE"
         }
     },
     "CY": {
@@ -8268,7 +8380,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇨🇾",
+            "emoji_unicode": "U+1F1E8 U+1F1FE"
         }
     },
     "CZ": {
@@ -8423,7 +8537,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇨🇿",
+            "emoji_unicode": "U+1F1E8 U+1F1FF"
         }
     },
     "DE": {
@@ -8582,7 +8698,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇩🇪",
+            "emoji_unicode": "U+1F1E9 U+1F1EA"
         }
     },
     "DJ": {
@@ -8733,7 +8851,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇩🇯",
+            "emoji_unicode": "U+1F1E9 U+1F1EF"
         }
     },
     "DM": {
@@ -8872,7 +8992,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇩🇲",
+            "emoji_unicode": "U+1F1E9 U+1F1F2"
         }
     },
     "DK": {
@@ -9018,7 +9140,9 @@
                 "reduced": [],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇩🇰",
+            "emoji_unicode": "U+1F1E9 U+1F1F0"
         }
     },
     "DO": {
@@ -9158,7 +9282,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇩🇴",
+            "emoji_unicode": "U+1F1E9 U+1F1F4"
         }
     },
     "DZ": {
@@ -9305,7 +9431,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇩🇿",
+            "emoji_unicode": "U+1F1E9 U+1F1FF"
         }
     },
     "EC": {
@@ -9447,7 +9575,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇪🇨",
+            "emoji_unicode": "U+1F1EA U+1F1E8"
         }
     },
     "EG": {
@@ -9589,7 +9719,9 @@
             "ar5": "MAF",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇪🇬",
+            "emoji_unicode": "U+1F1EA U+1F1EC"
         }
     },
     "ER": {
@@ -9744,7 +9876,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇪🇷",
+            "emoji_unicode": "U+1F1EA U+1F1F7"
         }
     },
     "EH": {
@@ -9899,7 +10033,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇪🇭",
+            "emoji_unicode": "U+1F1EA U+1F1ED"
         }
     },
     "ES": {
@@ -10066,7 +10202,9 @@
                 ],
                 "super_reduced": 4,
                 "parking": null
-            }
+            },
+            "emoji": "🇪🇸",
+            "emoji_unicode": "U+1F1EA U+1F1F8"
         }
     },
     "EE": {
@@ -10216,7 +10354,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇪🇪",
+            "emoji_unicode": "U+1F1EA U+1F1EA"
         }
     },
     "ET": {
@@ -10362,7 +10502,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇪🇹",
+            "emoji_unicode": "U+1F1EA U+1F1F9"
         }
     },
     "FI": {
@@ -10515,7 +10657,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇫🇮",
+            "emoji_unicode": "U+1F1EB U+1F1EE"
         }
     },
     "FJ": {
@@ -10661,7 +10805,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇫🇯",
+            "emoji_unicode": "U+1F1EB U+1F1EF"
         }
     },
     "FK": {
@@ -10795,7 +10941,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇫🇰",
+            "emoji_unicode": "U+1F1EB U+1F1F0"
         }
     },
     "FR": {
@@ -10947,7 +11095,9 @@
                 ],
                 "super_reduced": 2.1,
                 "parking": null
-            }
+            },
+            "emoji": "🇫🇷",
+            "emoji_unicode": "U+1F1EB U+1F1F7"
         }
     },
     "FO": {
@@ -11086,7 +11236,9 @@
             "ar5": "OECD1990",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇫🇴",
+            "emoji_unicode": "U+1F1EB U+1F1F4"
         }
     },
     "FM": {
@@ -11220,7 +11372,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇫🇲",
+            "emoji_unicode": "U+1F1EB U+1F1F2"
         }
     },
     "GA": {
@@ -11360,7 +11514,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇦",
+            "emoji_unicode": "U+1F1EC U+1F1E6"
         }
     },
     "GB": {
@@ -11504,7 +11660,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇬🇧",
+            "emoji_unicode": "U+1F1EC U+1F1E7"
         }
     },
     "GE": {
@@ -11642,7 +11800,9 @@
             "ar5": "EIT",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇪",
+            "emoji_unicode": "U+1F1EC U+1F1EA"
         }
     },
     "GG": {
@@ -11782,7 +11942,9 @@
             "ar5": "OECD1990",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇬",
+            "emoji_unicode": "U+1F1EC U+1F1EC"
         }
     },
     "GH": {
@@ -11921,7 +12083,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇭",
+            "emoji_unicode": "U+1F1EC U+1F1ED"
         }
     },
     "GI": {
@@ -12055,7 +12219,9 @@
             "ar5": "OECD1990",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇮",
+            "emoji_unicode": "U+1F1EC U+1F1EE"
         }
     },
     "GN": {
@@ -12196,7 +12362,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇳",
+            "emoji_unicode": "U+1F1EC U+1F1F3"
         }
     },
     "GP": {
@@ -12329,7 +12497,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇵",
+            "emoji_unicode": "U+1F1EC U+1F1F5"
         }
     },
     "GM": {
@@ -12464,7 +12634,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇲",
+            "emoji_unicode": "U+1F1EC U+1F1F2"
         }
     },
     "GW": {
@@ -12601,7 +12773,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇼",
+            "emoji_unicode": "U+1F1EC U+1F1FC"
         }
     },
     "GQ": {
@@ -12754,7 +12928,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇶",
+            "emoji_unicode": "U+1F1EC U+1F1F6"
         }
     },
     "GR": {
@@ -12902,7 +13078,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇬🇷",
+            "emoji_unicode": "U+1F1EC U+1F1F7"
         }
     },
     "GD": {
@@ -13034,7 +13212,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇩",
+            "emoji_unicode": "U+1F1EC U+1F1E9"
         }
     },
     "GL": {
@@ -13167,7 +13347,9 @@
             "ar5": "OECD1990",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇱",
+            "emoji_unicode": "U+1F1EC U+1F1F1"
         }
     },
     "GT": {
@@ -13304,7 +13486,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇹",
+            "emoji_unicode": "U+1F1EC U+1F1F9"
         }
     },
     "GF": {
@@ -13441,7 +13625,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇫",
+            "emoji_unicode": "U+1F1EC U+1F1EB"
         }
     },
     "GU": {
@@ -13584,7 +13770,9 @@
             "ar5": "OECD1990",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇺",
+            "emoji_unicode": "U+1F1EC U+1F1FA"
         }
     },
     "GY": {
@@ -13722,7 +13910,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇾",
+            "emoji_unicode": "U+1F1EC U+1F1FE"
         }
     },
     "HK": {
@@ -13862,7 +14052,9 @@
             "ar5": 0,
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}} {{region_short}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇭🇰",
+            "emoji_unicode": "U+1F1ED U+1F1F0"
         }
     },
     "HM": {
@@ -13990,7 +14182,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇭🇲",
+            "emoji_unicode": "U+1F1ED U+1F1F2"
         }
     },
     "HN": {
@@ -14129,7 +14323,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇭🇳",
+            "emoji_unicode": "U+1F1ED U+1F1F3"
         }
     },
     "HR": {
@@ -14282,7 +14478,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇭🇷",
+            "emoji_unicode": "U+1F1ED U+1F1F7"
         }
     },
     "HT": {
@@ -14430,7 +14628,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇭🇹",
+            "emoji_unicode": "U+1F1ED U+1F1F9"
         }
     },
     "HU": {
@@ -14579,7 +14779,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇭🇺",
+            "emoji_unicode": "U+1F1ED U+1F1FA"
         }
     },
     "ID": {
@@ -14720,7 +14922,9 @@
             "ar5": "ASIA",
             "address_format": "{{recipient}}\n{{street}}\n{{city}}\n{{region}} {{postalcode}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇮🇩",
+            "emoji_unicode": "U+1F1EE U+1F1E9"
         }
     },
     "IM": {
@@ -14856,7 +15060,9 @@
             "ar5": "OECD1990",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇮🇲",
+            "emoji_unicode": "U+1F1EE U+1F1F2"
         }
     },
     "IN": {
@@ -15011,7 +15217,9 @@
             "ar5": "ASIA",
             "address_format": "{{recipient}}\n{{street}}\n{{region}}\n{{city}} {{postalcode}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇮🇳",
+            "emoji_unicode": "U+1F1EE U+1F1F3"
         }
     },
     "IO": {
@@ -15149,7 +15357,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇮🇴",
+            "emoji_unicode": "U+1F1EE U+1F1F4"
         }
     },
     "IE": {
@@ -15299,7 +15509,9 @@
                 ],
                 "super_reduced": 4.8,
                 "parking": 13.5
-            }
+            },
+            "emoji": "🇮🇪",
+            "emoji_unicode": "U+1F1EE U+1F1EA"
         }
     },
     "IR": {
@@ -15439,7 +15651,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇮🇷",
+            "emoji_unicode": "U+1F1EE U+1F1F7"
         }
     },
     "IQ": {
@@ -15592,7 +15806,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇮🇶",
+            "emoji_unicode": "U+1F1EE U+1F1F6"
         }
     },
     "IS": {
@@ -15729,7 +15945,9 @@
             "ar5": "OECD1990",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇮🇸",
+            "emoji_unicode": "U+1F1EE U+1F1F8"
         }
     },
     "IL": {
@@ -15875,7 +16093,9 @@
             "ar5": "MAF",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇮🇱",
+            "emoji_unicode": "U+1F1EE U+1F1F1"
         }
     },
     "IT": {
@@ -16034,7 +16254,9 @@
                 ],
                 "super_reduced": 4,
                 "parking": null
-            }
+            },
+            "emoji": "🇮🇹",
+            "emoji_unicode": "U+1F1EE U+1F1F9"
         }
     },
     "JM": {
@@ -16171,7 +16393,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇯🇲",
+            "emoji_unicode": "U+1F1EF U+1F1F2"
         }
     },
     "JE": {
@@ -16312,7 +16536,9 @@
             "ar5": "OECD1990",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇯🇪",
+            "emoji_unicode": "U+1F1EF U+1F1EA"
         }
     },
     "JO": {
@@ -16453,7 +16679,9 @@
             "ar5": "MAF",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇯🇴",
+            "emoji_unicode": "U+1F1EF U+1F1F4"
         }
     },
     "JP": {
@@ -16589,7 +16817,9 @@
             "ar5": "OECD1990",
             "address_format": "〒{{postalcode}}\n{{region_short}}{{city}}{{street}}\n{{recipient}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇯🇵",
+            "emoji_unicode": "U+1F1EF U+1F1F5"
         }
     },
     "KZ": {
@@ -16741,7 +16971,9 @@
             "ar5": "EIT",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇰🇿",
+            "emoji_unicode": "U+1F1F0 U+1F1FF"
         }
     },
     "KE": {
@@ -16886,7 +17118,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇰🇪",
+            "emoji_unicode": "U+1F1F0 U+1F1EA"
         }
     },
     "KG": {
@@ -17032,7 +17266,9 @@
             "ar5": "EIT",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇰🇬",
+            "emoji_unicode": "U+1F1F0 U+1F1EC"
         }
     },
     "KH": {
@@ -17173,7 +17409,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇰🇭",
+            "emoji_unicode": "U+1F1F0 U+1F1ED"
         }
     },
     "KI": {
@@ -17312,7 +17550,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇰🇮",
+            "emoji_unicode": "U+1F1F0 U+1F1EE"
         }
     },
     "KN": {
@@ -17445,7 +17685,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇰🇳",
+            "emoji_unicode": "U+1F1F0 U+1F1F3"
         }
     },
     "KR": {
@@ -17583,7 +17825,9 @@
             "ar5": 0,
             "address_format": "{{recipient}}\n{{street}}\n{{city}} {{region_short}}\n{{postalcode}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇰🇷",
+            "emoji_unicode": "U+1F1F0 U+1F1F7"
         }
     },
     "XK": {
@@ -17708,7 +17952,9 @@
             "ar5": null,
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": null,
+            "emoji_unicode": null
         }
     },
     "KW": {
@@ -17845,7 +18091,9 @@
             "ar5": "MAF",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{region}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇰🇼",
+            "emoji_unicode": "U+1F1F0 U+1F1FC"
         }
     },
     "LA": {
@@ -17986,7 +18234,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇱🇦",
+            "emoji_unicode": "U+1F1F1 U+1F1E6"
         }
     },
     "LB": {
@@ -18128,7 +18378,9 @@
             "ar5": "MAF",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇱🇧",
+            "emoji_unicode": "U+1F1F1 U+1F1E7"
         }
     },
     "LR": {
@@ -18267,7 +18519,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇱🇷",
+            "emoji_unicode": "U+1F1F1 U+1F1F7"
         }
     },
     "LY": {
@@ -18409,7 +18663,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇱🇾",
+            "emoji_unicode": "U+1F1F1 U+1F1FE"
         }
     },
     "LC": {
@@ -18541,7 +18797,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇱🇨",
+            "emoji_unicode": "U+1F1F1 U+1F1E8"
         }
     },
     "LI": {
@@ -18678,7 +18936,9 @@
             "ar5": "OECD1990",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇱🇮",
+            "emoji_unicode": "U+1F1F1 U+1F1EE"
         }
     },
     "LK": {
@@ -18821,7 +19081,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇱🇰",
+            "emoji_unicode": "U+1F1F1 U+1F1F0"
         }
     },
     "LS": {
@@ -18968,7 +19230,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇱🇸",
+            "emoji_unicode": "U+1F1F1 U+1F1F8"
         }
     },
     "LT": {
@@ -19115,7 +19379,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇱🇹",
+            "emoji_unicode": "U+1F1F1 U+1F1F9"
         }
     },
     "LU": {
@@ -19273,7 +19539,9 @@
                 ],
                 "super_reduced": 3,
                 "parking": 12
-            }
+            },
+            "emoji": "🇱🇺",
+            "emoji_unicode": "U+1F1F1 U+1F1FA"
         }
     },
     "LV": {
@@ -19419,7 +19687,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇱🇻",
+            "emoji_unicode": "U+1F1F1 U+1F1FB"
         }
     },
     "MO": {
@@ -19563,7 +19833,9 @@
             "ar5": 0,
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇴",
+            "emoji_unicode": "U+1F1F2 U+1F1F4"
         }
     },
     "MF": {
@@ -19697,7 +19969,9 @@
             "ar5": 0,
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇫",
+            "emoji_unicode": "U+1F1F2 U+1F1EB"
         }
     },
     "MA": {
@@ -19841,7 +20115,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇦",
+            "emoji_unicode": "U+1F1F2 U+1F1E6"
         }
     },
     "MC": {
@@ -19978,7 +20254,9 @@
             "ar5": "OECD1990",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇨",
+            "emoji_unicode": "U+1F1F2 U+1F1E8"
         }
     },
     "MD": {
@@ -20116,7 +20394,9 @@
             "ar5": "EIT",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇩",
+            "emoji_unicode": "U+1F1F2 U+1F1E9"
         }
     },
     "MG": {
@@ -20256,7 +20536,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇬",
+            "emoji_unicode": "U+1F1F2 U+1F1EC"
         }
     },
     "MV": {
@@ -20391,7 +20673,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇻",
+            "emoji_unicode": "U+1F1F2 U+1F1FB"
         }
     },
     "MX": {
@@ -20532,7 +20816,9 @@
             "ar5": "LAM",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}} {{region_short}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇽",
+            "emoji_unicode": "U+1F1F2 U+1F1FD"
         }
     },
     "MH": {
@@ -20671,7 +20957,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇭",
+            "emoji_unicode": "U+1F1F2 U+1F1ED"
         }
     },
     "MK": {
@@ -20813,7 +21101,9 @@
             "ar5": "EIT",
             "address_format": "{{recipient}}\n{{street}}\n{{city}} {{postalcode}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇰",
+            "emoji_unicode": "U+1F1F2 U+1F1F0"
         }
     },
     "ML": {
@@ -20955,7 +21245,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇱",
+            "emoji_unicode": "U+1F1F2 U+1F1F1"
         }
     },
     "MT": {
@@ -21102,7 +21394,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇲🇹",
+            "emoji_unicode": "U+1F1F2 U+1F1F9"
         }
     },
     "MM": {
@@ -21244,7 +21538,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇲",
+            "emoji_unicode": "U+1F1F2 U+1F1F2"
         }
     },
     "ME": {
@@ -21383,7 +21679,9 @@
             "ar5": "EIT",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇪",
+            "emoji_unicode": "U+1F1F2 U+1F1EA"
         }
     },
     "MN": {
@@ -21521,7 +21819,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇳",
+            "emoji_unicode": "U+1F1F2 U+1F1F3"
         }
     },
     "MP": {
@@ -21665,7 +21965,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇵",
+            "emoji_unicode": "U+1F1F2 U+1F1F5"
         }
     },
     "MZ": {
@@ -21807,7 +22109,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇿",
+            "emoji_unicode": "U+1F1F2 U+1F1FF"
         }
     },
     "MR": {
@@ -21946,7 +22250,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇷",
+            "emoji_unicode": "U+1F1F2 U+1F1F7"
         }
     },
     "MS": {
@@ -22078,7 +22384,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇸",
+            "emoji_unicode": "U+1F1F2 U+1F1F8"
         }
     },
     "MQ": {
@@ -22210,7 +22518,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇶",
+            "emoji_unicode": "U+1F1F2 U+1F1F6"
         }
     },
     "MU": {
@@ -22354,7 +22664,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇺",
+            "emoji_unicode": "U+1F1F2 U+1F1FA"
         }
     },
     "MW": {
@@ -22496,7 +22808,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇼",
+            "emoji_unicode": "U+1F1F2 U+1F1FC"
         }
     },
     "MY": {
@@ -22638,7 +22952,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇲🇾",
+            "emoji_unicode": "U+1F1F2 U+1F1FE"
         }
     },
     "YT": {
@@ -22772,7 +23088,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇾🇹",
+            "emoji_unicode": "U+1F1FE U+1F1F9"
         }
     },
     "NA": {
@@ -22958,7 +23276,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇳🇦",
+            "emoji_unicode": "U+1F1F3 U+1F1E6"
         }
     },
     "NC": {
@@ -23090,7 +23410,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇳🇨",
+            "emoji_unicode": "U+1F1F3 U+1F1E8"
         }
     },
     "NE": {
@@ -23231,7 +23553,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇳🇪",
+            "emoji_unicode": "U+1F1F3 U+1F1EA"
         }
     },
     "NF": {
@@ -23370,7 +23694,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇳🇫",
+            "emoji_unicode": "U+1F1F3 U+1F1EB"
         }
     },
     "NG": {
@@ -23511,7 +23837,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇳🇬",
+            "emoji_unicode": "U+1F1F3 U+1F1EC"
         }
     },
     "NI": {
@@ -23648,7 +23976,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇳🇮",
+            "emoji_unicode": "U+1F1F3 U+1F1EE"
         }
     },
     "NU": {
@@ -23785,7 +24115,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇳🇺",
+            "emoji_unicode": "U+1F1F3 U+1F1FA"
         }
     },
     "NL": {
@@ -23929,7 +24261,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇳🇱",
+            "emoji_unicode": "U+1F1F3 U+1F1F1"
         }
     },
     "NO": {
@@ -24080,7 +24414,9 @@
             "ar5": "MAF",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇳🇴",
+            "emoji_unicode": "U+1F1F3 U+1F1F4"
         }
     },
     "NP": {
@@ -24218,7 +24554,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇳🇵",
+            "emoji_unicode": "U+1F1F3 U+1F1F5"
         }
     },
     "NR": {
@@ -24359,7 +24697,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇳🇷",
+            "emoji_unicode": "U+1F1F3 U+1F1F7"
         }
     },
     "NZ": {
@@ -24503,7 +24843,9 @@
             "ar5": "OECD1990",
             "address_format": "{{recipient}}\n{{street}}\n{{region}}\n{{city}} {{postalcode}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇳🇿",
+            "emoji_unicode": "U+1F1F3 U+1F1FF"
         }
     },
     "OM": {
@@ -24641,7 +24983,9 @@
             "ar5": 0,
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{region}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇴🇲",
+            "emoji_unicode": "U+1F1F4 U+1F1F2"
         }
     },
     "PK": {
@@ -24787,7 +25131,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇵🇰",
+            "emoji_unicode": "U+1F1F5 U+1F1F0"
         }
     },
     "PA": {
@@ -24930,7 +25276,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇵🇦",
+            "emoji_unicode": "U+1F1F5 U+1F1E6"
         }
     },
     "PN": {
@@ -25062,7 +25410,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇵🇳",
+            "emoji_unicode": "U+1F1F5 U+1F1F3"
         }
     },
     "PE": {
@@ -25213,7 +25563,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇵🇪",
+            "emoji_unicode": "U+1F1F5 U+1F1EA"
         }
     },
     "PH": {
@@ -25354,7 +25706,9 @@
             "ar5": "ASIA",
             "address_format": "{{recipient}}\n{{street}} {{region_short}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇵🇭",
+            "emoji_unicode": "U+1F1F5 U+1F1ED"
         }
     },
     "PW": {
@@ -25493,7 +25847,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇵🇼",
+            "emoji_unicode": "U+1F1F5 U+1F1FC"
         }
     },
     "PG": {
@@ -25639,7 +25995,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇵🇬",
+            "emoji_unicode": "U+1F1F5 U+1F1EC"
         }
     },
     "PL": {
@@ -25789,7 +26147,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇵🇱",
+            "emoji_unicode": "U+1F1F5 U+1F1F1"
         }
     },
     "PR": {
@@ -25929,7 +26289,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇵🇷",
+            "emoji_unicode": "U+1F1F5 U+1F1F7"
         }
     },
     "KP": {
@@ -26070,7 +26432,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇰🇵",
+            "emoji_unicode": "U+1F1F0 U+1F1F5"
         }
     },
     "PT": {
@@ -26215,7 +26579,9 @@
                 ],
                 "super_reduced": null,
                 "parking": 13
-            }
+            },
+            "emoji": "🇵🇹",
+            "emoji_unicode": "U+1F1F5 U+1F1F9"
         }
     },
     "PY": {
@@ -26359,7 +26725,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇵🇾",
+            "emoji_unicode": "U+1F1F5 U+1F1FE"
         }
     },
     "PS": {
@@ -26499,7 +26867,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇵🇸",
+            "emoji_unicode": "U+1F1F5 U+1F1F8"
         }
     },
     "PF": {
@@ -26634,7 +27004,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇵🇫",
+            "emoji_unicode": "U+1F1F5 U+1F1EB"
         }
     },
     "QA": {
@@ -26771,7 +27143,9 @@
             "ar5": "MAF",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇶🇦",
+            "emoji_unicode": "U+1F1F6 U+1F1E6"
         }
     },
     "RE": {
@@ -26904,7 +27278,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇷🇪",
+            "emoji_unicode": "U+1F1F7 U+1F1EA"
         }
     },
     "RO": {
@@ -27053,7 +27429,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇷🇴",
+            "emoji_unicode": "U+1F1F7 U+1F1F4"
         }
     },
     "RU": {
@@ -27206,7 +27584,9 @@
             "ar5": "EIT",
             "address_format": "{{recipient}}\n{{postalcode}} {{city}}\n{{street}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇷🇺",
+            "emoji_unicode": "U+1F1F7 U+1F1FA"
         }
     },
     "RW": {
@@ -27357,7 +27737,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇷🇼",
+            "emoji_unicode": "U+1F1F7 U+1F1FC"
         }
     },
     "SA": {
@@ -27502,7 +27884,9 @@
             "ar5": "MAF",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇦",
+            "emoji_unicode": "U+1F1F8 U+1F1E6"
         }
     },
     "SD": {
@@ -27649,7 +28033,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇩",
+            "emoji_unicode": "U+1F1F8 U+1F1E9"
         }
     },
     "SN": {
@@ -27789,7 +28175,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇳",
+            "emoji_unicode": "U+1F1F8 U+1F1F3"
         }
     },
     "SG": {
@@ -27942,7 +28330,9 @@
             "ar5": "ASIA",
             "address_format": "{{recipient}}\n{{street}}\n{{city}} {{postalcode}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇬",
+            "emoji_unicode": "U+1F1F8 U+1F1EC"
         }
     },
     "GS": {
@@ -28071,7 +28461,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇬🇸",
+            "emoji_unicode": "U+1F1EC U+1F1F8"
         }
     },
     "SJ": {
@@ -28204,7 +28596,9 @@
             "ar5": "OECD1990",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇯",
+            "emoji_unicode": "U+1F1F8 U+1F1EF"
         }
     },
     "SB": {
@@ -28336,7 +28730,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇧",
+            "emoji_unicode": "U+1F1F8 U+1F1E7"
         }
     },
     "SL": {
@@ -28472,7 +28868,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇱",
+            "emoji_unicode": "U+1F1F8 U+1F1F1"
         }
     },
     "SV": {
@@ -28619,7 +29017,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇻",
+            "emoji_unicode": "U+1F1F8 U+1F1FB"
         }
     },
     "SM": {
@@ -28758,7 +29158,9 @@
             "ar5": "OECD1990",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇲",
+            "emoji_unicode": "U+1F1F8 U+1F1F2"
         }
     },
     "SO": {
@@ -28904,7 +29306,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇴",
+            "emoji_unicode": "U+1F1F8 U+1F1F4"
         }
     },
     "PM": {
@@ -29037,7 +29441,9 @@
             "ar5": "OECD1990",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇵🇲",
+            "emoji_unicode": "U+1F1F5 U+1F1F2"
         }
     },
     "RS": {
@@ -29183,7 +29589,9 @@
             "ar5": "EIT",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇷🇸",
+            "emoji_unicode": "U+1F1F7 U+1F1F8"
         }
     },
     "SS": {
@@ -29322,7 +29730,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇸",
+            "emoji_unicode": "U+1F1F8 U+1F1F8"
         }
     },
     "ST": {
@@ -29458,7 +29868,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇹",
+            "emoji_unicode": "U+1F1F8 U+1F1F9"
         }
     },
     "SR": {
@@ -29598,7 +30010,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇷",
+            "emoji_unicode": "U+1F1F8 U+1F1F7"
         }
     },
     "SK": {
@@ -29745,7 +30159,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇸🇰",
+            "emoji_unicode": "U+1F1F8 U+1F1F0"
         }
     },
     "SI": {
@@ -29891,7 +30307,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇸🇮",
+            "emoji_unicode": "U+1F1F8 U+1F1EE"
         }
     },
     "SE": {
@@ -30036,7 +30454,9 @@
                 ],
                 "super_reduced": null,
                 "parking": null
-            }
+            },
+            "emoji": "🇸🇪",
+            "emoji_unicode": "U+1F1F8 U+1F1EA"
         }
     },
     "SZ": {
@@ -30181,7 +30601,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇿",
+            "emoji_unicode": "U+1F1F8 U+1F1FF"
         }
     },
     "SX": {
@@ -30322,7 +30744,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇽",
+            "emoji_unicode": "U+1F1F8 U+1F1FD"
         }
     },
     "SC": {
@@ -30467,7 +30891,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇨",
+            "emoji_unicode": "U+1F1F8 U+1F1E8"
         }
     },
     "SY": {
@@ -30609,7 +31035,9 @@
             "ar5": "MAF",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇾",
+            "emoji_unicode": "U+1F1F8 U+1F1FE"
         }
     },
     "TC": {
@@ -30741,7 +31169,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇨",
+            "emoji_unicode": "U+1F1F9 U+1F1E8"
         }
     },
     "TD": {
@@ -30892,7 +31322,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇩",
+            "emoji_unicode": "U+1F1F9 U+1F1E9"
         }
     },
     "TG": {
@@ -31031,7 +31463,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇬",
+            "emoji_unicode": "U+1F1F9 U+1F1EC"
         }
     },
     "TH": {
@@ -31175,7 +31609,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇭",
+            "emoji_unicode": "U+1F1F9 U+1F1ED"
         }
     },
     "TJ": {
@@ -31321,7 +31757,9 @@
             "ar5": "EIT",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇯",
+            "emoji_unicode": "U+1F1F9 U+1F1EF"
         }
     },
     "TK": {
@@ -31463,7 +31901,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇰",
+            "emoji_unicode": "U+1F1F9 U+1F1F0"
         }
     },
     "TM": {
@@ -31605,7 +32045,9 @@
             "ar5": "EIT",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇲",
+            "emoji_unicode": "U+1F1F9 U+1F1F2"
         }
     },
     "TL": {
@@ -31750,7 +32192,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇱",
+            "emoji_unicode": "U+1F1F9 U+1F1F1"
         }
     },
     "TO": {
@@ -31889,7 +32333,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇴",
+            "emoji_unicode": "U+1F1F9 U+1F1F4"
         }
     },
     "TT": {
@@ -32022,7 +32468,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇹",
+            "emoji_unicode": "U+1F1F9 U+1F1F9"
         }
     },
     "TN": {
@@ -32159,7 +32607,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇳",
+            "emoji_unicode": "U+1F1F9 U+1F1F3"
         }
     },
     "TR": {
@@ -32303,7 +32753,9 @@
             "ar5": "OECD1990",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇷",
+            "emoji_unicode": "U+1F1F9 U+1F1F7"
         }
     },
     "TV": {
@@ -32440,7 +32892,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇻",
+            "emoji_unicode": "U+1F1F9 U+1F1FB"
         }
     },
     "TW": {
@@ -32581,7 +33035,9 @@
             "ar5": "ASIA",
             "address_format": "{{recipient}}\n{{street}}\n{{city}} {{region_short}} {{postalcode}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇼",
+            "emoji_unicode": "U+1F1F9 U+1F1FC"
         }
     },
     "TZ": {
@@ -32730,7 +33186,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇹🇿",
+            "emoji_unicode": "U+1F1F9 U+1F1FF"
         }
     },
     "UG": {
@@ -32875,7 +33333,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇺🇬",
+            "emoji_unicode": "U+1F1FA U+1F1EC"
         }
     },
     "UA": {
@@ -33023,7 +33483,9 @@
             "ar5": "EIT",
             "address_format": "{{recipient}}\n{{street}}\n{{city}} {{region_short}}\n{{postalcode}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇺🇦",
+            "emoji_unicode": "U+1F1FA U+1F1E6"
         }
     },
     "UM": {
@@ -33149,7 +33611,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇺🇲",
+            "emoji_unicode": "U+1F1FA U+1F1F2"
         }
     },
     "UY": {
@@ -33293,7 +33757,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇺🇾",
+            "emoji_unicode": "U+1F1FA U+1F1FE"
         }
     },
     "US": {
@@ -33442,7 +33908,9 @@
             "ar5": "OECD1990",
             "address_format": "{{recipient}}\n{{street}}\n{{city}} {{region_short}} {{postalcode}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇺🇸",
+            "emoji_unicode": "U+1F1FA U+1F1F8"
         }
     },
     "UZ": {
@@ -33588,7 +34056,9 @@
             "ar5": "EIT",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇺🇿",
+            "emoji_unicode": "U+1F1FA U+1F1FF"
         }
     },
     "VA": {
@@ -33731,7 +34201,9 @@
             "ar5": "OECD1990",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇻🇦",
+            "emoji_unicode": "U+1F1FB U+1F1E6"
         }
     },
     "VC": {
@@ -33863,7 +34335,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇻🇨",
+            "emoji_unicode": "U+1F1FB U+1F1E8"
         }
     },
     "VE": {
@@ -34002,7 +34476,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇻🇪",
+            "emoji_unicode": "U+1F1FB U+1F1EA"
         }
     },
     "VG": {
@@ -34135,7 +34611,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇻🇬",
+            "emoji_unicode": "U+1F1FB U+1F1EC"
         }
     },
     "VI": {
@@ -34268,7 +34746,9 @@
             "ar5": "LAM",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇻🇮",
+            "emoji_unicode": "U+1F1FB U+1F1EE"
         }
     },
     "VN": {
@@ -34410,7 +34890,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇻🇳",
+            "emoji_unicode": "U+1F1FB U+1F1F3"
         }
     },
     "VU": {
@@ -34557,7 +35039,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇻🇺",
+            "emoji_unicode": "U+1F1FB U+1F1FA"
         }
     },
     "WF": {
@@ -34691,7 +35175,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇼🇫",
+            "emoji_unicode": "U+1F1FC U+1F1EB"
         }
     },
     "WS": {
@@ -34831,7 +35317,9 @@
             "ar5": "ASIA",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇼🇸",
+            "emoji_unicode": "U+1F1FC U+1F1F8"
         }
     },
     "YE": {
@@ -34970,7 +35458,9 @@
             "ar5": "MAF",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇾🇪",
+            "emoji_unicode": "U+1F1FE U+1F1EA"
         }
     },
     "ZA": {
@@ -35162,7 +35652,9 @@
             "ar5": "MAF",
             "address_format": "{{recipient}}\n{{street}}\n{{city}}\n{{region}}\n{{postalcode}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇿🇦",
+            "emoji_unicode": "U+1F1FF U+1F1E6"
         }
     },
     "ZM": {
@@ -35304,7 +35796,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇿🇲",
+            "emoji_unicode": "U+1F1FF U+1F1F2"
         }
     },
     "ZW": {
@@ -35515,7 +36009,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇿🇼",
+            "emoji_unicode": "U+1F1FF U+1F1FC"
         }
     },
     "BQ": {
@@ -35604,7 +36100,9 @@
             "ar5": 0,
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇧🇶",
+            "emoji_unicode": "U+1F1E7 U+1F1F6"
         }
     },
     "SH": {
@@ -35689,7 +36187,9 @@
             "ar5": "MAF",
             "address_format": null,
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇸🇭",
+            "emoji_unicode": "U+1F1F8 U+1F1ED"
         }
     }
 }

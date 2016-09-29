@@ -780,15 +780,15 @@ class Country
         return file_exists($file) ? file_get_contents($file) : null;
     }
 
-    /**
-     * Get the flag.
-     *
-     * @return string|null
-     */
+        /**
+         * Get the flag.
+         *
+         * @return string|null
+         */
         public function getFlag()
-    {
-        $file = __DIR__.'/../resources/data/'.$this->getIsoAlpha2().'.svg';
+        {
+            $file = __DIR__.'/../resources/data/'.$this->getIsoAlpha2().'.svg';
 
-        return file_exists($file) ? file_get_contents($file) : null;
-    }
+            return file_exists($file) ? file_get_contents($file) : null;
+        }
 }

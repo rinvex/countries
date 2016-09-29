@@ -63,9 +63,9 @@ class Loader
     /**
      * Filter items by the given key value pair.
      *
-     * @param  string $key
-     * @param  mixed  $value
-     * @param  bool   $strict
+     * @param string $key
+     * @param mixed  $value
+     * @param bool   $strict
      *
      * @return static
      */
@@ -83,7 +83,7 @@ class Loader
     /**
      * Run a filter over each of the items.
      *
-     * @param  callable|null $callback
+     * @param callable|null $callback
      *
      * @return mixed
      */
@@ -107,9 +107,9 @@ class Loader
     /**
      * Get an item from an array or object using "dot" notation.
      *
-     * @param  mixed        $target
-     * @param  string|array $key
-     * @param  mixed        $default
+     * @param mixed        $target
+     * @param string|array $key
+     * @param mixed        $default
      *
      * @return mixed
      */
@@ -147,9 +147,9 @@ class Loader
     /**
      * Pluck an array of values from an array.
      *
-     * @param  array             $array
-     * @param  string|array      $value
-     * @param  string|array|null $key
+     * @param array             $array
+     * @param string|array      $value
+     * @param string|array|null $key
      *
      * @return array
      */
@@ -182,7 +182,7 @@ class Loader
     /**
      * Collapse an array of arrays into a single array.
      *
-     * @param  array $array
+     * @param array $array
      *
      * @return array
      */

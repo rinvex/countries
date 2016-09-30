@@ -95,7 +95,7 @@ class Country
     }
 
     /**
-     * Get the native name.
+     * Get the given native name or fallback to first native name.
      *
      * @param string $language
      *
@@ -111,7 +111,7 @@ class Country
     }
 
     /**
-     * Get the native official name.
+     * Get the given native official name or fallback to first native official name.
      *
      * @param string $language
      *
@@ -187,7 +187,7 @@ class Country
     }
 
     /**
-     * Get the currency.
+     * Get the given currency or fallback to first currency.
      *
      * @param string $currency
      *
@@ -201,9 +201,8 @@ class Country
 
         $currency = $currency ? strtoupper($currency) : null;
 
-        return isset($this->attributes['currency'][$currency])
-            ? $this->attributes['currency'][$currency]
-            : current($this->attributes['currency']);
+        return isset($this->attributes['currency'][$currency]) ? $this->attributes['currency'][$currency]
+            : (isset($this->attributes['currency']) ? current($this->attributes['currency']) : null);
     }
 
     /**
@@ -247,7 +246,7 @@ class Country
     }
 
     /**
-     * Get the language.
+     * Get the given language or fallback to first language.
      *
      * @param string $language
      *
@@ -261,9 +260,8 @@ class Country
 
         $language = $language ? strtolower($language) : null;
 
-        return isset($this->attributes['languages'][$language])
-            ? $this->attributes['languages'][$language]
-            : current($this->attributes['languages']);
+        return isset($this->attributes['languages'][$language]) ? $this->attributes['languages'][$language]
+            : (isset($this->attributes['languages']) ? current($this->attributes['languages']) : null);
     }
 
     /**
@@ -500,7 +498,7 @@ class Country
     }
 
     /**
-     * Get the calling code.
+     * Get the given calling code or fallback to first calling code.
      *
      * @return string|null
      */

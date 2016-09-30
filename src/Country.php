@@ -791,4 +791,28 @@ class Country
 
         return file_exists($file) ? file_get_contents($file) : null;
     }
+
+    /**
+     * Get the divisions.
+     *
+     * @param string $division
+     *
+     * @return array|null
+     */
+    public function getDivision($division = null)
+    {
+        return ! empty($this->getDivisions()) && isset($this->getDivisions()[$division]) ? $this->getDivisions()[$division] : null;
+    }
+
+    /**
+     * Get the divisions.
+     *
+     * @return array|null
+     */
+    public function getDivisions()
+    {
+        $file = __DIR__.'/../resources/data/'.$this->getIsoAlpha2().'.divisions.json';
+
+        return file_exists($file) ? json_decode(file_get_contents($file), true) : null;
+    }
 }

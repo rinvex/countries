@@ -285,15 +285,7 @@ class Country
      */
     public function getTranslation($language = null)
     {
-        if (! isset($this->attributes['translations'])) {
-            return;
-        }
-
-        $language = $language ? strtolower($language) : null;
-
-        return isset($this->attributes['translations'][$language])
-            ? $this->attributes['translations'][$language]
-            : current($this->attributes['translations']);
+        return ! empty($this->getTranslations()) && isset($this->getTranslations()[$language]) ? $this->getTranslations()[$language] : current($this->getTranslations());
     }
 
     /**
@@ -303,7 +295,28 @@ class Country
      */
     public function getTranslations()
     {
-        return isset($this->attributes['translations']) ? $this->attributes['translations'] : null;
+        // Get english name
+        $name = [
+            'eng' => [
+                'common'   => $this->getName(),
+                'official' => $this->getOfficialName(),
+            ],
+        ];
+
+        // Get native names
+        $natives = $this->getNativeNames() ?: [];
+
+        // Get other translations
+        $file = __DIR__.'/../resources/data/'.$this->getIsoAlpha2().'.translations.json';
+        $translations = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
+
+        // Merge all names together
+        $result = array_merge($translations, $natives, $name);
+
+        // Sort alphabetically
+        ksort($result);
+
+        return $result;
     }
 
     /**

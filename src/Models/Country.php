@@ -42,7 +42,7 @@ class Country
      *
      * @return array
      */
-    public function find($code, $attributes = [])
+    public function find($code, array $attributes = [])
     {
         $result = $this->countries->only($code);
 
@@ -60,7 +60,7 @@ class Country
      *
      * @return array
      */
-    public function findBy($attribute, $value, $attributes = [])
+    public function findBy($attribute, $value, array $attributes = [])
     {
         $result = $this->countries->where($attribute, $value);
 
@@ -76,7 +76,7 @@ class Country
      *
      * @return \Illuminate\Support\Collection
      */
-    public function findAll($attributes = [])
+    public function findAll(array $attributes = [])
     {
         $countries = $this->countries;
 

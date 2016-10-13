@@ -44,10 +44,11 @@ class Loader
      * Get all countries short-listed.
      *
      * @param bool $longlist
+     * @param bool $hydrate
      *
      * @return array
      */
-    public static function countries($longlist = false)
+    public static function countries($longlist = false, $hydrate = false)
     {
         $list = $longlist ? 'longlist' : 'shortlist';
 
@@ -55,9 +56,9 @@ class Loader
             self::$countries[$list] = json_decode(file_get_contents(__DIR__.'/../resources/data/'.$list.'.json'), true);
         }
 
-        return array_map(function ($country) {
+        return $hydrate ? array_map(function ($country) {
             return new Country($country);
-        }, self::$countries[$list]);
+        }, self::$countries[$list]) : self::$countries[$list];
     }
 
     /**

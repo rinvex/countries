@@ -111,6 +111,8 @@ checks:
 
 filter:
     excluded_paths:
+        - 'build/*'
+        - 'tests/*'
         - 'vendor/*'
 
 tools:
@@ -132,6 +134,8 @@ tools:
             standard:         PSR2
         filter:
             excluded_paths:
+                - 'build/*'
+                - 'tests/*'
                 - 'vendor/*'
 
 
@@ -139,6 +143,8 @@ tools:
     php_cpd:
         enabled:              true
         excluded_dirs:
+            - 'build'
+            - 'tests'
             - 'vendor'
 
 
@@ -146,7 +152,9 @@ tools:
     php_loc:
         enabled:              true
         excluded_dirs:
-            - vendor
+            - 'build'
+            - 'tests'
+            - 'vendor'
 
 
     # PHP Mess Detector
@@ -161,6 +169,8 @@ tools:
                 - controversial
         filter:
             excluded_paths:
+                - 'build/*'
+                - 'tests/*'
                 - 'vendor/*'
 
 
@@ -168,7 +178,9 @@ tools:
     php_pdepend:
         enabled:              true
         excluded_dirs:
-            - vendor
+            - 'build'
+            - 'tests'
+            - 'vendor'
 
 
     # PHP Analyzer (https://scrutinizer-ci.com/docs/tools/php/php-analyzer/)

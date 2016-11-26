@@ -95,7 +95,7 @@ class Country
     /**
      * Get the given native name or fallback to first native name.
      *
-     * @param string $language
+     * @param string|null $language
      *
      * @return string|null
      */
@@ -112,7 +112,7 @@ class Country
     /**
      * Get the given native official name or fallback to first native official name.
      *
-     * @param string $language
+     * @param string|null $language
      *
      * @return string|null
      */
@@ -189,7 +189,7 @@ class Country
     /**
      * Get the given currency or fallback to first currency.
      *
-     * @param string $currency
+     * @param string|null $currency
      *
      * @return string|null
      */
@@ -243,7 +243,7 @@ class Country
     /**
      * Get the given language or fallback to first language.
      *
-     * @param string $language
+     * @param string|null $language
      *
      * @return string|null
      */
@@ -267,7 +267,7 @@ class Country
     /**
      * Get the translation.
      *
-     * @param string $language
+     * @param string|null $language
      *
      * @return array
      */

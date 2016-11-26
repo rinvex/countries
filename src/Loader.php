@@ -69,7 +69,7 @@ class Loader
      * @param mixed  $value
      * @param bool   $strict
      *
-     * @return static
+     * @return array
      */
     public static function where($key, $value, $strict = true)
     {
@@ -77,19 +77,20 @@ class Loader
             self::$countries['longlist'] = json_decode(self::getFile(__DIR__.'/../resources/data/longlist.json'), true);
         }
 
-        return self::filter(function ($item) use ($key, $value, $strict) {
+        return self::filter(self::$countries['longlist'], function ($item) use ($key, $value, $strict) {
             return $strict ? self::get($item, $key) === $value : self::get($item, $key) == $value;
-        }, self::$countries['longlist']);
+        });
     }
 
     /**
      * Run a filter over each of the items.
      *
+     * @param array         $items
      * @param callable|null $callback
      *
-     * @return mixed
+     * @return array
      */
-    public static function filter(callable $callback = null, $items)
+    public static function filter($items, callable $callback = null)
     {
         if ($callback) {
             $return = [];

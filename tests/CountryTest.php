@@ -205,6 +205,21 @@ class CountryTest extends PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function it_gets_dotted_attribute()
+    {
+        $this->assertEquals($this->shortAttributes['calling_code'], $this->shortCountry->get('calling_code'));
+        $this->assertEquals($this->longAttributes['name']['native']['ara']['common'], $this->longCountry->get('name.native.ara.common'));
+    }
+
+    /** @test */
+    public function it_sets_attribute()
+    {
+        $this->shortCountry->set('capital', 'Cairo');
+
+        $this->assertEquals('Cairo', $this->shortCountry->getCapital());
+    }
+
+    /** @test */
     public function its_fluently_chainable_when_sets_attributes()
     {
         $this->assertEquals($this->shortCountry, $this->shortCountry->setAttributes([]));

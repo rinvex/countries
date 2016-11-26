@@ -828,7 +828,7 @@ class Country
      *
      * @return array|null
      */
-    public function getDivision($division = null)
+    public function getDivision($division)
     {
         return ! empty($this->getDivisions()) && isset($this->getDivisions()[$division]) ? $this->getDivisions()[$division] : null;
     }

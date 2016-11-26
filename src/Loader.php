@@ -30,7 +30,7 @@ class Loader
      * @param string $code
      * @param bool   $hydrate
      *
-     * @return \Rinvex\Country\Country
+     * @return \Rinvex\Country\Country|array
      */
     public static function country($code, $hydrate = true)
     {

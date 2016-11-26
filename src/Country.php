@@ -291,7 +291,7 @@ class Country
         $natives = $this->getNativeNames() ?: [];
 
         // Get other translations
-        $file         = __DIR__.'/../resources/data/'.$this->getIsoAlpha2().'.translations.json';
+        $file         = __DIR__.'/../resources/data/'.strtolower($this->getIsoAlpha2()).'.translations.json';
         $translations = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
 
         // Merge all names together

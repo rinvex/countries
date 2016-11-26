@@ -1182,7 +1182,7 @@ class CountryTest extends PHPUnit_Framework_TestCase
     /** @test */
     public function it_returns_geojson()
     {
-        $file = __DIR__.'/../resources/data/'.$this->longCountry->getIsoAlpha2().'.geo.json';
+        $file = __DIR__.'/../resources/data/'.strtolower($this->longCountry->getIsoAlpha2()).'.geo.json';
 
         $this->assertEquals(file_get_contents($file), $this->longCountry->getGeoJson());
     }
@@ -1198,7 +1198,7 @@ class CountryTest extends PHPUnit_Framework_TestCase
     /** @test */
     public function it_returns_flag()
     {
-        $file = __DIR__.'/../resources/data/'.$this->longCountry->getIsoAlpha2().'.svg';
+        $file = __DIR__.'/../resources/data/'.strtolower($this->longCountry->getIsoAlpha2()).'.svg';
 
         $this->assertEquals(file_get_contents($file), $this->longCountry->getFlag());
     }
@@ -1214,7 +1214,7 @@ class CountryTest extends PHPUnit_Framework_TestCase
     /** @test */
     public function it_returns_divisions()
     {
-        $file = __DIR__.'/../resources/data/'.$this->longCountry->getIsoAlpha2().'.divisions.json';
+        $file = __DIR__.'/../resources/data/'.strtolower($this->longCountry->getIsoAlpha2()).'.divisions.json';
 
         $this->assertEquals(json_decode(file_get_contents($file), true), $this->longCountry->getDivisions());
     }

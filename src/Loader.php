@@ -28,16 +28,17 @@ class Loader
      * Get the country by it's ISO 3166-1 alpha-2.
      *
      * @param string $code
+     * @param bool   $hydrate
      *
      * @return \Rinvex\Country\Country
      */
-    public static function country($code)
+    public static function country($code, $hydrate = true)
     {
         if (! isset(self::$countries[$code])) {
-            self::$countries[$code] = json_decode(file_get_contents(__DIR__.'/../resources/data/'.$code.'.json'), true);
+            self::$countries[$code] = json_decode(self::getFile(__DIR__.'/../resources/data/'.$code.'.json'), true);
         }
 
-        return new Country(self::$countries[$code]);
+        return $hydrate ? new Country(self::$countries[$code]) : self::$countries[$code];
     }
 
     /**
@@ -53,7 +54,7 @@ class Loader
         $list = $longlist ? 'longlist' : 'shortlist';
 
         if (! isset(self::$countries[$list])) {
-            self::$countries[$list] = json_decode(file_get_contents(__DIR__.'/../resources/data/'.$list.'.json'), true);
+            self::$countries[$list] = json_decode(self::getFile(__DIR__.'/../resources/data/'.$list.'.json'), true);
         }
 
         return $hydrate ? array_map(function ($country) {
@@ -73,7 +74,7 @@ class Loader
     public static function where($key, $value, $strict = true)
     {
         if (! isset(self::$countries['longlist'])) {
-            self::$countries['longlist'] = json_decode(file_get_contents(__DIR__.'/../resources/data/longlist.json'), true);
+            self::$countries['longlist'] = json_decode(self::getFile(__DIR__.'/../resources/data/longlist.json'), true);
         }
 
         return self::filter(function ($item) use ($key, $value, $strict) {
@@ -200,5 +201,23 @@ class Loader
         }
 
         return $results;
+    }
+
+    /**
+     * Get contents of the given file path.
+     *
+     * @param string $filePath
+     *
+     * @throws \Rinvex\Country\CountryLoaderException
+     *
+     * @return string
+     */
+    public static function getFile($filePath)
+    {
+        if (! file_exists($filePath)) {
+            throw CountryLoaderException::invalidCountry();
+        }
+
+        return file_get_contents($filePath);
     }
 }

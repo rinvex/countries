@@ -32,8 +32,6 @@ class Country
      * @param array $attributes
      *
      * @throws \Exception
-     *
-     * @return void
      */
     public function __construct($attributes)
     {
@@ -195,13 +193,7 @@ class Country
      */
     public function getCurrency($currency = null)
     {
-        if (! isset($this->attributes['currency'])) {
-            return;
-        }
-
-        $currency = $currency ? strtoupper($currency) : null;
-
-        return isset($this->attributes['currency'][$currency]) ? $this->attributes['currency'][$currency]
+        return isset($this->attributes['currency'][strtoupper($currency)]) ? $this->attributes['currency'][strtoupper($currency)]
             : (isset($this->attributes['currency']) ? current($this->attributes['currency']) : null);
     }
 
@@ -228,7 +220,7 @@ class Country
     /**
      * Get the TLDs.
      *
-     * @return string|null
+     * @return array|null
      */
     public function getTlds()
     {
@@ -238,7 +230,7 @@ class Country
     /**
      * Get the alternative spellings.
      *
-     * @return string|null
+     * @return array|null
      */
     public function getAltSpellings()
     {
@@ -254,20 +246,14 @@ class Country
      */
     public function getLanguage($language = null)
     {
-        if (! isset($this->attributes['languages'])) {
-            return;
-        }
-
-        $language = $language ? strtolower($language) : null;
-
-        return isset($this->attributes['languages'][$language]) ? $this->attributes['languages'][$language]
+        return isset($this->attributes['languages'][strtolower($language)]) ? $this->attributes['languages'][strtolower($language)]
             : (isset($this->attributes['languages']) ? current($this->attributes['languages']) : null);
     }
 
     /**
      * Get the languages.
      *
-     * @return string|null
+     * @return array|null
      */
     public function getLanguages()
     {
@@ -279,17 +265,17 @@ class Country
      *
      * @param string $language
      *
-     * @return array|null
+     * @return array
      */
     public function getTranslation($language = null)
     {
-        return ! empty($this->getTranslations()) && isset($this->getTranslations()[$language]) ? $this->getTranslations()[$language] : current($this->getTranslations());
+        return isset($this->getTranslations()[$language]) ? $this->getTranslations()[$language] : current($this->getTranslations());
     }
 
     /**
      * Get the translations.
      *
-     * @return array|null
+     * @return array
      */
     public function getTranslations()
     {
@@ -340,7 +326,7 @@ class Country
     /**
      * Determine whether the country uses postal code.
      *
-     * @return bool
+     * @return bool|null
      */
     public function usesPostalCode()
     {
@@ -358,6 +344,16 @@ class Country
     }
 
     /**
+     * Get the longitude.
+     *
+     * @return string|null
+     */
+    public function getLongitude()
+    {
+        return isset($this->attributes['geo']['longitude']) ? $this->attributes['geo']['longitude'] : null;
+    }
+
+    /**
      * Get the described latitude.
      *
      * @return string|null
@@ -365,6 +361,16 @@ class Country
     public function getLatitudeDesc()
     {
         return isset($this->attributes['geo']['latitude_desc']) ? $this->attributes['geo']['latitude_desc'] : null;
+    }
+
+    /**
+     * Get the described longitude.
+     *
+     * @return string|null
+     */
+    public function getLongitudeDesc()
+    {
+        return isset($this->attributes['geo']['longitude_desc']) ? $this->attributes['geo']['longitude_desc'] : null;
     }
 
     /**
@@ -470,7 +476,7 @@ class Country
     /**
      * Check the landlock status.
      *
-     * @return bool
+     * @return bool|null
      */
     public function isLandlocked()
     {
@@ -505,7 +511,7 @@ class Country
     public function getCallingCode()
     {
         return isset($this->attributes['dialling']['calling_code']) ? current($this->attributes['dialling']['calling_code'])
-            : (isset($this->attributes['calling_code']) ? $this->attributes['calling_code'] : null);
+            : (isset($this->attributes['calling_code']) ? current($this->attributes['calling_code']) : null);
     }
 
     /**
@@ -563,7 +569,7 @@ class Country
      *
      * @return array|null
      */
-    public function getNationalDestinationCodeLengths()
+    public function getnationaldestinationcodelengths()
     {
         return isset($this->attributes['dialling']['national_destination_code_lengths']) ? $this->attributes['dialling']['national_destination_code_lengths'] : null;
     }
@@ -751,7 +757,7 @@ class Country
     /**
      * Determine whether the country is EU member.
      *
-     * @return bool
+     * @return bool|null
      */
     public function isEuMember()
     {
@@ -786,7 +792,7 @@ class Country
      */
     public function getGeoJson()
     {
-        $file = __DIR__.'/../resources/data/'.$this->getIsoAlpha2().'.geo.json';
+        $file = __DIR__.'/../resources/data/'.strtolower($this->getIsoAlpha2()).'.geo.json';
 
         return file_exists($file) ? file_get_contents($file) : null;
     }
@@ -798,9 +804,21 @@ class Country
      */
     public function getFlag()
     {
-        $file = __DIR__.'/../resources/data/'.$this->getIsoAlpha2().'.svg';
+        $file = __DIR__.'/../resources/data/'.strtolower($this->getIsoAlpha2()).'.svg';
 
         return file_exists($file) ? file_get_contents($file) : null;
+    }
+
+    /**
+     * Get the divisions.
+     *
+     * @return array|null
+     */
+    public function getDivisions()
+    {
+        $file = __DIR__.'/../resources/data/'.strtolower($this->getIsoAlpha2()).'.divisions.json';
+
+        return file_exists($file) ? json_decode(file_get_contents($file), true) : null;
     }
 
     /**
@@ -813,17 +831,5 @@ class Country
     public function getDivision($division = null)
     {
         return ! empty($this->getDivisions()) && isset($this->getDivisions()[$division]) ? $this->getDivisions()[$division] : null;
-    }
-
-    /**
-     * Get the divisions.
-     *
-     * @return array|null
-     */
-    public function getDivisions()
-    {
-        $file = __DIR__.'/../resources/data/'.$this->getIsoAlpha2().'.divisions.json';
-
-        return file_exists($file) ? json_decode(file_get_contents($file), true) : null;
     }
 }

@@ -109,7 +109,7 @@ class Country
             if (is_array($array) && array_key_exists($segment, $array)) {
                 $array = $array[$segment];
             } else {
-                return value($default);
+                return $default;
             }
         }
 

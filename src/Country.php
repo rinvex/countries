@@ -39,9 +39,9 @@ class Country
         $this->setAttributes($attributes);
 
         // Check required mandatory attributes
-        if (! $this->getName() || ! $this->getOfficialName()
-            || ! $this->getNativeName() || ! $this->getNativeOfficialName()
-            || ! $this->getIsoAlpha2() || ! $this->getIsoAlpha3()) {
+        if (empty($this->getName()) || ! empty($this->getOfficialName())
+            || empty($this->getNativeName()) || empty($this->getNativeOfficialName())
+            || empty($this->getIsoAlpha2()) || empty($this->getIsoAlpha3())) {
             throw new Exception('Missing mandatory country attributes!');
         }
     }
@@ -103,7 +103,8 @@ class Country
     {
         $language = $language ? strtolower($language) : null;
 
-        return isset($this->attributes['name']['native'][$language]['common']) ? $this->attributes['name']['native'][$language]['common']
+        return isset($this->attributes['name']['native'][$language]['common'])
+            ? $this->attributes['name']['native'][$language]['common']
             : (isset($this->attributes['name']['native']) ? current($this->attributes['name']['native'])['common']
                 : (isset($this->attributes['native_name']) ? $this->attributes['native_name'] : null));
     }
@@ -119,7 +120,8 @@ class Country
     {
         $language = $language ? strtolower($language) : null;
 
-        return isset($this->attributes['name']['native'][$language]['official']) ? $this->attributes['name']['native'][$language]['official']
+        return isset($this->attributes['name']['native'][$language]['official'])
+            ? $this->attributes['name']['native'][$language]['official']
             : (isset($this->attributes['name']['native']) ? current($this->attributes['name']['native'])['official']
                 : (isset($this->attributes['native_official_name']) ? $this->attributes['native_official_name'] : null));
     }
@@ -193,7 +195,8 @@ class Country
      */
     public function getCurrency($currency = null)
     {
-        return isset($this->attributes['currency'][strtoupper($currency)]) ? $this->attributes['currency'][strtoupper($currency)]
+        return isset($this->attributes['currency'][strtoupper($currency)])
+            ? $this->attributes['currency'][strtoupper($currency)]
             : (isset($this->attributes['currency']) ? current($this->attributes['currency']) : null);
     }
 
@@ -246,7 +249,8 @@ class Country
      */
     public function getLanguage($language = null)
     {
-        return isset($this->attributes['languages'][strtolower($language)]) ? $this->attributes['languages'][strtolower($language)]
+        return isset($this->attributes['languages'][strtolower($language)])
+            ? $this->attributes['languages'][strtolower($language)]
             : (isset($this->attributes['languages']) ? current($this->attributes['languages']) : null);
     }
 
@@ -269,7 +273,8 @@ class Country
      */
     public function getTranslation($language = null)
     {
-        return isset($this->getTranslations()[$language]) ? $this->getTranslations()[$language] : current($this->getTranslations());
+        return isset($this->getTranslations()[$language])
+            ? $this->getTranslations()[$language] : current($this->getTranslations());
     }
 
     /**
@@ -510,7 +515,8 @@ class Country
      */
     public function getCallingCode()
     {
-        return isset($this->attributes['dialling']['calling_code']) ? current($this->attributes['dialling']['calling_code'])
+        return isset($this->attributes['dialling']['calling_code'])
+            ? current($this->attributes['dialling']['calling_code'])
             : (isset($this->attributes['calling_code']) ? current($this->attributes['calling_code']) : null);
     }
 
@@ -521,7 +527,8 @@ class Country
      */
     public function getCallingCodes()
     {
-        return isset($this->attributes['dialling']['calling_code']) ? $this->attributes['dialling']['calling_code'] : null;
+        return isset($this->attributes['dialling']['calling_code'])
+            ? $this->attributes['dialling']['calling_code'] : null;
     }
 
     /**
@@ -531,7 +538,8 @@ class Country
      */
     public function getNationalPrefix()
     {
-        return isset($this->attributes['dialling']['national_prefix']) ? $this->attributes['dialling']['national_prefix'] : null;
+        return isset($this->attributes['dialling']['national_prefix'])
+            ? $this->attributes['dialling']['national_prefix'] : null;
     }
 
     /**
@@ -541,7 +549,8 @@ class Country
      */
     public function getNationalNumberLength()
     {
-        return isset($this->attributes['dialling']['national_number_lengths']) ? current($this->attributes['dialling']['national_number_lengths']) : null;
+        return isset($this->attributes['dialling']['national_number_lengths'])
+            ? current($this->attributes['dialling']['national_number_lengths']) : null;
     }
 
     /**
@@ -551,7 +560,8 @@ class Country
      */
     public function getNationalNumberLengths()
     {
-        return isset($this->attributes['dialling']['national_number_lengths']) ? $this->attributes['dialling']['national_number_lengths'] : null;
+        return isset($this->attributes['dialling']['national_number_lengths'])
+            ? $this->attributes['dialling']['national_number_lengths'] : null;
     }
 
     /**
@@ -561,7 +571,8 @@ class Country
      */
     public function getNationalDestinationCodeLength()
     {
-        return isset($this->attributes['dialling']['national_destination_code_lengths']) ? current($this->attributes['dialling']['national_destination_code_lengths']) : null;
+        return isset($this->attributes['dialling']['national_destination_code_lengths'])
+            ? current($this->attributes['dialling']['national_destination_code_lengths']) : null;
     }
 
     /**
@@ -571,7 +582,8 @@ class Country
      */
     public function getnationaldestinationcodelengths()
     {
-        return isset($this->attributes['dialling']['national_destination_code_lengths']) ? $this->attributes['dialling']['national_destination_code_lengths'] : null;
+        return isset($this->attributes['dialling']['national_destination_code_lengths'])
+            ? $this->attributes['dialling']['national_destination_code_lengths'] : null;
     }
 
     /**
@@ -581,7 +593,8 @@ class Country
      */
     public function getInternationalPrefix()
     {
-        return isset($this->attributes['dialling']['international_prefix']) ? $this->attributes['dialling']['international_prefix'] : null;
+        return isset($this->attributes['dialling']['international_prefix'])
+            ? $this->attributes['dialling']['international_prefix'] : null;
     }
 
     /**
@@ -751,7 +764,8 @@ class Country
      */
     public function getAddressFormat()
     {
-        return isset($this->attributes['extra']['address_format']) ? $this->attributes['extra']['address_format'] : null;
+        return isset($this->attributes['extra']['address_format'])
+            ? $this->attributes['extra']['address_format'] : null;
     }
 
     /**
@@ -830,6 +844,7 @@ class Country
      */
     public function getDivision($division)
     {
-        return ! empty($this->getDivisions()) && isset($this->getDivisions()[$division]) ? $this->getDivisions()[$division] : null;
+        return ! empty($this->getDivisions()) && isset($this->getDivisions()[$division])
+            ? $this->getDivisions()[$division] : null;
     }
 }

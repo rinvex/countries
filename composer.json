@@ -37,9 +37,17 @@
         "php": ">=5.5.9",
         "illuminate/support": "5.1.*|5.2.*|5.3.*"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^5.2.0"
+    },
     "autoload": {
         "psr-4": {
             "Rinvex\\Country\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rinvex\\Authy\\Test\\": "tests"
         }
     },
     "extra": {

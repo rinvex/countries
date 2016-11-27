@@ -23,4 +23,5 @@ after_script:
 
 notifications:
   slack:
-    secure: "FWUqrJVQ9TbcdWLkIEiUCDYTbuDSWjC/cYE+oXf6RCOOK1DtLVXuKDvm/0x7MC+45RKuuhgxEQdAQyKbAINvtniRSChh4cVqv5x9Dq8xVW4iMhPWFQUgFCovm0P0Ra+6LyEJt7aEkSTLrRpcm+vmNS5f5m3achxmpEddCTSQZks="
+    rooms:
+      - secure: "EKZNsrwz/l+AzTtSEKDw+C+fKMUhTDVO53ZmTfUStFPRZjMObctcH7nOW7h8IvUAFNnBclEGOEjmkJLFo7zttyB+S9g1krcfgZHofMaDHReGxGc0QaGcYyDfqTkcR8n+B3q36Z0f7ymmoWDllLAfhgxvfml7reNoVtmFF5YQ3hM="

@@ -38,14 +38,14 @@ class CountryTest extends PHPUnit_Framework_TestCase
         parent::setUp();
 
         $this->shortAttributes = [
-            'name' => 'Egypt',
-            'official_name' => 'Arab Republic of Egypt',
-            'native_name' => 'مصر',
+            'name'                 => 'Egypt',
+            'official_name'        => 'Arab Republic of Egypt',
+            'native_name'          => 'مصر',
             'native_official_name' => 'جمهورية مصر العربية',
-            'iso_3166_1_alpha2' => 'EG',
-            'iso_3166_1_alpha3' => 'EGY',
-            'calling_code' => ['20'],
-            'emoji'          => '🇪🇬'
+            'iso_3166_1_alpha2'    => 'EG',
+            'iso_3166_1_alpha3'    => 'EGY',
+            'calling_code'         => ['20'],
+            'emoji'                => '🇪🇬',
         ];
 
         $this->longAttributes = [
@@ -55,7 +55,7 @@ class CountryTest extends PHPUnit_Framework_TestCase
                 'native'   => [
                     'ara' => [
                         'common'   => 'مصر',
-                        'official' => 'جمهورية مصر العربية'
+                        'official' => 'جمهورية مصر العربية',
                     ],
                 ],
             ],
@@ -74,18 +74,18 @@ class CountryTest extends PHPUnit_Framework_TestCase
             ],
             'tld'                => [
                 '.eg',
-                '.مصر'
+                '.مصر',
             ],
             'alt_spellings'      => [
                 'EG',
-                'Arab Republic of Egypt'
+                'Arab Republic of Egypt',
             ],
             'languages'          => [
-                'ara' => 'Arabic'
+                'ara' => 'Arabic',
             ],
             'geo'                => [
                 'continent'      => [
-                    'AF' => 'Africa'
+                    'AF' => 'Africa',
                 ],
                 'postal_code'    => true,
                 'latitude'       => '27 00 N',
@@ -106,22 +106,22 @@ class CountryTest extends PHPUnit_Framework_TestCase
                 'borders'        => [
                     'ISR',
                     'LBY',
-                    'SDN'
+                    'SDN',
                 ],
-                'independent'    => 'Yes'
+                'independent'    => 'Yes',
             ],
             'dialling'           => [
                 'calling_code'                      => [
-                    '20'
+                    '20',
                 ],
                 'national_prefix'                   => '0',
                 'national_number_lengths'           => [
-                    9
+                    9,
                 ],
                 'national_destination_code_lengths' => [
-                    2
+                    2,
                 ],
-                'international_prefix'              => '00'
+                'international_prefix'              => '00',
             ],
             'extra'              => [
                 'geonameid'      => 357994,
@@ -142,33 +142,33 @@ class CountryTest extends PHPUnit_Framework_TestCase
                 'address_format' => '{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}',
                 'eu_member'      => null,
                 'vat_rates'      => null,
-                'emoji'          => '🇪🇬'
+                'emoji'          => '🇪🇬',
             ],
             'divisions' => [
                 'ALX' => [
-                    'name' => 'Al Iskandariyah',
+                    'name'      => 'Al Iskandariyah',
                     'alt_names' => [
                         'El Iskandariya',
                         'al-Iskandariyah',
                         'al-Iskandarīyah',
                         'Alexandria',
                         'Alexandrie',
-                        'Alexandria'
+                        'Alexandria',
                     ],
                     'geo' => [
-                        'latitude' => 31.2000924,
-                        'longitude' => 29.9187387,
-                        'min_latitude' => 31.1173177,
+                        'latitude'      => 31.2000924,
+                        'longitude'     => 29.9187387,
+                        'min_latitude'  => 31.1173177,
                         'min_longitude' => 29.8233701,
-                        'max_latitude' => 31.330904,
-                        'max_longitude' => 30.0864016
-                    ]
+                        'max_latitude'  => 31.330904,
+                        'max_longitude' => 30.0864016,
+                    ],
                 ],
-            ]
+            ],
         ];
 
         $this->shortCountry = new Country($this->shortAttributes);
-        $this->longCountry = new Country($this->longAttributes);
+        $this->longCountry  = new Country($this->longAttributes);
     }
 
     /** @test */

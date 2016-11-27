@@ -74,7 +74,7 @@ class Country
      * Set single attribute.
      *
      * @param string $key
-     * @param mixed $value
+     * @param mixed  $value
      *
      * @return $this
      */
@@ -88,8 +88,8 @@ class Country
     /**
      * Get an item from attributes array using "dot" notation.
      *
-     * @param  string  $key
-     * @param  mixed   $default
+     * @param string $key
+     * @param mixed  $default
      *
      * @return mixed
      */

@@ -1,61 +1,41 @@
 # Rinvex Country
 
-**Rinvex Country** is a simple and lightweight package for retrieving country details with flexibility. A whole bunch of data including name, demonym, capital, iso codes, dialling codes, geo data, currencies, and other attributes for all 250 countries worldwide at your fingertips.
+**Rinvex Country** is a simple and lightweight package for retrieving country details with flexibility. A whole bunch of data including name, demonym, capital, iso codes, dialling codes, geo data, currencies, flags, emoji, and other attributes for all 250 countries worldwide at your fingertips.
 
 [![Packagist](https://img.shields.io/packagist/v/rinvex/country.svg?label=Packagist&style=flat-square)](https://packagist.org/packages/rinvex/country)
-[![License](https://img.shields.io/packagist/l/rinvex/country.svg?label=License&style=flat-square)](https://github.com/rinvex/country/blob/develop/LICENSE)
-[![VersionEye Dependencies](https://img.shields.io/versioneye/d/php/rinvex:repository.svg?label=Dependencies&style=flat-square)](https://www.versioneye.com/php/rinvex:repository/)
+[![VersionEye Dependencies](https://img.shields.io/versioneye/d/php/rinvex:country.svg?label=Dependencies&style=flat-square)](https://www.versioneye.com/php/rinvex:country/)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/rinvex/country.svg?label=Scrutinizer&style=flat-square)](https://scrutinizer-ci.com/g/rinvex/country/)
 [![Code Climate](https://img.shields.io/codeclimate/github/rinvex/country.svg?label=CodeClimate&style=flat-square)](https://codeclimate.com/github/rinvex/country)
-[![StyleCI](https://styleci.io/repos/66037019/shield)](https://styleci.io/repos/66037019)
+[![Travis](https://img.shields.io/travis/rinvex/country.svg?label=TravisCI&style=flat-square)](https://travis-ci.org/rinvex/country)
 [![SensioLabs Insight](https://img.shields.io/sensiolabs/i/f2dca242-eb65-4bcc-8481-cd27ea16c804.svg?label=SensioLabs&style=flat-square)](https://insight.sensiolabs.com/projects/f2dca242-eb65-4bcc-8481-cd27ea16c804)
+[![StyleCI](https://styleci.io/repos/66037019/shield)](https://styleci.io/repos/66037019)
+[![License](https://img.shields.io/packagist/l/rinvex/country.svg?label=License&style=flat-square)](https://github.com/rinvex/country/blob/develop/LICENSE)
 
 
-## Quick Example (TL;DR)
+## Usage
 
 Install via `composer require rinvex/country`, then use as follows:
 ```php
-use Rinvex\Country\Models\Country;
+use Rinvex\Country\Loader;
 
-// Find a country by it's ISO 3166-1 alpha-2
-$egypt = (new Country)->find('EG');
+// Find a country by it's ISO 3166-1 alpha-2 (full country details)
+$egypt = country('eg'); // OR
+$egypt = Loader::country('eg');
 
-// Find a country by one of it's attributes
-$usa = (new Country)->findBy('capital', 'Washington D.C.');
-
-// Find all countries
-$countries = (new Country)->findAll();
-
-// Retrieve only `name`, `demonym`, and `currency` attributes of "Japan":
-$japan = (new Country)->find('JP', ['name', 'demonym', 'currency']);
-
-// Utilize Laravel Collections to get an array of all country names, with their 'iso_3166_1_alpha2' as the array keys
-$allCountries = (new Country)->findAll()->pluck('name.common', 'iso_3166_1_alpha2');
+// Find all countries as array (short-listed, common country details)
+$countries = countries(); // OR
+$countries = Loader::countries();
 ```
 
----
-
-**Mission accomplished! You're good to use this package right now! :white_check_mark:**
-
-**Unless you're new to this kind of stuff, you can skip the following steps! :wink:**
-
----
+> **Note:** This package is framework-agnostic, so it's compatible with any PHP framework whatsoever without any dependencies at all, except for the PHP version itself **>=5.5.9**. Awesome, huh? :smiley:
 
 
 ## Table Of Contents
 
-- [Installation](#installation)
-    - [Compatibility](#compatibility)
-    - [Prerequisites](#prerequisites)
-    - [Require Package](#require-package)
-    - [Install Dependencies](#install-dependencies)
-- [Integration](#integration)
-    - [Native Integration](#native-integration)
-    - [Laravel Integration](#laravel-integration)
-- [Usage](#usage)
-- [Country Example](#country-example)
+- [Country Object](#country-object)
+- [Country Details](#country-details)
 - [Features Explained](#features-explained)
-- [Inspired By](#inspired-by)
+- [Data Sources](#data-sources)
 - [Changelog](#changelog)
 - [Support](#support)
 - [Contributing & Protocols](#contributing--protocols)
@@ -64,93 +44,89 @@ $allCountries = (new Country)->findAll()->pluck('name.common', 'iso_3166_1_alpha
 - [License](#license)
 
 
-## Installation
+## Country Object
 
-The best and easiest way to install this package is through [Composer](https://getcomposer.org/).
-
-### Compatibility
-
-This package fully compatible with **Laravel** `5.1.*`, `5.2.*`, and `5.3.*`.
-
-While this package tends to be framework-agnostic, it embraces Laravel culture and best practices to some extent. It's tested mainly with Laravel but you still can use it with other frameworks or even without any framework if you want.
-
-### Prerequisites
-
-```json
-"php": ">=5.5.9",
-"illuminate/support": "5.1.*|5.2.*|5.3.*"
-```
-
-### Require Package
-
-Open your application's `composer.json` file and add the following line to the `require` array:
-```json
-"rinvex/country": "1.0.*"
-```
-
-> **Note:** Make sure that after the required changes your `composer.json` file is valid by running `composer validate`.
-
-### Install Dependencies
-
-On your terminal run `composer install` or `composer update` command according to your application's status to install the new requirements.
-
-> **Note:** Checkout Composer's [Basic Usage](https://getcomposer.org/doc/01-basic-usage.md) documentation for further details.
-
-
-## Integration
-
-**Rinvex Repository** package is framework-agnostic and as such can be integrated easily natively or with your favorite framework.
-
-### Native Integration
-
-Integrating the package outside of a framework is incredibly easy, just require the `vendor/autoload.php` file to autoload the package.
-
-> **Note:** Checkout Composer's [Autoloading](https://getcomposer.org/doc/01-basic-usage.md#autoloading) documentation for further details.
-
-### Laravel Integration
-
-Integrating the package inside Laravel framework takes much less work, actually it doesn't require any integration steps after installation. Just jump directly to the [Usage](#usage) section. Awesome, huh?
-
-
-## Usage
-
-Using this package is pretty easy, and straightforward. It provides you with few simple and intuitive API.
-
-First you need to import `Rinvex\Country\Models\Country` class in your file, then you can use any of the `Country` class methods, as follows:
+Get country attributes (self-descriptive):
 ```php
-use Rinvex\Country\Models\Country;
+$egypt = country('eg');
+
+$egypt->getName(); // Egypt
+$egypt->getOfficialName(); // Arab Republic of Egypt
+$egypt->getNativeName(); // مصر
+$egypt->getNativeOfficialName(); // جمهورية مصر العربية
+$egypt->getNativeNames(); // {"ara":{"official":"جمهورية مصر العربية","common":"مصر"}}
+$egypt->getDemonym(); // Egyptian
+$egypt->getCapital(); // Cairo
+$egypt->getIsoAlpha2(); // EG
+$egypt->getIsoAlpha3(); // EGY
+$egypt->getIsoNumeric(); // 818
+$egypt->getCurrency(); // {"iso_4217_code":"EGP","iso_4217_numeric":818,"iso_4217_name":"Egyptian Pound","iso_4217_minor_unit":2}
+$egypt->getCurrencies(); // {"EGP":{"iso_4217_code":"EGP","iso_4217_numeric":818,"iso_4217_name":"Egyptian Pound","iso_4217_minor_unit":2}}
+$egypt->getTld(); // .eg
+$egypt->getTlds(); // [".eg",".مصر"]
+$egypt->getAltSpellings(); // ["EG","Arab Republic of Egypt"]
+$egypt->getLanguage(); // Arabic
+$egypt->getLanguages(); // {"ara":"Arabic"}
+$egypt->getTranslation(); // {"official":"جمهورية مصر العربية","common":"مصر"}
+$egypt->getTranslations(); // {"ara":{"official":"جمهورية مصر العربية","common":"مصر"},"cym":{"official":"Arab Republic of Egypt","common":"Yr Aifft"},"deu":{"official":"Arabische Republik Ägypten","common":"Ägypten"},"fra":{"official":"République arabe d'Égypte","common":"Égypte"},"hrv":{"official":"Arapska Republika Egipat","common":"Egipat"},"ita":{"official":"Repubblica araba d'Egitto","common":"Egitto"},"jpn":{"official":"エジプト·アラブ共和国","common":"エジプト"},"nld":{"official":"Arabische Republiek Egypte","common":"Egypte"},"por":{"official":"República Árabe do Egipto","common":"Egito"},"rus":{"official":"Арабская Республика Египет","common":"Египет"},"spa":{"official":"República Árabe de Egipto","common":"Egipto"},"fin":{"official":"Egyptin arabitasavalta","common":"Egypti"}}
+$egypt->getGeodata(); // {"continent":{"AF":"Africa"},"postal_code":true,"latitude":"27 00 N","latitude_dec":"26.756103515625","longitude":"30 00 E","longitude_dec":"29.86229705810547","max_latitude":"31.916667","max_longitude":"36.333333","min_latitude":"20.383333","min_longitude":"24.7","area":1002450,"region":"Africa","subregion":"Northern Africa","world_region":"EMEA","region_code":"002","subregion_code":"015","landlocked":false,"borders":["ISR","LBY","SDN"],"independent":"Yes"}
+$egypt->getContinent(); // Africa
+$egypt->usesPostalCode(); // true
+$egypt->getLatitude(); // 27 00 N
+$egypt->getLongitude(); // 30 00 E
+$egypt->getLatitudeDesc(); // 26.756103515625
+$egypt->getLongitudeDesc(); // 29.86229705810547
+$egypt->getMaxLatitude(); // 31.916667
+$egypt->getMaxLongitude(); // 36.333333
+$egypt->getMinLatitude(); // 20.383333
+$egypt->getMinLongitude(); // 24.7
+$egypt->getArea(); // 1002450
+$egypt->getRegion(); // Africa
+$egypt->getSubregion(); // Northern Africa
+$egypt->getWorldRegion(); // EMEA
+$egypt->getRegionCode(); // 002
+$egypt->getSubregionCode(); // 015
+$egypt->isLandlocked(); // false
+$egypt->getBorders(); // ["ISR","LBY","SDN"]
+$egypt->isIndependent(); // Yes
+$egypt->getCallingCode(); // 20
+$egypt->getCallingCodes(); // ["20"]
+$egypt->getNationalPrefix(); // 0
+$egypt->getNationalNumberLength(); // 9
+$egypt->getNationalNumberLengths(); // [9]
+$egypt->getNationalDestinationCodeLength(); // 2
+$egypt->getnationaldestinationcodelengths(); // [2]
+$egypt->getInternationalPrefix(); // "00"
+$egypt->getExtra(); // {"geonameid":357994,"edgar":"H2","itu":"EGY","marc":"ua","wmo":"EG","ds":"ET","fifa":"EGY","fips":"EG","gaul":40765,"ioc":"EGY","cowc":"EGY","cown":651,"fao":59,"imf":469,"ar5":"MAF","address_format":"{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}","eu_member":null,"vat_rates":null,"emoji":"🇪🇬"}
+$egypt->getGeonameid(); // 357994
+$egypt->getEdgar(); // H2
+$egypt->getItu(); // EGY
+$egypt->getMarc(); // ua
+$egypt->getWmo(); // EG
+$egypt->getDs(); // ET
+$egypt->getFifa(); // EGY
+$egypt->getFips(); // EG
+$egypt->getGaul(); // 40765
+$egypt->getIoc(); // EGY
+$egypt->getCowc(); // EGY
+$egypt->getCown(); // 651
+$egypt->getFao(); // 59
+$egypt->getImf(); // 469
+$egypt->getAr5(); // MAF
+$egypt->getAddressFormat(); // {{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}
+$egypt->isEuMember(); // null
+$egypt->getVatRates(); // null
+$egypt->getEmoji(); // 🇪🇬
+$egypt->getGeoJson(); // GeoJson data returned as string
+$egypt->getFlag(); // SVG data returned as string
+$egypt->getDivisions(); // Divisions returned as array
+$egypt->getDivision("ALX"); // {"name":"Al Iskandariyah","alt_names":["El Iskandariya","al-Iskandariyah","al-Iskandarīyah","Alexandria","Alexandrie","Alexandria"],"geo":{"latitude":31.2000924,"longitude":29.9187387,"min_latitude":31.1173177,"min_longitude":29.8233701,"max_latitude":31.330904,"max_longitude":30.0864016}}
 ```
 
-The `find` method finds a country by it's ISO 3166-1 alpha-2, and returns an array of first result:
-```php
-$egypt = (new Country)->find('EG');
-```
-
-The `findBy` method finds a country by one of it's attributes, and returns an array of first result:
-```php
-$usa = (new Country)->findBy('capital', 'Washington D.C.');
-```
-
-The `findAll` method finds all countries, and returns a collection of all results:
-```php
-$countries = (new Country)->findAll();
-```
-
-This package utilizes [Laravel Collections](https://laravel.com/docs/5.2/collections), so you can just manipulate `findAll` method results the way you need. Example:
-```php
-// Get an array of all country names, with their 'iso_3166_1_alpha2' as the array keys
-$allCountries = (new Country)->findAll()->pluck('name.common', 'iso_3166_1_alpha2');
-```
-
-> **Note:** All `find*` methods have an optional parameter for retrieved columns/attributes, see the following example:
-
-Retrieve only `name`, `demonym`, and `currency` attributes of "Japan":
-```php
-$japan = (new Country)->find('JP', ['name', 'demonym', 'currency']);
-```
+> **Note:** When retrieving single country, you'll get the full country details just like the previous example. But when retrieving all countries, you'll get a short-listed result set with common country details for better performance.
 
 
-## Country Example
+## Country Details
 
 ```json
 {
@@ -241,9 +217,9 @@ $japan = (new Country)->find('JP', ['name', 'demonym', 'currency']);
             },
             "postal_code": true,
             "latitude": "27 00 N",
-            "latitude_dec": "26.756103515625",
+            "latitude_desc": "26.756103515625",
             "longitude": "30 00 E",
-            "longitude_dec": "29.86229705810547",
+            "longitude_desc": "29.86229705810547",
             "max_latitude": "31.916667",
             "max_longitude": "36.333333",
             "min_latitude": "20.383333",
@@ -293,7 +269,8 @@ $japan = (new Country)->find('JP', ['name', 'demonym', 'currency']);
             "ar5": "MAF",
             "address_format": "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
             "eu_member": null,
-            "vat_rates": null
+            "vat_rates": null,
+            "emoji": "🇪🇬"
         }
     }
 }
@@ -337,11 +314,11 @@ $japan = (new Country)->find('JP', ['name', 'demonym', 'currency']);
     - `continent` - continents that country lies in
         - key: two-letter continent code
         - value: name of the continent in english
-    - `postal_code` - geographical area postal code
+    - `postal_code` - whether the country uses postal codes
     - `latitude` - short form of latitude coordinate point
-    - `latitude_dec` - described latitude coordinate point
+    - `latitude_desc` - described latitude coordinate point
     - `longitude` - short form of longitude coordinate point
-    - `longitude_dec` - described longitude coordinate point
+    - `longitude_desc` - described longitude coordinate point
     - `max_latitude` - maximum latitude coordinate point
     - `max_longitude` - maximum longitude coordinate point
     - `min_latitude` - minimum latitude coordinate point
@@ -352,7 +329,7 @@ $japan = (new Country)->find('JP', ['name', 'demonym', 'currency']);
     - `world_region` - geographical world region
     - `region_code` - geographical region numeric code
     - `subregion_code` - geographical sub-region numeric code 
-    - `landlocked` - landlocked status
+    - `landlocked` - landlock status
     - `borders` - land borders
     - `independent` - independent status
 - `dialling`
@@ -380,23 +357,26 @@ $japan = (new Country)->find('JP', ['name', 'demonym', 'currency']);
     - `address_format` - Address forma
     - `eu_member` - European Union Member
     - `vat_rates` - Value-Added Tax
+    - `emoji` - Emoji Flag
 
 
-## Inspired By
+## Data Sources
 
-This package has been inspired by, and used some country data of the following open-source projects:
-
-- https://en.wikipedia.org
-- https://github.com/hexorx/countries
-- https://github.com/mledoze/countries
-- https://github.com/annexare/Countries
-- https://github.com/umpirsky/country-list
-- https://github.com/datasets/country-list
-- https://github.com/datasets/country-codes
-- https://github.com/sripaulgit/country-codes
-- https://github.com/alexrabarts/iso_country_codes
-- https://github.com/vincentarelbundock/countrycode
-- https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes
+- Currency Data (27th Sep, 2016): http://www.currency-iso.org
+- Emoji Flags (27th Sep, 2016): http://unicode.org/emoji/charts/full-emoji-list.html
+- World Borders (27th Sep, 2016): http://thematicmapping.org/downloads/world_borders.php
+- GeoJson & SVG Flags (27th Sep, 2016): https://github.com/mledoze/countries/tree/master/data
+- Main Country Data, Regions, and Subdivisions (27th Sep, 2016): https://github.com/hexorx/countries
+- Other Resources:
+    - https://en.wikipedia.org
+    - https://github.com/annexare/Countries
+    - https://github.com/umpirsky/country-list
+    - https://github.com/datasets/country-list
+    - https://github.com/datasets/country-codes
+    - https://github.com/sripaulgit/country-codes
+    - https://github.com/alexrabarts/iso_country_codes
+    - https://github.com/vincentarelbundock/countrycode
+    - https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes
 
 
 ## Changelog

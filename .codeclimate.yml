@@ -32,4 +32,7 @@ ratings:
   - "**.php"
   - "**.py"
   - "**.rb"
-exclude_paths: []
+exclude_paths:
+- "build/*"
+- "tests/*"
+- "vendor/*"

@@ -19,16 +19,37 @@ Install via `composer require rinvex/country`, then use as follows:
 use Rinvex\Country\Loader;
 
 // Find a country by it's ISO 3166-1 alpha-2 (full country details)
-$egypt = country('eg'); // OR 
+$egypt = country('eg'); // OR
 $egypt = Loader::country('eg');
 
 // Find all countries as array (short-listed, common country details)
-$countries = countries(); // OR 
+$countries = countries(); // OR
 $countries = Loader::countries();
 ```
 
-Deal with country objects (self-descriptive)
+> **Note:** This package is framework-agnostic, so it's compatible with any PHP framework whatsoever without any dependencies at all, except for the PHP version itself **>=5.5.9**. Awesome, huh? :smiley:
+
+
+## Table Of Contents
+
+- [Country Object](#country-object)
+- [Country Details](#country-details)
+- [Features Explained](#features-explained)
+- [Data Sources](#data-sources)
+- [Changelog](#changelog)
+- [Support](#support)
+- [Contributing & Protocols](#contributing--protocols)
+- [Security Vulnerabilities](#security-vulnerabilities)
+- [About Rinvex](#about-rinvex)
+- [License](#license)
+
+
+## Country Object
+
+Get country attributes (self-descriptive):
 ```php
+$egypt = country('eg');
+
 $egypt->getName(); // Egypt
 $egypt->getOfficialName(); // Arab Republic of Egypt
 $egypt->getNativeName(); // مصر
@@ -102,27 +123,10 @@ $egypt->getDivisions(); // Divisions returned as array
 $egypt->getDivision("ALX"); // {"name":"Al Iskandariyah","alt_names":["El Iskandariya","al-Iskandariyah","al-Iskandarīyah","Alexandria","Alexandrie","Alexandria"],"geo":{"latitude":31.2000924,"longitude":29.9187387,"min_latitude":31.1173177,"min_longitude":29.8233701,"max_latitude":31.330904,"max_longitude":30.0864016}}
 ```
 
-> **Note:** This package is framework-agnostic, so it's compatible with any PHP framework whatsoever without any dependencies at all, except for the PHP version itself **>=5.5.9**. Awesome, huh? :smiley:
-
----
-
-
-## Table Of Contents
-
-- [Country Details](#country-details)
-- [Features Explained](#features-explained)
-- [Data Sources](#data-sources)
-- [Changelog](#changelog)
-- [Support](#support)
-- [Contributing & Protocols](#contributing--protocols)
-- [Security Vulnerabilities](#security-vulnerabilities)
-- [About Rinvex](#about-rinvex)
-- [License](#license)
+> **Note:** When retrieving single country, you'll get the full country details just like the previous example. But when retrieving all countries, you'll get a short-listed result set with common country details for better performance.
 
 
 ## Country Details
-
-> **Note:** When retrieving single country, you'll get the full country details just like the following example. But when retrieving all countries, you'll get a short-listed result set with common country details for better performance.
 
 ```json
 {

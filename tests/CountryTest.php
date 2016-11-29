@@ -16,8 +16,8 @@
 namespace Rinvex\Country\Test;
 
 use Exception;
-use PHPUnit_Framework_TestCase;
 use Rinvex\Country\Country;
+use PHPUnit_Framework_TestCase;
 
 class CountryTest extends PHPUnit_Framework_TestCase
 {

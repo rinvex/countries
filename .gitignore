@@ -1,5 +1,6 @@
 /build
 /vendor
 /node_modules
+phpunit.xml
 composer.phar
 composer.lock

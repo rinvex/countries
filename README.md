@@ -366,7 +366,7 @@ $egypt->getDivision("ALX"); // {"name":"Al Iskandariyah","alt_names":["El Iskand
 - Emoji Flags (27th Sep, 2016): http://unicode.org/emoji/charts/full-emoji-list.html
 - World Borders (27th Sep, 2016): http://thematicmapping.org/downloads/world_borders.php
 - GeoJson & SVG Flags (27th Sep, 2016): https://github.com/mledoze/countries/tree/master/data
-- Main Country Data, Regions, and Subdivisions (27th Sep, 2016): https://github.com/hexorx/countries
+- Main Country Data, Regions, and Divisions (27th Sep, 2016): https://github.com/hexorx/countries
 - Other Resources:
     - https://en.wikipedia.org
     - https://github.com/annexare/Countries

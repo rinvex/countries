@@ -168,7 +168,7 @@ class CountryTest extends PHPUnit_Framework_TestCase
         ];
 
         $this->shortCountry = new Country($this->shortAttributes);
-        $this->longCountry  = new Country($this->longAttributes);
+        $this->longCountry = new Country($this->longAttributes);
     }
 
     /** @test */

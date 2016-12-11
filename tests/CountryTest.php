@@ -212,6 +212,18 @@ class CountryTest extends PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function it_gets_default_when_missing_value()
+    {
+        $this->assertEquals('default', $this->shortCountry->get('unknown', 'default'));
+    }
+
+    /** @test */
+    public function it_gets_all_attributes_when_missing_key()
+    {
+        $this->assertEquals($this->shortAttributes, $this->shortCountry->get(null));
+    }
+
+    /** @test */
     public function it_sets_attribute()
     {
         $this->shortCountry->set('capital', 'Cairo');
@@ -1144,6 +1156,20 @@ class CountryTest extends PHPUnit_Framework_TestCase
         $this->longCountry->setAttributes([]);
 
         $this->assertNull($this->longCountry->getAr5());
+    }
+
+    /** @test */
+    public function it_returns_address_format()
+    {
+        $this->assertEquals($this->longAttributes['extra']['address_format'], $this->longCountry->getAddressFormat());
+    }
+
+    /** @test */
+    public function it_returns_null_when_missing_address_format()
+    {
+        $this->longCountry->setAttributes([]);
+
+        $this->assertNull($this->longCountry->getAddressFormat());
     }
 
     /** @test */

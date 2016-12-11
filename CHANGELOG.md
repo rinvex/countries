@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
-## v2.0.0 - 2016-11-27
+## [v2.0.0] - 2016-11-27
 - Rewrite from scratch, add massively extensive country data
   - Add emoji flags & their unicode attributes (close #6)
   - Add GeoJson data (close #20)
@@ -23,3 +23,5 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 ## v1.0.0 - 2016-08-20
 - Commit first draft.
+
+[v2.0.0]: https://github.com/rinvex/country/compare/v1.0.0...v2.0.0

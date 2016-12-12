@@ -67,9 +67,9 @@ class Loader
     /**
      * Filter items by the given key value pair.
      *
-     * @param  string  $key
-     * @param  mixed  $operator
-     * @param  mixed  $value
+     * @param string $key
+     * @param mixed  $operator
+     * @param mixed  $value
      *
      * @return array
      */
@@ -90,9 +90,9 @@ class Loader
     /**
      * Get an operator checker callback.
      *
-     * @param  string  $key
-     * @param  string  $operator
-     * @param  mixed  $value
+     * @param string $key
+     * @param string $operator
+     * @param mixed  $value
      *
      * @return \Closure
      */

@@ -1,1 +1,9 @@
 * text=auto
+*.css linguist-vendored
+*.scss linguist-vendored
+
+phpunit.* export-ignore
+phpcs.* export-ignore
+tests/ export-ignore
+*.md export-ignore
+.* export-ignore

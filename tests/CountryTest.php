@@ -3,21 +3,21 @@
 /*
  * NOTICE OF LICENSE
  *
- * Part of the Rinvex Authy Package.
+ * Part of the Rinvex Country Package.
  *
  * This source file is subject to The MIT License (MIT)
  * that is bundled with this package in the LICENSE file.
  *
- * Package: Rinvex Authy Package
+ * Package: Rinvex Country Package
  * License: The MIT License (MIT)
  * Link:    https://rinvex.com
  */
 
-namespace Rinvex\Authy\Test;
+namespace Rinvex\Country\Test;
 
 use Exception;
-use PHPUnit_Framework_TestCase;
 use Rinvex\Country\Country;
+use PHPUnit_Framework_TestCase;
 
 class CountryTest extends PHPUnit_Framework_TestCase
 {
@@ -168,7 +168,7 @@ class CountryTest extends PHPUnit_Framework_TestCase
         ];
 
         $this->shortCountry = new Country($this->shortAttributes);
-        $this->longCountry  = new Country($this->longAttributes);
+        $this->longCountry = new Country($this->longAttributes);
     }
 
     /** @test */
@@ -209,6 +209,18 @@ class CountryTest extends PHPUnit_Framework_TestCase
     {
         $this->assertEquals($this->shortAttributes['calling_code'], $this->shortCountry->get('calling_code'));
         $this->assertEquals($this->longAttributes['name']['native']['ara']['common'], $this->longCountry->get('name.native.ara.common'));
+    }
+
+    /** @test */
+    public function it_gets_default_when_missing_value()
+    {
+        $this->assertEquals('default', $this->shortCountry->get('unknown', 'default'));
+    }
+
+    /** @test */
+    public function it_gets_all_attributes_when_missing_key()
+    {
+        $this->assertEquals($this->shortAttributes, $this->shortCountry->get(null));
     }
 
     /** @test */
@@ -1147,6 +1159,20 @@ class CountryTest extends PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function it_returns_address_format()
+    {
+        $this->assertEquals($this->longAttributes['extra']['address_format'], $this->longCountry->getAddressFormat());
+    }
+
+    /** @test */
+    public function it_returns_null_when_missing_address_format()
+    {
+        $this->longCountry->setAttributes([]);
+
+        $this->assertNull($this->longCountry->getAddressFormat());
+    }
+
+    /** @test */
     public function it_returns_whether_eu_member()
     {
         $this->assertEquals($this->longAttributes['extra']['eu_member'], $this->longCountry->isEuMember());
@@ -1197,7 +1223,7 @@ class CountryTest extends PHPUnit_Framework_TestCase
     /** @test */
     public function it_returns_geojson()
     {
-        $file = __DIR__.'/../resources/data/'.strtolower($this->longCountry->getIsoAlpha2()).'.geo.json';
+        $file = __DIR__.'/../resources/geodata/'.strtolower($this->longCountry->getIsoAlpha2()).'.json';
 
         $this->assertEquals(file_get_contents($file), $this->longCountry->getGeoJson());
     }
@@ -1213,7 +1239,7 @@ class CountryTest extends PHPUnit_Framework_TestCase
     /** @test */
     public function it_returns_flag()
     {
-        $file = __DIR__.'/../resources/data/'.strtolower($this->longCountry->getIsoAlpha2()).'.svg';
+        $file = __DIR__.'/../resources/flags/'.strtolower($this->longCountry->getIsoAlpha2()).'.svg';
 
         $this->assertEquals(file_get_contents($file), $this->longCountry->getFlag());
     }
@@ -1229,7 +1255,7 @@ class CountryTest extends PHPUnit_Framework_TestCase
     /** @test */
     public function it_returns_divisions()
     {
-        $file = __DIR__.'/../resources/data/'.strtolower($this->longCountry->getIsoAlpha2()).'.divisions.json';
+        $file = __DIR__.'/../resources/divisions/'.strtolower($this->longCountry->getIsoAlpha2()).'.json';
 
         $this->assertEquals(json_decode(file_get_contents($file), true), $this->longCountry->getDivisions());
     }

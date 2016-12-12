@@ -15,6 +15,9 @@
 
 namespace Rinvex\Country;
 
+use Closure;
+use Rinvex\Country\Exceptions\CountryLoaderException;
+
 class Loader
 {
     /**
@@ -34,11 +37,11 @@ class Loader
      */
     public static function country($code, $hydrate = true)
     {
-        if (! isset(self::$countries[$code])) {
-            self::$countries[$code] = json_decode(self::getFile(__DIR__.'/../resources/data/'.$code.'.json'), true);
+        if (! isset(static::$countries[$code])) {
+            static::$countries[$code] = json_decode(static::getFile(__DIR__.'/../resources/data/'.$code.'.json'), true);
         }
 
-        return $hydrate ? new Country(self::$countries[$code]) : self::$countries[$code];
+        return $hydrate ? new Country(static::$countries[$code]) : static::$countries[$code];
     }
 
     /**
@@ -53,33 +56,66 @@ class Loader
     {
         $list = $longlist ? 'longlist' : 'shortlist';
 
-        if (! isset(self::$countries[$list])) {
-            self::$countries[$list] = json_decode(self::getFile(__DIR__.'/../resources/data/'.$list.'.json'), true);
+        if (! isset(static::$countries[$list])) {
+            static::$countries[$list] = json_decode(static::getFile(__DIR__.'/../resources/data/'.$list.'.json'), true);
         }
 
         return $hydrate ? array_map(function ($country) {
             return new Country($country);
-        }, self::$countries[$list]) : self::$countries[$list];
+        }, static::$countries[$list]) : static::$countries[$list];
     }
 
     /**
      * Filter items by the given key value pair.
      *
      * @param string $key
+     * @param mixed  $operator
      * @param mixed  $value
-     * @param bool   $strict
      *
      * @return array
      */
-    public static function where($key, $value, $strict = true)
+    public static function where($key, $operator, $value = null)
     {
-        if (! isset(self::$countries['longlist'])) {
-            self::$countries['longlist'] = json_decode(self::getFile(__DIR__.'/../resources/data/longlist.json'), true);
+        if (func_num_args() == 2) {
+            $value = $operator;
+            $operator = '=';
         }
 
-        return self::filter(self::$countries['longlist'], function ($item) use ($key, $value, $strict) {
-            return $strict ? self::get($item, $key) === $value : self::get($item, $key) == $value;
-        });
+        if (! isset(static::$countries['longlist'])) {
+            static::$countries['longlist'] = json_decode(static::getFile(__DIR__.'/../resources/data/longlist.json'), true);
+        }
+
+        return static::filter(static::$countries['longlist'], static::operatorForWhere($key, $operator, $value));
+    }
+
+    /**
+     * Get an operator checker callback.
+     *
+     * @param string $key
+     * @param string $operator
+     * @param mixed  $value
+     *
+     * @return \Closure
+     */
+    public static function operatorForWhere($key, $operator, $value)
+    {
+        return function ($item) use ($key, $operator, $value) {
+            $retrieved = static::get($item, $key);
+
+            switch ($operator) {
+                default:
+                case '=':
+                case '==':  return $retrieved == $value;
+                case '!=':
+                case '<>':  return $retrieved != $value;
+                case '<':   return $retrieved < $value;
+                case '>':   return $retrieved > $value;
+                case '<=':  return $retrieved <= $value;
+                case '>=':  return $retrieved >= $value;
+                case '===': return $retrieved === $value;
+                case '!==': return $retrieved !== $value;
+            }
+        };
     }
 
     /**
@@ -93,15 +129,7 @@ class Loader
     public static function filter($items, callable $callback = null)
     {
         if ($callback) {
-            $return = [];
-
-            foreach ($items as $key => $value) {
-                if ($callback($value, $key)) {
-                    $return[$key] = $value;
-                }
-            }
-
-            return $return;
+            return array_filter($items, $callback, ARRAY_FILTER_USE_BOTH);
         }
 
         return array_filter($items);
@@ -127,12 +155,12 @@ class Loader
         while (($segment = array_shift($key)) !== null) {
             if ($segment === '*') {
                 if (! is_array($target)) {
-                    return value($default);
+                    return $default instanceof Closure ? $default() : $default;
                 }
 
-                $result = self::pluck($target, $key);
+                $result = static::pluck($target, $key);
 
-                return in_array('*', $key) ? self::collapse($result) : $result;
+                return in_array('*', $key) ? static::collapse($result) : $result;
             }
 
             if (is_array($target) && array_key_exists($segment, $target)) {
@@ -140,7 +168,7 @@ class Loader
             } elseif (is_object($target) && isset($target->{$segment})) {
                 $target = $target->{$segment};
             } else {
-                return value($default);
+                return $default instanceof Closure ? $default() : $default;
             }
         }
 
@@ -165,7 +193,7 @@ class Loader
         $key = is_null($key) || is_array($key) ? $key : explode('.', $key);
 
         foreach ($array as $item) {
-            $itemValue = self::get($item, $value);
+            $itemValue = static::get($item, $value);
 
             // If the key is "null", we will just append the value to the array and keep
             // looping. Otherwise we will key the array using the value of the key we
@@ -173,7 +201,7 @@ class Loader
             if (is_null($key)) {
                 $results[] = $itemValue;
             } else {
-                $itemKey = self::get($item, $key);
+                $itemKey = static::get($item, $key);
 
                 $results[$itemKey] = $itemValue;
             }
@@ -209,7 +237,7 @@ class Loader
      *
      * @param string $filePath
      *
-     * @throws \Rinvex\Country\CountryLoaderException
+     * @throws \Rinvex\Country\Exceptions\CountryLoaderException
      *
      * @return string
      */

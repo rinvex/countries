@@ -323,7 +323,7 @@ class Country
         $natives = $this->getNativeNames() ?: [];
 
         // Get other translations
-        $file         = __DIR__.'/../resources/data/'.strtolower($this->getIsoAlpha2()).'.translations.json';
+        $file = __DIR__.'/../resources/translations/'.strtolower($this->getIsoAlpha2()).'.json';
         $translations = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
 
         // Merge all names together
@@ -835,7 +835,7 @@ class Country
      */
     public function getGeoJson()
     {
-        $file = __DIR__.'/../resources/data/'.strtolower($this->getIsoAlpha2()).'.geo.json';
+        $file = __DIR__.'/../resources/geodata/'.strtolower($this->getIsoAlpha2()).'.json';
 
         return file_exists($file) ? file_get_contents($file) : null;
     }
@@ -847,7 +847,7 @@ class Country
      */
     public function getFlag()
     {
-        $file = __DIR__.'/../resources/data/'.strtolower($this->getIsoAlpha2()).'.svg';
+        $file = __DIR__.'/../resources/flags/'.strtolower($this->getIsoAlpha2()).'.svg';
 
         return file_exists($file) ? file_get_contents($file) : null;
     }
@@ -859,7 +859,7 @@ class Country
      */
     public function getDivisions()
     {
-        $file = __DIR__.'/../resources/data/'.strtolower($this->getIsoAlpha2()).'.divisions.json';
+        $file = __DIR__.'/../resources/divisions/'.strtolower($this->getIsoAlpha2()).'.json';
 
         return file_exists($file) ? json_decode(file_get_contents($file), true) : null;
     }

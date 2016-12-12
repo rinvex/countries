@@ -15,8 +15,8 @@
 
 namespace Rinvex\Country\Test;
 
-use PHPUnit_Framework_TestCase;
 use Rinvex\Country\Country;
+use PHPUnit_Framework_TestCase;
 
 class HelpersTest extends PHPUnit_Framework_TestCase
 {

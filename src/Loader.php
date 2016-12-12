@@ -15,6 +15,8 @@
 
 namespace Rinvex\Country;
 
+use Rinvex\Country\Exceptions\CountryLoaderException;
+
 class Loader
 {
     /**
@@ -209,7 +211,7 @@ class Loader
      *
      * @param string $filePath
      *
-     * @throws \Rinvex\Country\CountryLoaderException
+     * @throws \Rinvex\Country\Exceptions\CountryLoaderException
      *
      * @return string
      */

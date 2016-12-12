@@ -15,8 +15,8 @@
 
 namespace Rinvex\Country\Test;
 
-use Rinvex\Country\Country;
 use Rinvex\Country\Loader;
+use Rinvex\Country\Country;
 use PHPUnit_Framework_TestCase;
 use Rinvex\Country\Exceptions\CountryLoaderException;
 

@@ -346,13 +346,13 @@ class LoaderTest extends PHPUnit_Framework_TestCase
         $array = [
             [
                 'account' => 'a',
-                'users' => [
+                'users'   => [
                     ['first' => 'taylor', 'last' => 'otwell', 'email' => 'foo'],
                 ],
             ],
             [
                 'account' => 'b',
-                'users' => [
+                'users'   => [
                     ['first' => 'abigail', 'last' => 'otwell'],
                     ['first' => 'dayle', 'last' => 'rees'],
                 ],

@@ -154,7 +154,7 @@ class Loader
         while (($segment = array_shift($key)) !== null) {
             if ($segment === '*') {
                 if (! is_array($target)) {
-                    return value($default);
+                    return $default instanceof Closure ? $default() : $default;
                 }
 
                 $result = static::pluck($target, $key);
@@ -167,7 +167,7 @@ class Loader
             } elseif (is_object($target) && isset($target->{$segment})) {
                 $target = $target->{$segment};
             } else {
-                return value($default);
+                return $default instanceof Closure ? $default() : $default;
             }
         }
 

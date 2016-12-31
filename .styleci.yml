@@ -9,3 +9,4 @@ enabled:
 disabled:
   - ordered_imports
   - phpdoc_no_package
+  - align_double_arrow

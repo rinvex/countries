@@ -99,7 +99,7 @@ class Loader
      *
      * @return \Closure
      */
-    public static function operatorForWhere($key, $operator, $value)
+    protected static function operatorForWhere($key, $operator, $value)
     {
         return function ($item) use ($key, $operator, $value) {
             $retrieved = static::get($item, $key);
@@ -128,7 +128,7 @@ class Loader
      *
      * @return array
      */
-    public static function filter($items, callable $callback = null)
+    protected static function filter($items, callable $callback = null)
     {
         if ($callback) {
             return array_filter($items, $callback, ARRAY_FILTER_USE_BOTH);
@@ -146,7 +146,7 @@ class Loader
      *
      * @return mixed
      */
-    public static function get($target, $key, $default = null)
+    protected static function get($target, $key, $default = null)
     {
         if (is_null($key)) {
             return $target;
@@ -186,7 +186,7 @@ class Loader
      *
      * @return array
      */
-    public static function pluck($array, $value, $key = null)
+    protected static function pluck($array, $value, $key = null)
     {
         $results = [];
 
@@ -219,7 +219,7 @@ class Loader
      *
      * @return array
      */
-    public static function collapse($array)
+    protected static function collapse($array)
     {
         $results = [];
 
@@ -243,7 +243,7 @@ class Loader
      *
      * @return string
      */
-    public static function getFile($filePath)
+    protected static function getFile($filePath)
     {
         if (! file_exists($filePath)) {
             throw CountryLoaderException::invalidCountry();

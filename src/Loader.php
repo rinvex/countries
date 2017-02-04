@@ -30,18 +30,20 @@ class Loader
     /**
      * Get the country by it's ISO 3166-1 alpha-2.
      *
-     * @param string $code
+     * @param string $key
      * @param bool   $hydrate
      *
      * @return \Rinvex\Country\Country|array
      */
-    public static function country($code, $hydrate = true)
+    public static function country($key, $hydrate = true)
     {
-        if (! isset(static::$countries[$code])) {
-            static::$countries[$code] = json_decode(static::getFile(__DIR__.'/../resources/data/'.$code.'.json'), true);
+        $key = strtolower($key);
+
+        if (! isset(static::$countries[$key])) {
+            static::$countries[$key] = json_decode(static::getFile(__DIR__.'/../resources/data/'.$key.'.json'), true);
         }
 
-        return $hydrate ? new Country(static::$countries[$code]) : static::$countries[$code];
+        return $hydrate ? new Country(static::$countries[$key]) : static::$countries[$key];
     }
 
     /**

@@ -15,7 +15,7 @@
 
 declare(strict_types=1);
 
-namespace Rinvex\Country\Exceptions;
+namespace Rinvex\Country;
 
 use Exception;
 

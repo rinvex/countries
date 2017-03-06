@@ -36,7 +36,7 @@ echo $egypt->getEmoji();                            echo $egypt->getFlag();
 
 
 // Get all countries                                // Get countries with where condition (continent: Oceania)
-$countries = countries();                           $whereCountries = \Rinvex\Country\Loader::where('geo.continent', ['OC' => 'Oceania']);
+$countries = countries();                           $whereCountries = \Rinvex\Country\CountryLoader::where('geo.continent', ['OC' => 'Oceania']);
 ```
 
 > **Note:** This package is framework-agnostic, so it's compatible with any PHP framework whatsoever without any dependencies at all, except for the PHP version itself **^7.0**. Awesome, huh? :smiley:

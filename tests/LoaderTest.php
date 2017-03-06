@@ -1,6 +1,5 @@
 <?php
 
-declare(strict_types=1);
 /*
  * NOTICE OF LICENSE
  *
@@ -19,10 +18,10 @@ declare(strict_types=1);
 namespace Rinvex\Country\Test;
 
 use ReflectionClass;
-use Rinvex\Country\Loader;
 use Rinvex\Country\Country;
 use PHPUnit_Framework_TestCase;
-use Rinvex\Country\Exceptions\CountryLoaderException;
+use Rinvex\Country\CountryLoader;
+use Rinvex\Country\CountryLoaderException;
 
 class LoaderTest extends PHPUnit_Framework_TestCase
 {
@@ -31,7 +30,7 @@ class LoaderTest extends PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $reflection = new ReflectionClass(Loader::class);
+        $reflection = new ReflectionClass(CountryLoader::class);
         $this->methods['get'] = $reflection->getMethod('get');
         $this->methods['filter'] = $reflection->getMethod('filter');
         $this->methods['pluck'] = $reflection->getMethod('pluck');
@@ -144,63 +143,63 @@ class LoaderTest extends PHPUnit_Framework_TestCase
             ],
         ];
 
-        $this->assertEquals($egypt, Loader::country('eg', false));
-        $this->assertEquals(new Country($egypt), Loader::country('eg'));
+        $this->assertEquals($egypt, CountryLoader::country('eg', false));
+        $this->assertEquals(new Country($egypt), CountryLoader::country('eg'));
     }
 
     /** @test */
     public function it_gets_data_with_where_conditions()
     {
-        $this->assertEquals(['as', 'au', 'ck', 'fj', 'fm', 'gu', 'ki', 'mh', 'mp', 'nc', 'nf', 'nu', 'nr', 'nz', 'pn', 'pw', 'pg', 'pf', 'sb', 'tk', 'tl', 'to', 'tv', 'um', 'vu', 'wf', 'ws'], array_keys(Loader::where('geo.continent', ['OC' => 'Oceania'])));
-        $this->assertEquals('Egypt', current(Loader::where('capital', '=', 'Cairo'))['name']['common']);
-        $this->assertEquals('Egypt', current(Loader::where('capital', '==', 'Cairo'))['name']['common']);
-        $this->assertEquals('Egypt', current(Loader::where('capital', '===', 'Cairo'))['name']['common']);
-        $this->assertEquals('Egypt', current(Loader::where('capital', 'invalid-operator', 'Cairo'))['name']['common']);
-        $this->assertEquals(['aq', 'ru'], array_keys(Loader::where('geo.area', '>', 12345678)));
-        $this->assertEquals(['ru'], array_keys(Loader::where('geo.area', '>=', 17098242)));
-        $this->assertEquals(['sj', 'va', 'bq', 'sh'], array_keys(Loader::where('geo.area', '<=', 1)));
-        $this->assertEquals(55, count(array_keys(Loader::where('geo.independent', '<>', 'Yes'))));
-        $this->assertEquals(45, count(array_keys(Loader::where('geo.landlocked', '!=', false))));
-        $this->assertEquals(47, count(array_keys(Loader::where('geo.landlocked', '!==', false))));
-        $this->assertEquals(19, count(array_keys(Loader::where('dialling.national_number_lengths.0', '<', 5))));
+        $this->assertEquals(['as', 'au', 'ck', 'fj', 'fm', 'gu', 'ki', 'mh', 'mp', 'nc', 'nf', 'nu', 'nr', 'nz', 'pn', 'pw', 'pg', 'pf', 'sb', 'tk', 'tl', 'to', 'tv', 'um', 'vu', 'wf', 'ws'], array_keys(CountryLoader::where('geo.continent', ['OC' => 'Oceania'])));
+        $this->assertEquals('Egypt', current(CountryLoader::where('capital', '=', 'Cairo'))['name']['common']);
+        $this->assertEquals('Egypt', current(CountryLoader::where('capital', '==', 'Cairo'))['name']['common']);
+        $this->assertEquals('Egypt', current(CountryLoader::where('capital', '===', 'Cairo'))['name']['common']);
+        $this->assertEquals('Egypt', current(CountryLoader::where('capital', 'invalid-operator', 'Cairo'))['name']['common']);
+        $this->assertEquals(['aq', 'ru'], array_keys(CountryLoader::where('geo.area', '>', 12345678)));
+        $this->assertEquals(['ru'], array_keys(CountryLoader::where('geo.area', '>=', 17098242)));
+        $this->assertEquals(['sj', 'va', 'bq', 'sh'], array_keys(CountryLoader::where('geo.area', '<=', 1)));
+        $this->assertEquals(55, count(array_keys(CountryLoader::where('geo.independent', '<>', 'Yes'))));
+        $this->assertEquals(45, count(array_keys(CountryLoader::where('geo.landlocked', '!=', false))));
+        $this->assertEquals(47, count(array_keys(CountryLoader::where('geo.landlocked', '!==', false))));
+        $this->assertEquals(19, count(array_keys(CountryLoader::where('dialling.national_number_lengths.0', '<', 5))));
     }
 
     /** @test */
     public function it_returns_country_array_shortlist()
     {
-        $this->assertEquals(250, count(Loader::countries()));
-        $this->assertInternalType('array', Loader::countries()['eg']);
-        $this->assertEquals('Egypt', Loader::countries()['eg']['name']);
-        $this->assertArrayNotHasKey('geo', Loader::countries()['eg']);
+        $this->assertEquals(250, count(CountryLoader::countries()));
+        $this->assertInternalType('array', CountryLoader::countries()['eg']);
+        $this->assertEquals('Egypt', CountryLoader::countries()['eg']['name']);
+        $this->assertArrayNotHasKey('geo', CountryLoader::countries()['eg']);
     }
 
     /** @test */
     public function it_returns_country_hydrated_shortlist()
     {
-        $this->assertEquals(250, count(Loader::countries(false, true)));
-        $this->assertInternalType('object', Loader::countries(false, true)['eg']);
-        $this->assertEquals('Egypt', Loader::countries(false, true)['eg']->getName());
-        $this->assertNull(Loader::countries(false, true)['eg']->getGeodata());
+        $this->assertEquals(250, count(CountryLoader::countries(false, true)));
+        $this->assertInternalType('object', CountryLoader::countries(false, true)['eg']);
+        $this->assertEquals('Egypt', CountryLoader::countries(false, true)['eg']->getName());
+        $this->assertNull(CountryLoader::countries(false, true)['eg']->getGeodata());
     }
 
     /** @test */
     public function it_returns_country_array_longlist()
     {
-        $this->assertEquals(250, count(Loader::countries(true)));
-        $this->assertInternalType('array', Loader::countries(true)['eg']);
-        $this->assertEquals('Egypt', Loader::countries(true)['eg']['name']['common']);
-        $this->assertEquals('🇪🇬', Loader::countries(true)['eg']['extra']['emoji']);
-        $this->assertArrayHasKey('geo', Loader::countries(true)['eg']);
+        $this->assertEquals(250, count(CountryLoader::countries(true)));
+        $this->assertInternalType('array', CountryLoader::countries(true)['eg']);
+        $this->assertEquals('Egypt', CountryLoader::countries(true)['eg']['name']['common']);
+        $this->assertEquals('🇪🇬', CountryLoader::countries(true)['eg']['extra']['emoji']);
+        $this->assertArrayHasKey('geo', CountryLoader::countries(true)['eg']);
     }
 
     /** @test */
     public function it_returns_country_hydrated_longlist()
     {
-        $this->assertEquals(250, count(Loader::countries(true, true)));
-        $this->assertInternalType('object', Loader::countries(true, true)['eg']);
-        $this->assertEquals('Egypt', Loader::countries(true, true)['eg']->getName());
-        $this->assertEquals('🇪🇬', Loader::countries(true, true)['eg']->getEmoji());
-        $this->assertInternalType('array', Loader::countries(true, true)['eg']->getGeodata());
+        $this->assertEquals(250, count(CountryLoader::countries(true, true)));
+        $this->assertInternalType('object', CountryLoader::countries(true, true)['eg']);
+        $this->assertEquals('Egypt', CountryLoader::countries(true, true)['eg']->getName());
+        $this->assertEquals('🇪🇬', CountryLoader::countries(true, true)['eg']->getEmoji());
+        $this->assertInternalType('array', CountryLoader::countries(true, true)['eg']->getGeodata());
     }
 
     /** @test */
@@ -208,7 +207,7 @@ class LoaderTest extends PHPUnit_Framework_TestCase
     {
         $this->expectException(CountryLoaderException::class);
 
-        Loader::country('asd');
+        CountryLoader::country('asd');
     }
 
     /** @test */

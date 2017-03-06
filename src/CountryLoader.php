@@ -18,9 +18,8 @@ declare(strict_types=1);
 namespace Rinvex\Country;
 
 use Closure;
-use Rinvex\Country\Exceptions\CountryLoaderException;
 
-class Loader
+class CountryLoader
 {
     /**
      * The countries array.
@@ -241,7 +240,7 @@ class Loader
      *
      * @param string $filePath
      *
-     * @throws \Rinvex\Country\Exceptions\CountryLoaderException
+     * @throws \Rinvex\Country\CountryLoaderException
      *
      * @return string
      */

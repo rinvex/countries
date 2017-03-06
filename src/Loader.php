@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 /*
  * NOTICE OF LICENSE
  *
@@ -37,7 +38,7 @@ class Loader
      */
     public static function country($key, $hydrate = true)
     {
-        $key = strtolower($key);
+        $key = mb_strtolower($key);
 
         if (! isset(static::$countries[$key])) {
             static::$countries[$key] = json_decode(static::getFile(__DIR__.'/../resources/data/'.$key.'.json'), true);
@@ -78,7 +79,7 @@ class Loader
      */
     public static function where($key, $operator, $value = null)
     {
-        if (func_num_args() == 2) {
+        if (func_num_args() === 2) {
             $value = $operator;
             $operator = '=';
         }
@@ -107,9 +108,9 @@ class Loader
             switch ($operator) {
                 default:
                 case '=':
-                case '==':  return $retrieved == $value;
+                case '==':  return $retrieved === $value;
                 case '!=':
-                case '<>':  return $retrieved != $value;
+                case '<>':  return $retrieved !== $value;
                 case '<':   return $retrieved < $value;
                 case '>':   return $retrieved > $value;
                 case '<=':  return $retrieved <= $value;

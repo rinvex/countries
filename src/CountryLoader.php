@@ -108,9 +108,9 @@ class CountryLoader
             switch ($operator) {
                 default:
                 case '=':
-                case '==':  return $retrieved == $value;
+                case '==':  return $retrieved === $value;
                 case '!=':
-                case '<>':  return $retrieved != $value;
+                case '<>':  return $retrieved !== $value;
                 case '<':   return $retrieved < $value;
                 case '>':   return $retrieved > $value;
                 case '<=':  return $retrieved <= $value;

@@ -112,6 +112,7 @@ checks:
 filter:
     excluded_paths:
         - 'build/*'
+        - 'resources/*'
         - 'tests/*'
         - 'vendor/*'
 
@@ -135,6 +136,7 @@ tools:
         filter:
             excluded_paths:
                 - 'build/*'
+                - 'resources/*'
                 - 'tests/*'
                 - 'vendor/*'
 
@@ -144,6 +146,7 @@ tools:
         enabled:              true
         excluded_dirs:
             - 'build'
+            - 'resources'
             - 'tests'
             - 'vendor'
 
@@ -153,6 +156,7 @@ tools:
         enabled:              true
         excluded_dirs:
             - 'build'
+            - 'resources'
             - 'tests'
             - 'vendor'
 
@@ -171,6 +175,7 @@ tools:
             excluded_paths:
                 - 'build/*'
                 - 'tests/*'
+                - 'resources/*'
                 - 'vendor/*'
 
 
@@ -179,6 +184,7 @@ tools:
         enabled:              true
         excluded_dirs:
             - 'build'
+            - 'resources'
             - 'tests'
             - 'vendor'
 

@@ -37,6 +37,7 @@ ratings:
   - "**.py"
   - "**.rb"
 exclude_paths:
+- "resources/*"
 - "build/*"
 - "tests/*"
 - "vendor/*"

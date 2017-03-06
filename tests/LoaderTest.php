@@ -14,6 +14,8 @@ declare(strict_types=1);
  * Link:    https://rinvex.com
  */
 
+declare(strict_types=1);
+
 namespace Rinvex\Country\Test;
 
 use ReflectionClass;

@@ -1,6 +1,5 @@
 <?php
 
-declare(strict_types=1);
 /*
  * NOTICE OF LICENSE
  *
@@ -13,6 +12,8 @@ declare(strict_types=1);
  * License: The MIT License (MIT)
  * Link:    https://rinvex.com
  */
+
+declare(strict_types=1);
 
 namespace Rinvex\Country\Test;
 

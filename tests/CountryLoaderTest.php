@@ -26,26 +26,31 @@ use Rinvex\Country\CountryLoaderException;
 class CountryLoaderTest extends PHPUnit_Framework_TestCase
 {
     /** @var array */
-    protected $methods;
+    protected static $methods;
 
-    public function setUp()
+    public static function setUpBeforeClass()
     {
-        $reflection = new ReflectionClass(CountryLoader::class);
-        $this->methods['get'] = $reflection->getMethod('get');
-        $this->methods['filter'] = $reflection->getMethod('filter');
-        $this->methods['pluck'] = $reflection->getMethod('pluck');
-        $this->methods['collapse'] = $reflection->getMethod('collapse');
-        $this->methods['getFile'] = $reflection->getMethod('getFile');
+        $reflectedLoader = new ReflectionClass(CountryLoader::class);
+        self::$methods['get'] = $reflectedLoader->getMethod('get');
+        self::$methods['pluck'] = $reflectedLoader->getMethod('pluck');
+        self::$methods['filter'] = $reflectedLoader->getMethod('filter');
+        self::$methods['getFile'] = $reflectedLoader->getMethod('getFile');
+        self::$methods['collapse'] = $reflectedLoader->getMethod('collapse');
 
-        foreach ($this->methods as $method) {
+        foreach (self::$methods as $method) {
             $method->setAccessible(true);
         }
+    }
+
+    public static function tearDownAfterClass()
+    {
+        self::$methods = null;
     }
 
     /** @test */
     public function it_returns_country_data()
     {
-        $egypt = [
+        $countryArray = [
             'name' => [
                 'common' => 'Egypt',
                 'official' => 'Arab Republic of Egypt',
@@ -143,8 +148,8 @@ class CountryLoaderTest extends PHPUnit_Framework_TestCase
             ],
         ];
 
-        $this->assertEquals($egypt, CountryLoader::country('eg', false));
-        $this->assertEquals(new Country($egypt), CountryLoader::country('eg'));
+        $this->assertEquals($countryArray, CountryLoader::country('eg', false));
+        $this->assertEquals(new Country($countryArray), CountryLoader::country('eg'));
     }
 
     /** @test */
@@ -214,15 +219,15 @@ class CountryLoaderTest extends PHPUnit_Framework_TestCase
     public function it_filters_data()
     {
         $array1 = [['id' => 1, 'name' => 'Hello'], ['id' => 2, 'name' => 'World']];
-        $this->assertEquals([1 => ['id' => 2, 'name' => 'World']], $this->methods['filter']->invoke(null, $array1, function ($item) {
+        $this->assertEquals([1 => ['id' => 2, 'name' => 'World']], self::$methods['filter']->invoke(null, $array1, function ($item) {
             return $item['id'] === 2;
         }));
 
         $array2 = ['', 'Hello', '', 'World'];
-        $this->assertEquals(['Hello', 'World'], array_values($this->methods['filter']->invoke(null, $array2)));
+        $this->assertEquals(['Hello', 'World'], array_values(self::$methods['filter']->invoke(null, $array2)));
 
         $array3 = ['id' => 1, 'first' => 'Hello', 'second' => 'World'];
-        $this->assertEquals(['first' => 'Hello', 'second' => 'World'], $this->methods['filter']->invoke(null, $array3, function ($item, $key) {
+        $this->assertEquals(['first' => 'Hello', 'second' => 'World'], self::$methods['filter']->invoke(null, $array3, function ($item, $key) {
             return $key !== 'id';
         }));
     }
@@ -233,22 +238,22 @@ class CountryLoaderTest extends PHPUnit_Framework_TestCase
         $object = (object) ['users' => ['name' => ['Taylor', 'Otwell']]];
         $array = [(object) ['users' => [(object) ['name' => 'Taylor']]]];
         $dottedArray = ['users' => ['first.name' => 'Taylor', 'middle.name' => null]];
-        $this->assertEquals('Taylor', $this->methods['get']->invoke(null, $object, 'users.name.0'));
-        $this->assertEquals('Taylor', $this->methods['get']->invoke(null, $array, '0.users.0.name'));
-        $this->assertNull($this->methods['get']->invoke(null, $array, '0.users.3'));
-        $this->assertEquals('Not found', $this->methods['get']->invoke(null, $array, '0.users.3', 'Not found'));
-        $this->assertEquals('Not found', $this->methods['get']->invoke(null, $array, '0.users.3', function () {
+        $this->assertEquals('Taylor', self::$methods['get']->invoke(null, $object, 'users.name.0'));
+        $this->assertEquals('Taylor', self::$methods['get']->invoke(null, $array, '0.users.0.name'));
+        $this->assertNull(self::$methods['get']->invoke(null, $array, '0.users.3'));
+        $this->assertEquals('Not found', self::$methods['get']->invoke(null, $array, '0.users.3', 'Not found'));
+        $this->assertEquals('Not found', self::$methods['get']->invoke(null, $array, '0.users.3', function () {
             return 'Not found';
         }));
-        $this->assertEquals('Taylor', $this->methods['get']->invoke(null, $dottedArray, ['users', 'first.name']));
-        $this->assertNull($this->methods['get']->invoke(null, $dottedArray, ['users', 'middle.name']));
-        $this->assertEquals('Not found', $this->methods['get']->invoke(null, $dottedArray, ['users', 'last.name'], 'Not found'));
+        $this->assertEquals('Taylor', self::$methods['get']->invoke(null, $dottedArray, ['users', 'first.name']));
+        $this->assertNull(self::$methods['get']->invoke(null, $dottedArray, ['users', 'middle.name']));
+        $this->assertEquals('Not found', self::$methods['get']->invoke(null, $dottedArray, ['users', 'last.name'], 'Not found'));
     }
 
     /** @test */
     public function it_returns_target_when_missing_key()
     {
-        $this->assertEquals(['test'], $this->methods['get']->invoke(null, ['test'], null));
+        $this->assertEquals(['test'], self::$methods['get']->invoke(null, ['test'], null));
     }
 
     /** @test */
@@ -259,8 +264,8 @@ class CountryLoaderTest extends PHPUnit_Framework_TestCase
             ['name' => 'abigail'],
             ['name' => 'dayle'],
         ];
-        $this->assertEquals(['taylor', 'abigail', 'dayle'], $this->methods['get']->invoke(null, $array, '*.name'));
-        $this->assertEquals(['taylorotwell@gmail.com', null, null], $this->methods['get']->invoke(null, $array, '*.email', 'irrelevant'));
+        $this->assertEquals(['taylor', 'abigail', 'dayle'], self::$methods['get']->invoke(null, $array, '*.name'));
+        $this->assertEquals(['taylorotwell@gmail.com', null, null], self::$methods['get']->invoke(null, $array, '*.email', 'irrelevant'));
         $array = [
             'users' => [
                 ['first' => 'taylor', 'last' => 'otwell', 'email' => 'taylorotwell@gmail.com'],
@@ -269,10 +274,10 @@ class CountryLoaderTest extends PHPUnit_Framework_TestCase
             ],
             'posts' => null,
         ];
-        $this->assertEquals(['taylor', 'abigail', 'dayle'], $this->methods['get']->invoke(null, $array, 'users.*.first'));
-        $this->assertEquals(['taylorotwell@gmail.com', null, null], $this->methods['get']->invoke(null, $array, 'users.*.email', 'irrelevant'));
-        $this->assertEquals('not found', $this->methods['get']->invoke(null, $array, 'posts.*.date', 'not found'));
-        $this->assertNull($this->methods['get']->invoke(null, $array, 'posts.*.date'));
+        $this->assertEquals(['taylor', 'abigail', 'dayle'], self::$methods['get']->invoke(null, $array, 'users.*.first'));
+        $this->assertEquals(['taylorotwell@gmail.com', null, null], self::$methods['get']->invoke(null, $array, 'users.*.email', 'irrelevant'));
+        $this->assertEquals('not found', self::$methods['get']->invoke(null, $array, 'posts.*.date', 'not found'));
+        $this->assertNull(self::$methods['get']->invoke(null, $array, 'posts.*.date'));
     }
 
     /** @test */
@@ -300,10 +305,10 @@ class CountryLoaderTest extends PHPUnit_Framework_TestCase
                 ],
             ],
         ];
-        $this->assertEquals(['taylor', 'abigail', 'abigail', 'dayle', 'dayle', 'taylor'], $this->methods['get']->invoke(null, $array, 'posts.*.comments.*.author'));
-        $this->assertEquals([4, 3, 2, null, null, 1], $this->methods['get']->invoke(null, $array, 'posts.*.comments.*.likes'));
-        $this->assertEquals([], $this->methods['get']->invoke(null, $array, 'posts.*.users.*.name', 'irrelevant'));
-        $this->assertEquals([], $this->methods['get']->invoke(null, $array, 'posts.*.users.*.name'));
+        $this->assertEquals(['taylor', 'abigail', 'abigail', 'dayle', 'dayle', 'taylor'], self::$methods['get']->invoke(null, $array, 'posts.*.comments.*.author'));
+        $this->assertEquals([4, 3, 2, null, null, 1], self::$methods['get']->invoke(null, $array, 'posts.*.comments.*.likes'));
+        $this->assertEquals([], self::$methods['get']->invoke(null, $array, 'posts.*.users.*.name', 'irrelevant'));
+        $this->assertEquals([], self::$methods['get']->invoke(null, $array, 'posts.*.users.*.name'));
     }
 
     /** @test */
@@ -336,28 +341,28 @@ class CountryLoaderTest extends PHPUnit_Framework_TestCase
                     '#baz',
                 ],
             ],
-        ], $this->methods['pluck']->invoke(null, $data, 'comments'));
-        $this->assertEquals([['#foo', '#bar'], ['#baz']], $this->methods['pluck']->invoke(null, $data, 'comments.tags'));
-        $this->assertEquals([null, null], $this->methods['pluck']->invoke(null, $data, 'foo'));
-        $this->assertEquals([null, null], $this->methods['pluck']->invoke(null, $data, 'foo.bar'));
+        ], self::$methods['pluck']->invoke(null, $data, 'comments'));
+        $this->assertEquals([['#foo', '#bar'], ['#baz']], self::$methods['pluck']->invoke(null, $data, 'comments.tags'));
+        $this->assertEquals([null, null], self::$methods['pluck']->invoke(null, $data, 'foo'));
+        $this->assertEquals([null, null], self::$methods['pluck']->invoke(null, $data, 'foo.bar'));
     }
 
     /** @test */
     public function it_plucks_array_with_array_and_object_values()
     {
         $array = [(object) ['name' => 'taylor', 'email' => 'foo'], ['name' => 'dayle', 'email' => 'bar']];
-        $this->assertEquals(['taylor', 'dayle'], $this->methods['pluck']->invoke(null, $array, 'name'));
-        $this->assertEquals(['taylor' => 'foo', 'dayle' => 'bar'], $this->methods['pluck']->invoke(null, $array, 'email', 'name'));
+        $this->assertEquals(['taylor', 'dayle'], self::$methods['pluck']->invoke(null, $array, 'name'));
+        $this->assertEquals(['taylor' => 'foo', 'dayle' => 'bar'], self::$methods['pluck']->invoke(null, $array, 'email', 'name'));
     }
 
     /** @test */
     public function it_plucks_array_with_nested_keys()
     {
         $array = [['user' => ['taylor', 'otwell']], ['user' => ['dayle', 'rees']]];
-        $this->assertEquals(['taylor', 'dayle'], $this->methods['pluck']->invoke(null, $array, 'user.0'));
-        $this->assertEquals(['taylor', 'dayle'], $this->methods['pluck']->invoke(null, $array, ['user', 0]));
-        $this->assertEquals(['taylor' => 'otwell', 'dayle' => 'rees'], $this->methods['pluck']->invoke(null, $array, 'user.1', 'user.0'));
-        $this->assertEquals(['taylor' => 'otwell', 'dayle' => 'rees'], $this->methods['pluck']->invoke(null, $array, ['user', 1], ['user', 0]));
+        $this->assertEquals(['taylor', 'dayle'], self::$methods['pluck']->invoke(null, $array, 'user.0'));
+        $this->assertEquals(['taylor', 'dayle'], self::$methods['pluck']->invoke(null, $array, ['user', 0]));
+        $this->assertEquals(['taylor' => 'otwell', 'dayle' => 'rees'], self::$methods['pluck']->invoke(null, $array, 'user.1', 'user.0'));
+        $this->assertEquals(['taylor' => 'otwell', 'dayle' => 'rees'], self::$methods['pluck']->invoke(null, $array, ['user', 1], ['user', 0]));
     }
 
     /** @test */
@@ -378,22 +383,22 @@ class CountryLoaderTest extends PHPUnit_Framework_TestCase
                 ],
             ],
         ];
-        $this->assertEquals([['taylor'], ['abigail', 'dayle']], $this->methods['pluck']->invoke(null, $array, 'users.*.first'));
-        $this->assertEquals(['a' => ['taylor'], 'b' => ['abigail', 'dayle']], $this->methods['pluck']->invoke(null, $array, 'users.*.first', 'account'));
-        $this->assertEquals([['foo'], [null, null]], $this->methods['pluck']->invoke(null, $array, 'users.*.email'));
+        $this->assertEquals([['taylor'], ['abigail', 'dayle']], self::$methods['pluck']->invoke(null, $array, 'users.*.first'));
+        $this->assertEquals(['a' => ['taylor'], 'b' => ['abigail', 'dayle']], self::$methods['pluck']->invoke(null, $array, 'users.*.first', 'account'));
+        $this->assertEquals([['foo'], [null, null]], self::$methods['pluck']->invoke(null, $array, 'users.*.email'));
     }
 
     /** @test */
     public function it_collapses_array()
     {
         $array = [[1], [2], [3], ['foo', 'bar'], ['baz', 'boom']];
-        $this->assertEquals([1, 2, 3, 'foo', 'bar', 'baz', 'boom'], $this->methods['collapse']->invoke(null, $array));
+        $this->assertEquals([1, 2, 3, 'foo', 'bar', 'baz', 'boom'], self::$methods['collapse']->invoke(null, $array));
     }
 
     /** @test */
     public function it_gets_file_content()
     {
-        $this->assertStringEqualsFile(__DIR__.'/../resources/data/eg.json', $this->methods['getFile']->invoke(null, __DIR__.'/../resources/data/eg.json'));
+        $this->assertStringEqualsFile(__DIR__.'/../resources/data/eg.json', self::$methods['getFile']->invoke(null, __DIR__.'/../resources/data/eg.json'));
     }
 
     /** @test */
@@ -401,6 +406,6 @@ class CountryLoaderTest extends PHPUnit_Framework_TestCase
     {
         $this->expectException(CountryLoaderException::class);
 
-        $this->methods['getFile']->invoke(null, __DIR__.'/../resources/data/invalid.json');
+        self::$methods['getFile']->invoke(null, __DIR__.'/../resources/data/invalid.json');
     }
 }

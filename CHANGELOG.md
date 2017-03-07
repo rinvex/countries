@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v3.1.0] - 2017-03-07
+- Format country code to small case before retrieval
+- Change internal methods visibility to protected
+- Update StyleCI fixers and other supplementary files
+- Enforce strict type declaration
+- Enforce consistency and rename Country Loader class
+- Execute reflections once per test class
+- Fix strict type declaration issues and tweak code
+- Update Ukrainian phone prefixes and native name fix
+
 ## [v3.0.0] - 2016-12-12
 - Drop PHP 5.6 support
 - Drop leaking dependency
@@ -40,5 +50,6 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Commit first draft.
 
+[v3.1.0]: https://github.com/rinvex/country/compare/v3.0.0...v3.1.0
 [v3.0.0]: https://github.com/rinvex/country/compare/v2.0.0...v3.0.0
 [v2.0.0]: https://github.com/rinvex/country/compare/v1.0.0...v2.0.0

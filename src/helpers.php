@@ -13,7 +13,9 @@
  * Link:    https://rinvex.com
  */
 
-use Rinvex\Country\Loader;
+declare(strict_types=1);
+
+use Rinvex\Country\CountryLoader;
 
 if (! function_exists('country')) {
     /**
@@ -26,7 +28,7 @@ if (! function_exists('country')) {
      */
     function country($code, $hydrate = true)
     {
-        return Loader::country($code, $hydrate);
+        return CountryLoader::country($code, $hydrate);
     }
 }
 
@@ -41,6 +43,6 @@ if (! function_exists('countries')) {
      */
     function countries($longlist = false, $hydrate = false)
     {
-        return Loader::countries($longlist, $hydrate);
+        return CountryLoader::countries($longlist, $hydrate);
     }
 }

@@ -13,7 +13,9 @@
  * Link:    https://rinvex.com
  */
 
-namespace Rinvex\Country\Exceptions;
+declare(strict_types=1);
+
+namespace Rinvex\Country;
 
 use Exception;
 

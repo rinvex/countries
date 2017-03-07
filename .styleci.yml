@@ -1,11 +1,24 @@
 preset: recommended
-risky: false
-linting: true
 
 enabled:
-  - not_operator_with_successor_space
+  - dir_constant
+  - ereg_to_preg
+  - mb_str_functions
   - no_short_echo_tag
+  - strict_comparison
+  - phpdoc_link_to_see
+  - no_php4_constructor
+  - declare_strict_types
+  - unalign_double_arrow
+  - length_ordered_imports
+  - modernize_types_casting
+  - return_type_declaration
+  - not_operator_with_successor_space
 
 disabled:
-  - ordered_imports
-  - phpdoc_no_package
+  - align_double_arrow
+  - alpha_ordered_imports
+
+finder:
+  not-name:
+    - "CountryLoader.php"

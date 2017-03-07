@@ -13,6 +13,8 @@
  * Link:    https://rinvex.com
  */
 
+declare(strict_types=1);
+
 namespace Rinvex\Country;
 
 use Exception;
@@ -145,7 +147,7 @@ class Country
      */
     public function getNativeName($language = null)
     {
-        $language = $language ? strtolower($language) : null;
+        $language = $language ? mb_strtolower($language) : null;
 
         return $this->get("name.native.{$language}.common")
             ?: (current($this->get('name.native', []))['common'] ?: $this->get('native_name'));
@@ -160,7 +162,7 @@ class Country
      */
     public function getNativeOfficialName($language = null)
     {
-        $language = $language ? strtolower($language) : null;
+        $language = $language ? mb_strtolower($language) : null;
 
         return $this->get("name.native.{$language}.official")
             ?: (current($this->get('name.native', []))['official'] ?: $this->get('native_official_name'));
@@ -235,7 +237,7 @@ class Country
      */
     public function getCurrency($currency = null)
     {
-        $currency = $currency ? strtoupper($currency) : null;
+        $currency = $currency ? mb_strtoupper($currency) : null;
 
         return $this->get("currency.{$currency}") ?: (current($this->get('currency', [])) ?: null);
     }
@@ -289,7 +291,7 @@ class Country
      */
     public function getLanguage($language = null)
     {
-        $language = $language ? strtoupper($language) : null;
+        $language = $language ? mb_strtoupper($language) : null;
 
         return $this->get("languages.{$language}") ?: (current($this->get('languages', [])) ?: null);
     }
@@ -314,7 +316,7 @@ class Country
         // Get english name
         $name = [
             'eng' => [
-                'common'   => $this->getName(),
+                'common' => $this->getName(),
                 'official' => $this->getOfficialName(),
             ],
         ];
@@ -323,7 +325,7 @@ class Country
         $natives = $this->getNativeNames() ?: [];
 
         // Get other translations
-        $file = __DIR__.'/../resources/translations/'.strtolower($this->getIsoAlpha2()).'.json';
+        $file = __DIR__.'/../resources/translations/'.mb_strtolower($this->getIsoAlpha2()).'.json';
         $translations = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
 
         // Merge all names together
@@ -835,9 +837,11 @@ class Country
      */
     public function getGeoJson()
     {
-        $file = __DIR__.'/../resources/geodata/'.strtolower($this->getIsoAlpha2()).'.json';
+        if (! ($code = $this->getIsoAlpha2())) {
+            return;
+        }
 
-        return file_exists($file) ? file_get_contents($file) : null;
+        return file_exists($file = __DIR__.'/../resources/geodata/'.mb_strtolower($code).'.json') ? file_get_contents($file) : null;
     }
 
     /**
@@ -847,9 +851,11 @@ class Country
      */
     public function getFlag()
     {
-        $file = __DIR__.'/../resources/flags/'.strtolower($this->getIsoAlpha2()).'.svg';
+        if (! ($code = $this->getIsoAlpha2())) {
+            return;
+        }
 
-        return file_exists($file) ? file_get_contents($file) : null;
+        return file_exists($file = __DIR__.'/../resources/flags/'.mb_strtolower($code).'.svg') ? file_get_contents($file) : null;
     }
 
     /**
@@ -859,9 +865,11 @@ class Country
      */
     public function getDivisions()
     {
-        $file = __DIR__.'/../resources/divisions/'.strtolower($this->getIsoAlpha2()).'.json';
+        if (! ($code = $this->getIsoAlpha2())) {
+            return;
+        }
 
-        return file_exists($file) ? json_decode(file_get_contents($file), true) : null;
+        return file_exists($file = __DIR__.'/../resources/divisions/'.mb_strtolower($code).'.json') ? json_decode(file_get_contents($file), true) : null;
     }
 
     /**

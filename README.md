@@ -36,7 +36,7 @@ echo $egypt->getEmoji();                            echo $egypt->getFlag();
 
 
 // Get all countries                                // Get countries with where condition (continent: Oceania)
-$countries = countries();                           $whereCountries = \Rinvex\Country\Loader::where('geo.continent', ['OC' => 'Oceania']);
+$countries = countries();                           $whereCountries = \Rinvex\Country\CountryLoader::where('geo.continent', ['OC' => 'Oceania']);
 ```
 
 > **Note:** This package is framework-agnostic, so it's compatible with any PHP framework whatsoever without any dependencies at all, except for the PHP version itself **^7.0**. Awesome, huh? :smiley:
@@ -64,58 +64,58 @@ $egypt = country('eg');
 
 // Egypt                                            // مصر
 $egypt->getName();                                  $egypt->getNativeName();
-                                                    
+
 // Arab Republic of Egypt                           // جمهورية مصر العربية
 $egypt->getOfficialName();                          $egypt->getNativeOfficialName();
-                                                    
+
 // Egyptian                                         // Cairo
 $egypt->getDemonym();                               $egypt->getCapital();
-                                                    
+
 // EG                                               // EGY
 $egypt->getIsoAlpha2();                             $egypt->getIsoAlpha3();
-                                                    
+
 // 818                                              // .eg
 $egypt->getIsoNumeric();                            $egypt->getTld();
-                                                    
+
 // [".eg",".مصر"]                                   // ["EG","Arab Republic of Egypt"]
 $egypt->getTlds();                                  $egypt->getAltSpellings();
 
 // Arabic                                           // {"ara":"Arabic"}
 $egypt->getLanguage();                              $egypt->getLanguages();
-                                                    
+
 // Africa                                           // true
 $egypt->getContinent();                             $egypt->usesPostalCode();
-                                                    
+
 // 27 00 N                                          // 30 00 E
 $egypt->getLatitude();                              $egypt->getLongitude();
-                                                    
+
 // 26.756103515625                                  // 29.86229705810547
 $egypt->getLatitudeDesc();                          $egypt->getLongitudeDesc();
-                                                    
+
 // 31.916667                                        // 36.333333
 $egypt->getMaxLatitude();                           $egypt->getMaxLongitude();
-                                                    
+
 // 20.383333                                        // 24.7
 $egypt->getMinLatitude();                           $egypt->getMinLongitude();
-                                                    
+
 // 1002450                                          // Africa
 $egypt->getArea();                                  $egypt->getRegion();
-                                                    
+
 // Northern Africa                                  // EMEA
 $egypt->getSubregion();                             $egypt->getWorldRegion();
-                                                    
+
 // 002                                              // 015
 $egypt->getRegionCode();                            $egypt->getSubregionCode();
-                                                    
+
 // false                                            // ["ISR","LBY","SDN"]
 $egypt->isLandlocked();                             $egypt->getBorders();
-                                                    
+
 // Yes                                              // 20
 $egypt->isIndependent();                            $egypt->getCallingCode();
-                                                    
+
 // ["20"]                                           // 0
 $egypt->getCallingCodes();                          $egypt->getNationalPrefix();
-                                                    
+
 // 9                                                // [9]
 $egypt->getNationalNumberLength();                  $egypt->getNationalNumberLengths();
 
@@ -162,7 +162,7 @@ $egypt->getDivisions();                             $egypt->getTranslation();
 $egypt->getNativeNames();
 
 // {"iso_4217_code":"EGP","iso_4217_numeric":818,"iso_4217_name":"Egyptian Pound","iso_4217_minor_unit":2}
-$egypt->getCurrency(); 
+$egypt->getCurrency();
 
 // {"EGP":{"iso_4217_code":"EGP","iso_4217_numeric":818,"iso_4217_name":"Egyptian Pound","iso_4217_minor_unit":2}}
 $egypt->getCurrencies();
@@ -177,7 +177,7 @@ $egypt->getGeodata();
 $egypt->getExtra();
 
 // {"name":"Al Iskandariyah","alt_names":["El Iskandariya","al-Iskandariyah","al-Iskandarīyah","Alexandria","Alexandrie","Alexandria"],"geo":{"latitude":31.2000924,"longitude":29.9187387,"min_latitude":31.1173177,"min_longitude":29.8233701,"max_latitude":31.330904,"max_longitude":30.0864016}}
-$egypt->getDivision("ALX"); 
+$egypt->getDivision("ALX");
 ```
 
 > **Note:** When retrieving single country, you'll get the full country details just like the previous example. But when retrieving all countries, you'll get a short-listed result set with common country details for better performance.
@@ -234,7 +234,7 @@ $egypt->getDivision("ALX");
     - `subregion` - geographical sub-region
     - `world_region` - geographical world region
     - `region_code` - geographical region numeric code
-    - `subregion_code` - geographical sub-region numeric code 
+    - `subregion_code` - geographical sub-region numeric code
     - `landlocked` - landlock status
     - `borders` - land borders
     - `independent` - independent status
@@ -242,7 +242,7 @@ $egypt->getDivision("ALX");
     - `calling_code` - calling code(s)
     - `national_prefix` - national prefix
     - `national_number_lengths` - national number lengths
-    - `national_destination_code_lengths` - national destination code lengths 
+    - `national_destination_code_lengths` - national destination code lengths
     - `international_prefix` - international prefix
 - `extra`
     - `geonameid` - Geoname ID
@@ -257,9 +257,9 @@ $egypt->getDivision("ALX");
     - `ioc` - Codes assigned by the International Olympics Committee
     - `cowc` - Correlates of War character
     - `cown` - Correlates of War numeric
-    - `fao` - Food and Agriculture Organization 
-    - `imf` - International Monetary Fund 
-    - `ar5` - Fifth Assessment Report (AR5) 
+    - `fao` - Food and Agriculture Organization
+    - `imf` - International Monetary Fund
+    - `ar5` - Fifth Assessment Report (AR5)
     - `address_format` - Address forma
     - `eu_member` - European Union Member
     - `vat_rates` - Value-Added Tax
@@ -289,11 +289,11 @@ $egypt->getDivision("ALX");
 
 - **Upgrading To `v3.x` From `v2.x`**
 
-  No major changes, same API with 100% backward compatibility. Note that **PHP v7.0** is now minimum requirement. 
+  No major changes, same API with 100% backward compatibility. Note that **PHP v7.0** is now minimum requirement.
 
 - **Upgrading To `v2.x` From `v1.x`**
 
-  Whole package re-written from scratch, just drop any previous code and start using the new clean, and intuitive API. 
+  Whole package re-written from scratch, just drop any previous code and start using the new clean, and intuitive API.
 
 
 ## Changelog
@@ -325,11 +325,7 @@ Bug reports, feature requests, and pull requests are very welcome.
 
 ## Security Vulnerabilities
 
-We want to ensure that this package is secure for everyone. If you've discovered a security vulnerability in this package, we appreciate your help in disclosing it to us in a [responsible manner](https://en.wikipedia.org/wiki/Responsible_disclosure).
-
-Publicly disclosing a vulnerability can put the entire community at risk. If you've discovered a security concern, please email us at [security@rinvex.com](mailto:security@rinvex.com). We'll work with you to make sure that we understand the scope of the issue, and that we fully address your concern. We consider correspondence sent to [security@rinvex.com](mailto:security@rinvex.com) our highest priority, and work to address any issues that arise as quickly as possible.
-
-After a security vulnerability has been corrected, a security hotfix release will be deployed as soon as possible.
+If you discover a security vulnerability within this project, please send an e-mail to [security@rinvex.com](security@rinvex.com). All security vulnerabilities will be promptly addressed.
 
 
 ## About Rinvex

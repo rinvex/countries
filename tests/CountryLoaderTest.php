@@ -23,7 +23,7 @@ use PHPUnit_Framework_TestCase;
 use Rinvex\Country\CountryLoader;
 use Rinvex\Country\CountryLoaderException;
 
-class LoaderTest extends PHPUnit_Framework_TestCase
+class CountryLoaderTest extends PHPUnit_Framework_TestCase
 {
     /** @var array */
     protected $methods;

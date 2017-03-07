@@ -837,9 +837,11 @@ class Country
      */
     public function getGeoJson()
     {
-        $file = __DIR__.'/../resources/geodata/'.mb_strtolower($this->getIsoAlpha2()).'.json';
+        if (! ($code = $this->getIsoAlpha2())) {
+            return null;
+        }
 
-        return file_exists($file) ? file_get_contents($file) : null;
+        return file_exists($file = __DIR__.'/../resources/geodata/'.mb_strtolower($code).'.json') ? file_get_contents($file) : null;
     }
 
     /**
@@ -849,9 +851,11 @@ class Country
      */
     public function getFlag()
     {
-        $file = __DIR__.'/../resources/flags/'.mb_strtolower($this->getIsoAlpha2()).'.svg';
+        if (! ($code = $this->getIsoAlpha2())) {
+            return null;
+        }
 
-        return file_exists($file) ? file_get_contents($file) : null;
+        return file_exists($file = __DIR__.'/../resources/flags/'.mb_strtolower($code).'.svg') ? file_get_contents($file) : null;
     }
 
     /**
@@ -861,9 +865,11 @@ class Country
      */
     public function getDivisions()
     {
-        $file = __DIR__.'/../resources/divisions/'.mb_strtolower($this->getIsoAlpha2()).'.json';
+        if (! ($code = $this->getIsoAlpha2())) {
+            return null;
+        }
 
-        return file_exists($file) ? json_decode(file_get_contents($file), true) : null;
+        return file_exists($file = __DIR__.'/../resources/divisions/'.mb_strtolower($code).'.json') ? json_decode(file_get_contents($file), true) : null;
     }
 
     /**

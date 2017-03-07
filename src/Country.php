@@ -838,7 +838,7 @@ class Country
     public function getGeoJson()
     {
         if (! ($code = $this->getIsoAlpha2())) {
-            return null;
+            return;
         }
 
         return file_exists($file = __DIR__.'/../resources/geodata/'.mb_strtolower($code).'.json') ? file_get_contents($file) : null;
@@ -852,7 +852,7 @@ class Country
     public function getFlag()
     {
         if (! ($code = $this->getIsoAlpha2())) {
-            return null;
+            return;
         }
 
         return file_exists($file = __DIR__.'/../resources/flags/'.mb_strtolower($code).'.svg') ? file_get_contents($file) : null;
@@ -866,7 +866,7 @@ class Country
     public function getDivisions()
     {
         if (! ($code = $this->getIsoAlpha2())) {
-            return null;
+            return;
         }
 
         return file_exists($file = __DIR__.'/../resources/divisions/'.mb_strtolower($code).'.json') ? json_decode(file_get_contents($file), true) : null;

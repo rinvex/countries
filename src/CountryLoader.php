@@ -31,20 +31,20 @@ class CountryLoader
     /**
      * Get the country by it's ISO 3166-1 alpha-2.
      *
-     * @param string $key
+     * @param string $code
      * @param bool   $hydrate
      *
      * @return \Rinvex\Country\Country|array
      */
-    public static function country($key, $hydrate = true)
+    public static function country($code, $hydrate = true)
     {
-        $key = mb_strtolower($key);
+        $code = mb_strtolower($code);
 
-        if (! isset(static::$countries[$key])) {
-            static::$countries[$key] = json_decode(static::getFile(__DIR__.'/../resources/data/'.$key.'.json'), true);
+        if (! isset(static::$countries[$code])) {
+            static::$countries[$code] = json_decode(static::getFile(__DIR__.'/../resources/data/'.$code.'.json'), true);
         }
 
-        return $hydrate ? new Country(static::$countries[$key]) : static::$countries[$key];
+        return $hydrate ? new Country(static::$countries[$code]) : static::$countries[$code];
     }
 
     /**

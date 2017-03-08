@@ -346,8 +346,7 @@ class Country
      */
     public function getTranslation($language = null)
     {
-        return isset($this->getTranslations()[$language])
-            ? $this->getTranslations()[$language] : current($this->getTranslations());
+        return $this->getTranslations()[$language] ?? current($this->getTranslations());
     }
 
     /**

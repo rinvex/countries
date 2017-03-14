@@ -4,6 +4,5 @@
 
 phpunit.* export-ignore
 phpcs.* export-ignore
-tests/ export-ignore
-*.md export-ignore
+tests export-ignore
 .* export-ignore

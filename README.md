@@ -325,7 +325,7 @@ Bug reports, feature requests, and pull requests are very welcome.
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within this project, please send an e-mail to [security@rinvex.com](security@rinvex.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this project, please send an e-mail to [help@rinvex.com](help@rinvex.com). All security vulnerabilities will be promptly addressed.
 
 
 ## About Rinvex

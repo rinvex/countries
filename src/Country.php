@@ -141,30 +141,30 @@ class Country
     /**
      * Get the given native name or fallback to first native name.
      *
-     * @param string|null $language
+     * @param string|null $languageCode
      *
      * @return string|null
      */
-    public function getNativeName($language = null)
+    public function getNativeName($languageCode = null)
     {
-        $language = $language ? mb_strtolower($language) : null;
+        $languageCode = $languageCode ? mb_strtolower($languageCode) : null;
 
-        return $this->get("name.native.{$language}.common")
+        return $this->get("name.native.{$languageCode}.common")
             ?: (current($this->get('name.native', []))['common'] ?: $this->get('native_name'));
     }
 
     /**
      * Get the given native official name or fallback to first native official name.
      *
-     * @param string|null $language
+     * @param string|null $languageCode
      *
      * @return string|null
      */
-    public function getNativeOfficialName($language = null)
+    public function getNativeOfficialName($languageCode = null)
     {
-        $language = $language ? mb_strtolower($language) : null;
+        $languageCode = $languageCode ? mb_strtolower($languageCode) : null;
 
-        return $this->get("name.native.{$language}.official")
+        return $this->get("name.native.{$languageCode}.official")
             ?: (current($this->get('name.native', []))['official'] ?: $this->get('native_official_name'));
     }
 
@@ -285,15 +285,15 @@ class Country
     /**
      * Get the given language or fallback to first language.
      *
-     * @param string|null $language
+     * @param string|null $languageCode
      *
      * @return string|null
      */
-    public function getLanguage($language = null)
+    public function getLanguage($languageCode = null)
     {
-        $language = $language ? mb_strtoupper($language) : null;
+        $languageCode = $languageCode ? mb_strtoupper($languageCode) : null;
 
-        return $this->get("languages.{$language}") ?: (current($this->get('languages', [])) ?: null);
+        return $this->get("languages.{$languageCode}") ?: (current($this->get('languages', [])) ?: null);
     }
 
     /**
@@ -340,13 +340,13 @@ class Country
     /**
      * Get the translation.
      *
-     * @param string|null $language
+     * @param string|null $languageCode
      *
      * @return array
      */
-    public function getTranslation($language = null)
+    public function getTranslation($languageCode = null)
     {
-        return $this->getTranslations()[$language] ?? current($this->getTranslations());
+        return $this->getTranslations()[$languageCode] ?? current($this->getTranslations());
     }
 
     /**

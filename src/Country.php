@@ -253,14 +253,12 @@ class Country
     }
 
     /**
-     * Get the default currency or fallback to first currency.
-     *
-     * @param string|null $currency
+     * Get the default currency or fallback to first currency.     
      *
      * @return string|null
      */
     public function getDefaultCurrency(){
-        return $this->getCurrency( $this->get("default_currency"));
+        return $this->getCurrency($this->get("default_currency"));
     }
 
     /**

@@ -439,6 +439,107 @@ class CountryTest extends PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function it_returns_default_currency(){
+
+       $longAttributes = $this->longAttributes;
+
+       $dollarCurrencies = [
+           'USN'=>[
+               "iso_4217_code" =>"USN",
+               "iso_4217_numeric"=>997,
+               "iso_4217_name"=>"United States dollar (next day) (funds code)",
+               "iso_4217_minor_unit"=>2
+           ],
+           'USS'=>[
+               "iso_4217_code" =>"USS",
+               "iso_4217_numeric"=>998,
+               "iso_4217_name"=>"United States dollar (same day) (funds code)",
+               "iso_4217_minor_unit"=>2
+           ],
+           'USD'=>[
+               "iso_4217_code" =>"USD",
+               "iso_4217_numeric"=>840,
+               "iso_4217_name"=>"US Dollar",
+               "iso_4217_minor_unit"=>2
+           ],
+       ];
+
+       $longAttributes['currency'] = $dollarCurrencies;
+       $longAttributes['default_currency'] = 'USD';
+       $country= new Country($longAttributes);
+       $this->assertEquals(
+           $dollarCurrencies['USD'], $country->getDefaultCurrency()
+       );
+    }
+    /** @test */
+    public function it_returns_first_currency_when_default_currency_is_not_set(){
+        $longAttributes = $this->longAttributes;
+
+        $dollarCurrencies = [
+            'USN'=>[
+                "iso_4217_code" =>"USN",
+                "iso_4217_numeric"=>997,
+                "iso_4217_name"=>"United States dollar (next day) (funds code)",
+                "iso_4217_minor_unit"=>2
+            ],
+            'USS'=>[
+                "iso_4217_code" =>"USS",
+                "iso_4217_numeric"=>998,
+                "iso_4217_name"=>"United States dollar (same day) (funds code)",
+                "iso_4217_minor_unit"=>2
+            ],
+            'USD'=>[
+                "iso_4217_code" =>"USD",
+                "iso_4217_numeric"=>840,
+                "iso_4217_name"=>"US Dollar",
+                "iso_4217_minor_unit"=>2
+            ],
+        ];
+
+        $longAttributes['currency'] = $dollarCurrencies;
+
+        $country= new Country($longAttributes);
+
+        $this->assertEquals(
+            $dollarCurrencies['USN'], $country->getDefaultCurrency()
+        );
+    }
+    /** @test */
+    public function it_returns_first_currency_when_missing_default_currency(){
+        $longAttributes = $this->longAttributes;
+
+        $dollarCurrencies = [
+            'USN'=>[
+                "iso_4217_code" =>"USN",
+                "iso_4217_numeric"=>997,
+                "iso_4217_name"=>"United States dollar (next day) (funds code)",
+                "iso_4217_minor_unit"=>2
+            ],
+            'USS'=>[
+                "iso_4217_code" =>"USS",
+                "iso_4217_numeric"=>998,
+                "iso_4217_name"=>"United States dollar (same day) (funds code)",
+                "iso_4217_minor_unit"=>2
+            ],
+            'USD'=>[
+                "iso_4217_code" =>"USD",
+                "iso_4217_numeric"=>840,
+                "iso_4217_name"=>"US Dollar",
+                "iso_4217_minor_unit"=>2
+            ],
+        ];
+
+        $longAttributes['currency'] = $dollarCurrencies;
+        //Set a non-existing default currency
+        $longAttributes['default_currency'] = 'EUR';
+
+        $country= new Country($longAttributes);
+        $this->assertEquals(
+            $dollarCurrencies['USN'], $country->getDefaultCurrency()
+        );
+    }
+
+    /** @test */
     public function it_returns_tld()
     {
         $this->assertEquals(current($this->longAttributes['tld']), $this->longCountry->getTld());

@@ -6,11 +6,11 @@ namespace Rinvex\Country\Test;
 
 use ReflectionClass;
 use Rinvex\Country\Country;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Rinvex\Country\CountryLoader;
 use Rinvex\Country\CountryLoaderException;
 
-class CountryLoaderTest extends PHPUnit_Framework_TestCase
+class CountryLoaderTest extends TestCase
 {
     /** @var array */
     protected static $methods;

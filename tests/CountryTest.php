@@ -6,9 +6,9 @@ namespace Rinvex\Country\Test;
 
 use Exception;
 use Rinvex\Country\Country;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class CountryTest extends PHPUnit_Framework_TestCase
+class CountryTest extends TestCase
 {
     /** @var array */
     protected $shortAttributes;

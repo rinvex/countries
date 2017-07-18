@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Rinvex\Country\Test;
 
 use Rinvex\Country\Country;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class HelpersTest extends PHPUnit_Framework_TestCase
+class HelpersTest extends TestCase
 {
     /** @test */
     public function it_returns_country_data()

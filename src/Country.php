@@ -40,7 +40,7 @@ class Country
      *
      * @param array $attributes
      *
-     * @return static
+     * @return $this
      */
     public function setAttributes($attributes)
     {
@@ -65,7 +65,7 @@ class Country
      * @param string $key
      * @param mixed  $value
      *
-     * @return static
+     * @return $this
      */
     public function set($key, $value)
     {

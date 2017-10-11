@@ -17,9 +17,9 @@ declare(strict_types=1);
 
 namespace Rinvex\Country;
 
-use DateTimeZone;
-use Exception;
 use Locale;
+use Exception;
+use DateTimeZone;
 use ResourceBundle;
 
 class Country

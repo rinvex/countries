@@ -158,6 +158,9 @@ $egypt->getGeoJson();                               $egypt->getFlag();
 // Divisions returned as array                      // {"official":"جمهورية مصر العربية","common":"مصر"}
 $egypt->getDivisions();                             $egypt->getTranslation();
 
+// ['Africa/Cairo']                                 // ['ar_EG']
+$egypt->getTimezones();                             $egypt->getLocales();
+
 // {"ara":{"official":"جمهورية مصر العربية","common":"مصر"}}
 $egypt->getNativeNames();
 

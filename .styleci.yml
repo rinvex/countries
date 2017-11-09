@@ -26,9 +26,12 @@ php:
 
 js:
   tab-width: 4
+  print-width: 120
 
 ts:
   tab-width: 4
+  print-width: 120
 
 css:
   tab-width: 4
+  print-width: 120

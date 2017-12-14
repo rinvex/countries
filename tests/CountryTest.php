@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rinvex\Country\Test;
+namespace Rinvex\Country\Tests;
 
 use Exception;
 use Rinvex\Country\Country;

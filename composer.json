@@ -11,6 +11,7 @@
         "geographic",
         "languages",
         "dialling",
+        "laravel",
         "demonym",
         "simple",
         "emoji",
@@ -57,7 +58,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Rinvex\\Country\\Test\\": "tests"
+            "Rinvex\\Country\\Tests\\": "tests"
         }
     },
     "config": {

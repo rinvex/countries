@@ -13,6 +13,7 @@
 ## Usage
 
 Install via `composer require rinvex/country`, then use intuitively:
+
 ```php
 // Get single country
 $egypt = country('eg');
@@ -57,6 +58,7 @@ $countries = countries();                           $whereCountries = \Rinvex\Co
 ## Advanced Usage
 
 Get country attributes (self-descriptive):
+
 ```php
 $egypt = country('eg');
 

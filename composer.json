@@ -46,8 +46,8 @@
         "php": "^7.1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.0.0",
-        "codedungeon/phpunit-result-printer": "^0.4.0"
+        "codedungeon/phpunit-result-printer": "^0.4.0",
+        "phpunit/phpunit": "^6.0.0"
     },
     "autoload": {
         "files": [
@@ -63,8 +63,8 @@
         }
     },
     "config": {
-        "preferred-install": "dist",
         "sort-packages": true,
+        "preferred-install": "dist",
         "optimize-autoloader": true
     },
     "extra": {

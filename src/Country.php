@@ -220,9 +220,9 @@ class Country
      *
      * @param string|null $currency
      *
-     * @return string|null
+     * @return array|null
      */
-    public function getCurrency($currency = null): ?string
+    public function getCurrency($currency = null): ?array
     {
         $currency = $currency ? mb_strtoupper($currency) : null;
 
@@ -809,9 +809,9 @@ class Country
     /**
      * Get the emoji.
      *
-     * @return array|null
+     * @return string|null
      */
-    public function getEmoji(): ?array
+    public function getEmoji(): ?string
     {
         return $this->get('extra.emoji') ?: $this->get('emoji');
     }

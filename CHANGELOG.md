@@ -48,7 +48,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
   - Refactor documentation
 
 ## v1.0.0 - 2016-08-20
-- Commit first draft.
+- Tag first release.
 
 [v3.1.0]: https://github.com/rinvex/country/compare/v3.0.0...v3.1.0
 [v3.0.0]: https://github.com/rinvex/country/compare/v2.0.0...v3.0.0

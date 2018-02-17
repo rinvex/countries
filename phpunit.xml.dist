@@ -11,7 +11,8 @@
          stopOnFailure="false"
          beStrictAboutTestsThatDoNotTestAnything="true"
          beStrictAboutChangesToGlobalState="true"
-         beStrictAboutCoversAnnotation="true">
+         beStrictAboutCoversAnnotation="true"
+         printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer">
     <testsuites>
         <testsuite name="Rinvex Country Unit Test Suite">
             <directory>tests</directory>
@@ -23,10 +24,10 @@
         </whitelist>
     </filter>
     <logging>
-        <log type="tap" target="build/report.tap"/>
-        <log type="junit" target="build/report.junit.xml"/>
-        <log type="coverage-html" target="build/coverage" charset="UTF-8" yui="true" highlight="true"/>
-        <log type="coverage-text" target="build/coverage.txt"/>
-        <log type="coverage-clover" target="build/logs/clover.xml"/>
+        <log type="tap" target="build/report.tap" />
+        <log type="junit" target="build/report.junit.xml" />
+        <log type="coverage-html" target="build/coverage" charset="UTF-8" yui="true" highlight="true" />
+        <log type="coverage-text" target="build/coverage.txt" />
+        <log type="coverage-clover" target="build/logs/clover.xml" />
     </logging>
 </phpunit>

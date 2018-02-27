@@ -70,6 +70,11 @@
     "extra": {
         "branch-alias": {
             "dev-master": "3.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Rinvex\\Country\\Providers\\CountryServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",

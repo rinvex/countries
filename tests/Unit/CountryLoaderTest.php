@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rinvex\Country\Tests;
+namespace Rinvex\Country\Tests\Unit;
 
 use ReflectionClass;
 use Rinvex\Country\Country;

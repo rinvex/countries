@@ -3,17 +3,41 @@ preset: recommended
 enabled:
   - dir_constant
   - ereg_to_preg
+  - no_useless_else
   - mb_str_functions
+  - short_list_syntax
   - no_short_echo_tag
   - strict_comparison
   - phpdoc_link_to_see
+  - property_separation
   - no_php4_constructor
+  - php_unit_namespaced
+  - random_api_migration
   - declare_strict_types
   - unalign_double_arrow
+  - no_alternative_syntax
+  - standardize_increment
   - length_ordered_imports
   - modernize_types_casting
+  - non_printable_character
   - return_type_declaration
+  - explicit_string_variable
+  - no_unneeded_final_method
+  - no_unneeded_curly_braces
+  - blank_line_before_declare
+  - compact_nullable_typehint
+  - combine_consecutive_issets
+  - combine_consecutive_unsets
+  - explicit_indirect_variable
+  - ternary_to_null_coalescing
+  - escape_implicit_backslashes
+  - fully_qualified_strict_types
+  - phpdoc_return_self_reference
+  - no_null_property_initialization
+  - multiline_comment_opening_closing
   - not_operator_with_successor_space
+  - phpdoc_add_missing_param_annotation
+  - php_unit_set_up_tear_down_visibility
 
 disabled:
   - align_double_arrow

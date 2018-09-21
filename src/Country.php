@@ -1,18 +1,5 @@
 <?php
 
-/*
- * NOTICE OF LICENSE
- *
- * Part of the Rinvex Country Package.
- *
- * This source file is subject to The MIT License (MIT)
- * that is bundled with this package in the LICENSE file.
- *
- * Package: Rinvex Country Package
- * License: The MIT License (MIT)
- * Link:    https://rinvex.com
- */
-
 declare(strict_types=1);
 
 namespace Rinvex\Country;
@@ -67,7 +54,7 @@ class Country
      *
      * @return array|null
      */
-    public function getAttributes()
+    public function getAttributes(): ?array
     {
         return $this->attributes;
     }
@@ -123,7 +110,7 @@ class Country
      *
      * @return string|null
      */
-    public function getName()
+    public function getName(): ?string
     {
         return $this->get('name.common') ?: $this->get('name');
     }
@@ -133,7 +120,7 @@ class Country
      *
      * @return string|null
      */
-    public function getOfficialName()
+    public function getOfficialName(): ?string
     {
         return $this->get('name.official') ?: $this->get('official_name');
     }
@@ -141,30 +128,30 @@ class Country
     /**
      * Get the given native name or fallback to first native name.
      *
-     * @param string|null $language
+     * @param string|null $languageCode
      *
      * @return string|null
      */
-    public function getNativeName($language = null)
+    public function getNativeName($languageCode = null): ?string
     {
-        $language = $language ? mb_strtolower($language) : null;
+        $languageCode = $languageCode ? mb_strtolower($languageCode) : null;
 
-        return $this->get("name.native.{$language}.common")
+        return $this->get("name.native.{$languageCode}.common")
             ?: (current($this->get('name.native', []))['common'] ?: $this->get('native_name'));
     }
 
     /**
      * Get the given native official name or fallback to first native official name.
      *
-     * @param string|null $language
+     * @param string|null $languageCode
      *
      * @return string|null
      */
-    public function getNativeOfficialName($language = null)
+    public function getNativeOfficialName($languageCode = null): ?string
     {
-        $language = $language ? mb_strtolower($language) : null;
+        $languageCode = $languageCode ? mb_strtolower($languageCode) : null;
 
-        return $this->get("name.native.{$language}.official")
+        return $this->get("name.native.{$languageCode}.official")
             ?: (current($this->get('name.native', []))['official'] ?: $this->get('native_official_name'));
     }
 
@@ -173,7 +160,7 @@ class Country
      *
      * @return array|null
      */
-    public function getNativeNames()
+    public function getNativeNames(): ?array
     {
         return $this->get('name.native');
     }
@@ -183,7 +170,7 @@ class Country
      *
      * @return string|null
      */
-    public function getDemonym()
+    public function getDemonym(): ?string
     {
         return $this->get('demonym');
     }
@@ -193,7 +180,7 @@ class Country
      *
      * @return string|null
      */
-    public function getCapital()
+    public function getCapital(): ?string
     {
         return $this->get('capital');
     }
@@ -223,7 +210,7 @@ class Country
      *
      * @return string|null
      */
-    public function getIsoNumeric()
+    public function getIsoNumeric(): ?string
     {
         return $this->get('iso_3166_1_numeric');
     }
@@ -233,9 +220,9 @@ class Country
      *
      * @param string|null $currency
      *
-     * @return string|null
+     * @return array|null
      */
-    public function getCurrency($currency = null)
+    public function getCurrency($currency = null): ?array
     {
         $currency = $currency ? mb_strtoupper($currency) : null;
 
@@ -247,7 +234,7 @@ class Country
      *
      * @return array|null
      */
-    public function getCurrencies()
+    public function getCurrencies(): ?array
     {
         return $this->get('currency');
     }
@@ -257,7 +244,7 @@ class Country
      *
      * @return string|null
      */
-    public function getTld()
+    public function getTld(): ?string
     {
         return current($this->get('tld', [])) ?: null;
     }
@@ -267,7 +254,7 @@ class Country
      *
      * @return array|null
      */
-    public function getTlds()
+    public function getTlds(): ?array
     {
         return $this->get('tld');
     }
@@ -277,7 +264,7 @@ class Country
      *
      * @return array|null
      */
-    public function getAltSpellings()
+    public function getAltSpellings(): ?array
     {
         return $this->get('alt_spellings');
     }
@@ -285,15 +272,15 @@ class Country
     /**
      * Get the given language or fallback to first language.
      *
-     * @param string|null $language
+     * @param string|null $languageCode
      *
      * @return string|null
      */
-    public function getLanguage($language = null)
+    public function getLanguage($languageCode = null): ?string
     {
-        $language = $language ? mb_strtoupper($language) : null;
+        $languageCode = $languageCode ? mb_strtoupper($languageCode) : null;
 
-        return $this->get("languages.{$language}") ?: (current($this->get('languages', [])) ?: null);
+        return $this->get("languages.{$languageCode}") ?: (current($this->get('languages', [])) ?: null);
     }
 
     /**
@@ -301,7 +288,7 @@ class Country
      *
      * @return array|null
      */
-    public function getLanguages()
+    public function getLanguages(): ?array
     {
         return $this->get('languages');
     }
@@ -311,7 +298,7 @@ class Country
      *
      * @return array
      */
-    public function getTranslations()
+    public function getTranslations(): array
     {
         // Get english name
         $name = [
@@ -340,14 +327,13 @@ class Country
     /**
      * Get the translation.
      *
-     * @param string|null $language
+     * @param string|null $languageCode
      *
      * @return array
      */
-    public function getTranslation($language = null)
+    public function getTranslation($languageCode = null): array
     {
-        return isset($this->getTranslations()[$language])
-            ? $this->getTranslations()[$language] : current($this->getTranslations());
+        return $this->getTranslations()[$languageCode] ?? current($this->getTranslations());
     }
 
     /**
@@ -355,7 +341,7 @@ class Country
      *
      * @return array|null
      */
-    public function getGeodata()
+    public function getGeodata(): ?array
     {
         return $this->get('geo');
     }
@@ -365,7 +351,7 @@ class Country
      *
      * @return string|null
      */
-    public function getContinent()
+    public function getContinent(): ?string
     {
         return current($this->get('geo.continent', [])) ?: null;
     }
@@ -385,7 +371,7 @@ class Country
      *
      * @return string|null
      */
-    public function getLatitude()
+    public function getLatitude(): ?string
     {
         return $this->get('geo.latitude');
     }
@@ -395,7 +381,7 @@ class Country
      *
      * @return string|null
      */
-    public function getLongitude()
+    public function getLongitude(): ?string
     {
         return $this->get('geo.longitude');
     }
@@ -405,7 +391,7 @@ class Country
      *
      * @return string|null
      */
-    public function getLatitudeDesc()
+    public function getLatitudeDesc(): ?string
     {
         return $this->get('geo.latitude_desc');
     }
@@ -415,7 +401,7 @@ class Country
      *
      * @return string|null
      */
-    public function getLongitudeDesc()
+    public function getLongitudeDesc(): ?string
     {
         return $this->get('geo.longitude_desc');
     }
@@ -425,7 +411,7 @@ class Country
      *
      * @return string|null
      */
-    public function getMaxLatitude()
+    public function getMaxLatitude(): ?string
     {
         return $this->get('geo.max_latitude');
     }
@@ -435,7 +421,7 @@ class Country
      *
      * @return string|null
      */
-    public function getMaxLongitude()
+    public function getMaxLongitude(): ?string
     {
         return $this->get('geo.max_longitude');
     }
@@ -445,7 +431,7 @@ class Country
      *
      * @return string|null
      */
-    public function getMinLatitude()
+    public function getMinLatitude(): ?string
     {
         return $this->get('geo.min_latitude');
     }
@@ -455,7 +441,7 @@ class Country
      *
      * @return string|null
      */
-    public function getMinLongitude()
+    public function getMinLongitude(): ?string
     {
         return $this->get('geo.min_longitude');
     }
@@ -465,7 +451,7 @@ class Country
      *
      * @return int|null
      */
-    public function getArea()
+    public function getArea(): ?int
     {
         return $this->get('geo.area');
     }
@@ -475,7 +461,7 @@ class Country
      *
      * @return string|null
      */
-    public function getRegion()
+    public function getRegion(): ?string
     {
         return $this->get('geo.region');
     }
@@ -485,7 +471,7 @@ class Country
      *
      * @return string|null
      */
-    public function getSubregion()
+    public function getSubregion(): ?string
     {
         return $this->get('geo.subregion');
     }
@@ -495,7 +481,7 @@ class Country
      *
      * @return string|null
      */
-    public function getWorldRegion()
+    public function getWorldRegion(): ?string
     {
         return $this->get('geo.world_region');
     }
@@ -505,7 +491,7 @@ class Country
      *
      * @return string|null
      */
-    public function getRegionCode()
+    public function getRegionCode(): ?string
     {
         return $this->get('geo.region_code');
     }
@@ -515,7 +501,7 @@ class Country
      *
      * @return string|null
      */
-    public function getSubregionCode()
+    public function getSubregionCode(): ?string
     {
         return $this->get('geo.subregion_code');
     }
@@ -535,7 +521,7 @@ class Country
      *
      * @return array|null
      */
-    public function getBorders()
+    public function getBorders(): ?array
     {
         return $this->get('geo.borders');
     }
@@ -545,7 +531,7 @@ class Country
      *
      * @return string|null
      */
-    public function isIndependent()
+    public function isIndependent(): ?string
     {
         return $this->get('geo.independent');
     }
@@ -555,7 +541,7 @@ class Country
      *
      * @return string|null
      */
-    public function getCallingCode()
+    public function getCallingCode(): ?string
     {
         return current($this->get('dialling.calling_code', [])) ?: (current($this->get('calling_code', [])) ?: null);
     }
@@ -565,7 +551,7 @@ class Country
      *
      * @return array|null
      */
-    public function getCallingCodes()
+    public function getCallingCodes(): ?array
     {
         return $this->get('dialling.calling_code');
     }
@@ -575,7 +561,7 @@ class Country
      *
      * @return string|null
      */
-    public function getNationalPrefix()
+    public function getNationalPrefix(): ?string
     {
         return $this->get('dialling.national_prefix');
     }
@@ -585,7 +571,7 @@ class Country
      *
      * @return int|null
      */
-    public function getNationalNumberLength()
+    public function getNationalNumberLength(): ?int
     {
         return current($this->get('dialling.national_number_lengths', [])) ?: null;
     }
@@ -595,7 +581,7 @@ class Country
      *
      * @return array|null
      */
-    public function getNationalNumberLengths()
+    public function getNationalNumberLengths(): ?array
     {
         return $this->get('dialling.national_number_lengths');
     }
@@ -605,7 +591,7 @@ class Country
      *
      * @return int|null
      */
-    public function getNationalDestinationCodeLength()
+    public function getNationalDestinationCodeLength(): ?int
     {
         return current($this->get('dialling.national_destination_code_lengths', [])) ?: null;
     }
@@ -615,7 +601,7 @@ class Country
      *
      * @return array|null
      */
-    public function getnationaldestinationcodelengths()
+    public function getnationaldestinationcodelengths(): ?array
     {
         return $this->get('dialling.national_destination_code_lengths');
     }
@@ -625,7 +611,7 @@ class Country
      *
      * @return string|null
      */
-    public function getInternationalPrefix()
+    public function getInternationalPrefix(): ?string
     {
         return $this->get('dialling.international_prefix');
     }
@@ -635,7 +621,7 @@ class Country
      *
      * @return array|null
      */
-    public function getExtra()
+    public function getExtra(): ?array
     {
         return $this->get('extra');
     }
@@ -645,7 +631,7 @@ class Country
      *
      * @return int|null
      */
-    public function getGeonameid()
+    public function getGeonameid(): ?int
     {
         return $this->get('extra.geonameid');
     }
@@ -655,7 +641,7 @@ class Country
      *
      * @return string|null
      */
-    public function getEdgar()
+    public function getEdgar(): ?string
     {
         return $this->get('extra.edgar');
     }
@@ -665,7 +651,7 @@ class Country
      *
      * @return string|null
      */
-    public function getItu()
+    public function getItu(): ?string
     {
         return $this->get('extra.itu');
     }
@@ -675,7 +661,7 @@ class Country
      *
      * @return string|null
      */
-    public function getMarc()
+    public function getMarc(): ?string
     {
         return $this->get('extra.marc');
     }
@@ -685,7 +671,7 @@ class Country
      *
      * @return string|null
      */
-    public function getWmo()
+    public function getWmo(): ?string
     {
         return $this->get('extra.wmo');
     }
@@ -695,7 +681,7 @@ class Country
      *
      * @return string|null
      */
-    public function getDs()
+    public function getDs(): ?string
     {
         return $this->get('extra.ds');
     }
@@ -705,7 +691,7 @@ class Country
      *
      * @return string|null
      */
-    public function getFifa()
+    public function getFifa(): ?string
     {
         return $this->get('extra.fifa');
     }
@@ -715,7 +701,7 @@ class Country
      *
      * @return string|null
      */
-    public function getFips()
+    public function getFips(): ?string
     {
         return $this->get('extra.fips');
     }
@@ -725,7 +711,7 @@ class Country
      *
      * @return int|null
      */
-    public function getGaul()
+    public function getGaul(): ?int
     {
         return $this->get('extra.gaul');
     }
@@ -735,7 +721,7 @@ class Country
      *
      * @return string|null
      */
-    public function getIoc()
+    public function getIoc(): ?string
     {
         return $this->get('extra.ioc');
     }
@@ -745,7 +731,7 @@ class Country
      *
      * @return string|null
      */
-    public function getCowc()
+    public function getCowc(): ?string
     {
         return $this->get('extra.cowc');
     }
@@ -755,7 +741,7 @@ class Country
      *
      * @return int|null
      */
-    public function getCown()
+    public function getCown(): ?int
     {
         return $this->get('extra.cown');
     }
@@ -765,7 +751,7 @@ class Country
      *
      * @return int|null
      */
-    public function getFao()
+    public function getFao(): ?int
     {
         return $this->get('extra.fao');
     }
@@ -775,7 +761,7 @@ class Country
      *
      * @return int|null
      */
-    public function getImf()
+    public function getImf(): ?int
     {
         return $this->get('extra.imf');
     }
@@ -795,7 +781,7 @@ class Country
      *
      * @return string|null
      */
-    public function getAddressFormat()
+    public function getAddressFormat(): ?string
     {
         return $this->get('extra.address_format');
     }
@@ -815,7 +801,7 @@ class Country
      *
      * @return array|null
      */
-    public function getVatRates()
+    public function getVatRates(): ?array
     {
         return $this->get('extra.vat_rates');
     }
@@ -823,9 +809,9 @@ class Country
     /**
      * Get the emoji.
      *
-     * @return array|null
+     * @return string|null
      */
-    public function getEmoji()
+    public function getEmoji(): ?string
     {
         return $this->get('extra.emoji') ?: $this->get('emoji');
     }
@@ -835,10 +821,10 @@ class Country
      *
      * @return string|null
      */
-    public function getGeoJson()
+    public function getGeoJson(): ?string
     {
         if (! ($code = $this->getIsoAlpha2())) {
-            return;
+            return null;
         }
 
         return file_exists($file = __DIR__.'/../resources/geodata/'.mb_strtolower($code).'.json') ? file_get_contents($file) : null;
@@ -849,10 +835,10 @@ class Country
      *
      * @return string|null
      */
-    public function getFlag()
+    public function getFlag(): ?string
     {
         if (! ($code = $this->getIsoAlpha2())) {
-            return;
+            return null;
         }
 
         return file_exists($file = __DIR__.'/../resources/flags/'.mb_strtolower($code).'.svg') ? file_get_contents($file) : null;
@@ -863,10 +849,10 @@ class Country
      *
      * @return array|null
      */
-    public function getDivisions()
+    public function getDivisions(): ?array
     {
         if (! ($code = $this->getIsoAlpha2())) {
-            return;
+            return null;
         }
 
         return file_exists($file = __DIR__.'/../resources/divisions/'.mb_strtolower($code).'.json') ? json_decode(file_get_contents($file), true) : null;
@@ -879,7 +865,7 @@ class Country
      *
      * @return array|null
      */
-    public function getDivision($division)
+    public function getDivision($division): ?array
     {
         return ! empty($this->getDivisions()) && isset($this->getDivisions()[$division])
             ? $this->getDivisions()[$division] : null;

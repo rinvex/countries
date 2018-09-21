@@ -1,26 +1,13 @@
 <?php
 
-/*
- * NOTICE OF LICENSE
- *
- * Part of the Rinvex Country Package.
- *
- * This source file is subject to The MIT License (MIT)
- * that is bundled with this package in the LICENSE file.
- *
- * Package: Rinvex Country Package
- * License: The MIT License (MIT)
- * Link:    https://rinvex.com
- */
-
 declare(strict_types=1);
 
-namespace Rinvex\Country\Test;
+namespace Rinvex\Country\Tests\Unit;
 
 use Rinvex\Country\Country;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class HelpersTest extends PHPUnit_Framework_TestCase
+class HelpersTest extends TestCase
 {
     /** @test */
     public function it_returns_country_data()

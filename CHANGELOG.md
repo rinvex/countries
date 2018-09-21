@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v4.0.0] - 2018-09-22
+- Simplify code by using PHP7 null coalescing operator
+- Fix stupid gitattributes export-ignore issues
+- Rename country variable to countryCode for naming consistency
+- Remove file header docblock
+- Push forward PHPUnit version
+- Update composer config
+- Fix deprecated PHPUnit TestCase namespace
+- Disable travis email notifications
+- Fix git export-ignore dotfiles
+- Support the new StyleCI CSS/JS beta features
+- Add PHPUnitPrettyResultPrinter
+- Enforce consistency
+- Require PHP 7.1.0 at least
+- Tweak composer file
+- Typehint method returns
+- Fix wrong method return types
+- Update minimum required PHP version
+- Update composer packages
+- Update travis php versions
+- Add Laravel Auto Discovery support and validation rule
+- Add missing Kosovo emoji
+- Drop StyleCI multi-language support (paid feature now!)
+- Prepare and tweak testing configuration
+- Update PHPUnit options
+
 ## [v3.1.0] - 2017-03-07
 - Format country code to small case before retrieval
 - Change internal methods visibility to protected
@@ -50,6 +76,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Tag first release.
 
+[v4.0.0]: https://github.com/rinvex/country/compare/v3.1.0...v4.0.0
 [v3.1.0]: https://github.com/rinvex/country/compare/v3.0.0...v3.1.0
 [v3.0.0]: https://github.com/rinvex/country/compare/v2.0.0...v3.0.0
 [v2.0.0]: https://github.com/rinvex/country/compare/v1.0.0...v2.0.0

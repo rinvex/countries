@@ -5,6 +5,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v4.0.1] - 2018-09-29
+- Abandon the package in favor to rinvex/countries
+
 ## [v4.0.0] - 2018-09-22
 - Simplify code by using PHP7 null coalescing operator
 - Fix stupid gitattributes export-ignore issues
@@ -76,6 +79,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Tag first release.
 
+[v4.0.1]: https://github.com/rinvex/country/compare/v4.0.0...v4.0.1
 [v4.0.0]: https://github.com/rinvex/country/compare/v3.1.0...v4.0.0
 [v3.1.0]: https://github.com/rinvex/country/compare/v3.0.0...v3.1.0
 [v3.0.0]: https://github.com/rinvex/country/compare/v2.0.0...v3.0.0

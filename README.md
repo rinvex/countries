@@ -2,17 +2,17 @@
 
 **Rinvex Country** is a simple and lightweight package for retrieving country details with flexibility. A whole bunch of data including name, demonym, capital, iso codes, dialling codes, geo data, currencies, flags, emoji, and other attributes for all 250 countries worldwide at your fingertips.
 
-[![Packagist](https://img.shields.io/packagist/v/rinvex/country.svg?label=Packagist&style=flat-square)](https://packagist.org/packages/rinvex/country)
-[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/rinvex/country.svg?label=Scrutinizer&style=flat-square)](https://scrutinizer-ci.com/g/rinvex/country/)
-[![Code Climate](https://img.shields.io/codeclimate/github/rinvex/country.svg?label=CodeClimate&style=flat-square)](https://codeclimate.com/github/rinvex/country)
-[![Travis](https://img.shields.io/travis/rinvex/country.svg?label=TravisCI&style=flat-square)](https://travis-ci.org/rinvex/country)
+[![Packagist](https://img.shields.io/packagist/v/rinvex/countries.svg?label=Packagist&style=flat-square)](https://packagist.org/packages/rinvex/countries)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/rinvex/countries.svg?label=Scrutinizer&style=flat-square)](https://scrutinizer-ci.com/g/rinvex/countries/)
+[![Code Climate](https://img.shields.io/codeclimate/github/rinvex/countries.svg?label=CodeClimate&style=flat-square)](https://codeclimate.com/github/rinvex/countries)
+[![Travis](https://img.shields.io/travis/rinvex/countries.svg?label=TravisCI&style=flat-square)](https://travis-ci.org/rinvex/countries)
 [![StyleCI](https://styleci.io/repos/66037019/shield)](https://styleci.io/repos/66037019)
-[![License](https://img.shields.io/packagist/l/rinvex/country.svg?label=License&style=flat-square)](https://github.com/rinvex/country/blob/develop/LICENSE)
+[![License](https://img.shields.io/packagist/l/rinvex/countries.svg?label=License&style=flat-square)](https://github.com/rinvex/countries/blob/develop/LICENSE)
 
 
 ## Usage
 
-Install via `composer require rinvex/country`, then use intuitively:
+Install via `composer require rinvex/countries`, then use intuitively:
 
 ```php
 // Get single country

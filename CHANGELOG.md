@@ -1,9 +1,13 @@
-# Rinvex Country Change Log
+# Rinvex Countries Change Log
 
 All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
+
+## [v5.0.0] - 2018-10-01
+- Enforce Consistency
+- Rename package to rinvex/countries
 
 ## [v4.0.0] - 2018-09-22
 - Simplify code by using PHP7 null coalescing operator
@@ -76,7 +80,8 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Tag first release.
 
-[v4.0.0]: https://github.com/rinvex/country/compare/v3.1.0...v4.0.0
-[v3.1.0]: https://github.com/rinvex/country/compare/v3.0.0...v3.1.0
-[v3.0.0]: https://github.com/rinvex/country/compare/v2.0.0...v3.0.0
-[v2.0.0]: https://github.com/rinvex/country/compare/v1.0.0...v2.0.0
+[v5.0.0]: https://github.com/rinvex/countries/compare/v4.0.0...v5.0.0
+[v4.0.0]: https://github.com/rinvex/countries/compare/v3.1.0...v4.0.0
+[v3.1.0]: https://github.com/rinvex/countries/compare/v3.0.0...v3.1.0
+[v3.0.0]: https://github.com/rinvex/countries/compare/v2.0.0...v3.0.0
+[v2.0.0]: https://github.com/rinvex/countries/compare/v1.0.0...v2.0.0

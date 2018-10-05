@@ -1,6 +1,7 @@
 {
-    "name": "rinvex/country",
-    "description": "Rinvex Country is a simple and lightweight package for retrieving country details with flexibility. A whole bunch of data including name, demonym, capital, iso codes, dialling codes, geo data, currencies, flags, emoji, and other attributes for all 250 countries worldwide at your fingertips.",
+    "name": "rinvex/countries",
+    "description": "Rinvex Countries is a simple and lightweight package for retrieving country details with flexibility. A whole bunch of data including name, demonym, capital, iso codes, dialling codes, geo data, currencies, flags, emoji, and other attributes for all 250 countries worldwide at your fingertips.",
+    "type": "library",
     "keywords": [
         "flags",
         "rinvex",
@@ -11,7 +12,6 @@
         "geographic",
         "languages",
         "dialling",
-        "laravel",
         "demonym",
         "simple",
         "emoji",
@@ -21,9 +21,9 @@
     "homepage": "https://rinvex.com",
     "support": {
         "email": "help@rinvex.com",
-        "issues": "https://github.com/rinvex/country/issues",
-        "source": "https://github.com/rinvex/country",
-        "docs": "https://github.com/rinvex/country/blob/master/README.md"
+        "issues": "https://github.com/rinvex/countries/issues",
+        "source": "https://github.com/rinvex/countries",
+        "docs": "https://github.com/rinvex/countries/blob/master/README.md"
     },
     "authors": [
         {
@@ -38,15 +38,15 @@
             "role": "Project Lead"
         },
         {
-            "name": "The Generous Laravel Community",
-            "homepage": "https://github.com/rinvex/country/contributors"
+            "name": "The Generous PHP Community",
+            "homepage": "https://github.com/rinvex/countries/contributors"
         }
     ],
     "require": {
         "php": "^7.1.3"
     },
     "require-dev": {
-        "codedungeon/phpunit-result-printer": "^0.20.0",
+        "codedungeon/phpunit-result-printer": "^0.22.0",
         "phpunit/phpunit": "^7.0.0"
     },
     "autoload": {
@@ -62,15 +62,15 @@
             "Rinvex\\Country\\Tests\\": "tests"
         }
     },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
     "config": {
         "sort-packages": true,
         "preferred-install": "dist",
         "optimize-autoloader": true
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "3.0-dev"
-        },
         "laravel": {
             "providers": [
                 "Rinvex\\Country\\Providers\\CountryServiceProvider"

@@ -823,11 +823,11 @@ class Country
      */
     public function getGeoJson(): ?string
     {
-        if (! ($code = $this->getIsoAlpha2())) {
+        if (! $code = $this->getIsoAlpha2()) {
             return null;
         }
 
-        return file_exists($file = __DIR__.'/../resources/geodata/'.mb_strtolower($code).'.json') ? file_get_contents($file) : null;
+        return $this->getResourceFileContents('geodata', $code.'.json');
     }
 
     /**
@@ -837,11 +837,11 @@ class Country
      */
     public function getFlag(): ?string
     {
-        if (! ($code = $this->getIsoAlpha2())) {
+        if (! $code = $this->getIsoAlpha2()) {
             return null;
         }
 
-        return file_exists($file = __DIR__.'/../resources/flags/'.mb_strtolower($code).'.svg') ? file_get_contents($file) : null;
+        return $this->getResourceFileContents('flags', $code.'.svg');
     }
 
     /**
@@ -851,11 +851,11 @@ class Country
      */
     public function getDivisions(): ?array
     {
-        if (! ($code = $this->getIsoAlpha2())) {
+        if (! $code = $this->getIsoAlpha2()) {
             return null;
         }
 
-        return file_exists($file = __DIR__.'/../resources/divisions/'.mb_strtolower($code).'.json') ? json_decode(file_get_contents($file), true) : null;
+        return json_decode($this->getResourceFileContents('divisions', $code.'.json'), true);
     }
 
     /**
@@ -868,6 +868,21 @@ class Country
     public function getDivision($division): ?array
     {
         return ! empty($this->getDivisions()) && isset($this->getDivisions()[$division])
-            ? $this->getDivisions()[$division] : null;
+            ? $this->getDivisions()[$division]
+            : null;
+    }
+
+    /**
+     * Get the contents of the file by the given directory and code.
+     *
+     * @param string $directory
+     * @param string $filename
+     * @return null|string
+     */
+    private function getResourceFileContents(string $directory, string $filename): ?string
+    {
+        return file_exists($file = __DIR__.'/../resources/'.$directory.'/'.mb_strtolower($filename))
+            ? file_get_contents($file)
+            : null;
     }
 }

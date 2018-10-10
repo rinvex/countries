@@ -93,26 +93,20 @@ class CountryLoader
     {
         return function ($item) use ($key, $operator, $value) {
             $retrieved = static::get($item, $key);
-
-            if ($operator == '!=' || $operator == '<>') {
-                $result = $retrieved != $value;
-            } elseif ($operator == '<') {
-                $result = $retrieved < $value;
-            } elseif ($operator == '>') {
-                $result = $retrieved > $value;
-            } elseif ($operator == '<=') {
-                $result = $retrieved <= $value;
-            } elseif ($operator == '>=') {
-                $result = $retrieved >= $value;
-            } elseif ($operator == '===') {
-                $result = $retrieved === $value;
-            } elseif ($operator == '!==') {
-                $result = $retrieved !== $value;
-            } else {
-                $result = $retrieved == $value;
+            
+            switch ($operator) {
+                default:
+                case '=':
+                case '==':  return $retrieved == $value;
+                case '!=':
+                case '<>':  return $retrieved != $value;
+                case '<':   return $retrieved < $value;
+                case '>':   return $retrieved > $value;
+                case '<=':  return $retrieved <= $value;
+                case '>=':  return $retrieved >= $value;
+                case '===': return $retrieved === $value;
+                case '!==': return $retrieved !== $value;
             }
-
-            return $result;
         };
     }
 

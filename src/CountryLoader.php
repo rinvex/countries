@@ -28,7 +28,8 @@ class CountryLoader
         $code = mb_strtolower($code);
 
         if (! isset(static::$countries[$code])) {
-            static::$countries[$code] = json_decode(static::getFile(__DIR__.'/../resources/data/'.$code.'.json'), true);
+            $file = static::getFile(__DIR__ . '/../resources/data/' . $code . '.json');
+            static::$countries[$code] = json_decode($file, true);
         }
 
         return $hydrate ? new Country(static::$countries[$code]) : static::$countries[$code];
@@ -72,7 +73,8 @@ class CountryLoader
         }
 
         if (! isset(static::$countries['longlist'])) {
-            static::$countries['longlist'] = json_decode(static::getFile(__DIR__.'/../resources/data/longlist.json'), true);
+            $file = static::getFile(__DIR__ . '/../resources/data/longlist.json');
+            static::$countries['longlist'] = json_decode($file, true);
         }
 
         return static::filter(static::$countries['longlist'], static::operatorForWhere($key, $operator, $value));
@@ -91,7 +93,7 @@ class CountryLoader
     {
         return function ($item) use ($key, $operator, $value) {
             $retrieved = static::get($item, $key);
-
+            
             switch ($operator) {
                 default:
                 case '=':

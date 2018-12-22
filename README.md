@@ -337,4 +337,4 @@ Rinvex is a software solutions startup, specialized in integrated enterprise sol
 
 This software is released under [The MIT License (MIT)](LICENSE).
 
-(c) 2016-2018 Rinvex LLC, Some rights reserved.
+(c) 2016-2019 Rinvex LLC, Some rights reserved.

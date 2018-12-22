@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v5.0.1] - 2018-12-22
+- Update composer dependencies
+- Add PHP 7.3 support to travis
+- Mexico City is no longer called Distrito Federal
+
 ## [v5.0.0] - 2018-10-01
 - Enforce Consistency
 - Rename package to rinvex/countries
@@ -80,6 +85,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Tag first release.
 
+[v5.0.1]: https://github.com/rinvex/countries/compare/v5.0.0...v5.0.1
 [v5.0.0]: https://github.com/rinvex/countries/compare/v4.0.0...v5.0.0
 [v4.0.0]: https://github.com/rinvex/countries/compare/v3.1.0...v4.0.0
 [v3.1.0]: https://github.com/rinvex/countries/compare/v3.0.0...v3.1.0

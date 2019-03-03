@@ -305,7 +305,7 @@ Refer to the [Changelog](CHANGELOG.md) for a full history of the project.
 
 The following support channels are available at your fingertips:
 
-- [Chat on Slack](http://chat.rinvex.com)
+- [Chat on Slack](https://bit.ly/rinvex-slack)
 - [Help on Email](mailto:help@rinvex.com)
 - [Follow on Twitter](https://twitter.com/rinvex)
 

@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v6.0.0] - 2019-03-03
+- Rename environment variable QUEUE_DRIVER to QUEUE_CONNECTION
+- Require PHP 7.2 & Laravel 5.8
+- Apply PHPUnit 8 updates
+
 ## [v5.0.2] - 2018-12-23
 - Fix dialing code for Caribbean Netherlands, Curaçao","official, Saint Helena (fix #79)
 - Mexico City is no longer called Distrito Federal
@@ -90,6 +95,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Tag first release.
 
+[v6.0.0]: https://github.com/rinvex/countries/compare/v5.0.2...v6.0.0
 [v5.0.2]: https://github.com/rinvex/countries/compare/v5.0.1...v5.0.2
 [v5.0.1]: https://github.com/rinvex/countries/compare/v5.0.0...v5.0.1
 [v5.0.0]: https://github.com/rinvex/countries/compare/v4.0.0...v5.0.0

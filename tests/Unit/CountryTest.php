@@ -22,7 +22,7 @@ class CountryTest extends TestCase
     /** @var \Rinvex\Country\Country */
     protected $longCountry;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 

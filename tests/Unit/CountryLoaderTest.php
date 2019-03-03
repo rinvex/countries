@@ -15,7 +15,7 @@ class CountryLoaderTest extends TestCase
     /** @var array */
     protected static $methods;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         $reflectedLoader = new ReflectionClass(CountryLoader::class);
         self::$methods['get'] = $reflectedLoader->getMethod('get');
@@ -29,7 +29,7 @@ class CountryLoaderTest extends TestCase
         }
     }
 
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
     {
         self::$methods = null;
     }
@@ -160,7 +160,7 @@ class CountryLoaderTest extends TestCase
     public function it_returns_country_array_shortlist()
     {
         $this->assertEquals(250, count(CountryLoader::countries()));
-        $this->assertInternalType('array', CountryLoader::countries()['eg']);
+        $this->assertIsArray(CountryLoader::countries()['eg']);
         $this->assertEquals('Egypt', CountryLoader::countries()['eg']['name']);
         $this->assertArrayNotHasKey('geo', CountryLoader::countries()['eg']);
     }
@@ -169,7 +169,7 @@ class CountryLoaderTest extends TestCase
     public function it_returns_country_hydrated_shortlist()
     {
         $this->assertEquals(250, count(CountryLoader::countries(false, true)));
-        $this->assertInternalType('object', CountryLoader::countries(false, true)['eg']);
+        $this->assertIsObject(CountryLoader::countries(false, true)['eg']);
         $this->assertEquals('Egypt', CountryLoader::countries(false, true)['eg']->getName());
         $this->assertNull(CountryLoader::countries(false, true)['eg']->getGeodata());
     }
@@ -178,7 +178,7 @@ class CountryLoaderTest extends TestCase
     public function it_returns_country_array_longlist()
     {
         $this->assertEquals(250, count(CountryLoader::countries(true)));
-        $this->assertInternalType('array', CountryLoader::countries(true)['eg']);
+        $this->assertIsArray(CountryLoader::countries(true)['eg']);
         $this->assertEquals('Egypt', CountryLoader::countries(true)['eg']['name']['common']);
         $this->assertEquals('🇪🇬', CountryLoader::countries(true)['eg']['extra']['emoji']);
         $this->assertArrayHasKey('geo', CountryLoader::countries(true)['eg']);
@@ -188,10 +188,10 @@ class CountryLoaderTest extends TestCase
     public function it_returns_country_hydrated_longlist()
     {
         $this->assertEquals(250, count(CountryLoader::countries(true, true)));
-        $this->assertInternalType('object', CountryLoader::countries(true, true)['eg']);
+        $this->assertIsObject(CountryLoader::countries(true, true)['eg']);
         $this->assertEquals('Egypt', CountryLoader::countries(true, true)['eg']->getName());
         $this->assertEquals('🇪🇬', CountryLoader::countries(true, true)['eg']->getEmoji());
-        $this->assertInternalType('array', CountryLoader::countries(true, true)['eg']->getGeodata());
+        $this->assertIsArray(CountryLoader::countries(true, true)['eg']->getGeodata());
     }
 
     /** @test */

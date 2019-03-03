@@ -118,7 +118,7 @@ class HelpersTest extends TestCase
     public function it_returns_country_array_shortlist()
     {
         $this->assertEquals(250, count(countries()));
-        $this->assertInternalType('array', countries()['eg']);
+        $this->assertIsArray(countries()['eg']);
         $this->assertEquals('Egypt', countries()['eg']['name']);
         $this->assertArrayNotHasKey('geo', countries()['eg']);
     }

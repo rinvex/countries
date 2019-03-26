@@ -278,7 +278,7 @@ class Country
      */
     public function getLanguage($languageCode = null): ?string
     {
-        $languageCode = $languageCode ? mb_strtoupper($languageCode) : null;
+        $languageCode = $languageCode ? mb_strtolower($languageCode) : null;
 
         return $this->get("languages.{$languageCode}") ?: (current($this->get('languages', [])) ?: null);
     }

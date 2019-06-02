@@ -99,6 +99,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Tag first release.
 
+[v6.1.0]: https://github.com/rinvex/countries/compare/v6.0.0...v6.1.0
 [v6.0.0]: https://github.com/rinvex/countries/compare/v5.0.2...v6.0.0
 [v5.0.2]: https://github.com/rinvex/countries/compare/v5.0.1...v5.0.2
 [v5.0.1]: https://github.com/rinvex/countries/compare/v5.0.0...v5.0.1

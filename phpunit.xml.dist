@@ -34,11 +34,11 @@
         <log type="coverage-clover" target="build/logs/clover.xml" />
     </logging>
     <php>
-        <env name="APP_ENV" value="testing" />
-        <env name="CACHE_DRIVER" value="array" />
-        <env name="SESSION_DRIVER" value="array" />
-        <env name="QUEUE_CONNECTION" value="sync" />
-        <env name="DB_CONNECTION" value="sqlite" />
-        <env name="DB_DATABASE" value=":memory:" />
+        <server name="APP_ENV" value="testing" />
+        <server name="CACHE_DRIVER" value="array" />
+        <server name="SESSION_DRIVER" value="array" />
+        <server name="QUEUE_CONNECTION" value="sync" />
+        <server name="DB_CONNECTION" value="sqlite" />
+        <server name="DB_DATABASE" value=":memory:" />
     </php>
 </phpunit>

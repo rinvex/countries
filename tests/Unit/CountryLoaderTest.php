@@ -385,7 +385,7 @@ class CountryLoaderTest extends TestCase
     /** @test */
     public function it_gets_file_content()
     {
-        $this->assertStringEqualsFile(__DIR__.'/../resources/data/eg.json', self::$methods['getFile']->invoke(null, __DIR__.'/../resources/data/eg.json'));
+        $this->assertStringEqualsFile(__DIR__.'/../../resources/data/eg.json', self::$methods['getFile']->invoke(null, __DIR__.'/../../resources/data/eg.json'));
     }
 
     /** @test */

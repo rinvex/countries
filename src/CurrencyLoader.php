@@ -17,17 +17,19 @@ class CurrencyLoader
      */
     public static function curriencies($longlist = false): array
     {
-        if(empty(static::$curriencies)) {
+        $list = $longlist ? 'longlist' : 'shortlist';
+
+        if(!isset(static::$curriencies[$list])) {
             
             $countries = CountryLoader::countries(true);
 
             foreach ($countries as $country) {
                 foreach ($country["currency"] as $currency => $details) {
-                    static::$curriencies[$currency] = $longlist? $details: $currency; 
+                    static::$curriencies[$list][$currency] = $longlist? $details: $currency; 
                 }
             }
         } 
 
-        return static::$curriencies;
+        return static::$curriencies[$list];
     }
 }

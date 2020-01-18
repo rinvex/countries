@@ -21,6 +21,8 @@ class CountryLoader
      * @param string $code
      * @param bool   $hydrate
      *
+     * @throws \Rinvex\Country\CountryLoaderException
+     *
      * @return \Rinvex\Country\Country|array
      */
     public static function country($code, $hydrate = true)
@@ -39,6 +41,8 @@ class CountryLoader
      *
      * @param bool $longlist
      * @param bool $hydrate
+     *
+     * @throws \Rinvex\Country\CountryLoaderException
      *
      * @return array
      */
@@ -61,6 +65,8 @@ class CountryLoader
      * @param string $key
      * @param mixed  $operator
      * @param mixed  $value
+     *
+     * @throws \Rinvex\Country\CountryLoaderException
      *
      * @return array
      */

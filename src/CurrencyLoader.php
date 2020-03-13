@@ -9,9 +9,9 @@ class CurrencyLoader
     protected static $curriencies = [];
 
     /**
-     * Retrive all the curriencies of all countries
+     * Retrive all the curriencies of all countries.
      *
-     * @param boolean $longlist states if need all the details of the curriencies or only the keys
+     * @param bool $longlist states if need all the details of the curriencies or only the keys
      *
      * @throws \Rinvex\Country\CountryLoaderException
      *

@@ -43,12 +43,12 @@
         }
     ],
     "require": {
-        "php": "^7.2.0"
+        "php": "^7.4.0"
     },
     "require-dev": {
-        "codedungeon/phpunit-result-printer": "^0.26.0",
-        "laravel/helpers": "^1.1.0",
-        "phpunit/phpunit": "^8.3.0"
+        "codedungeon/phpunit-result-printer": "^0.27.0",
+        "laravel/helpers": "^1.2.0",
+        "phpunit/phpunit": "^9.0.0"
     },
     "autoload": {
         "files": [

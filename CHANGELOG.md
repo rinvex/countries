@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v7.0.0] - 2020-03-15
+- Upgrade to Laravel v7.1.x & PHP v7.4.x
+
+## [v6.1.2] - 2019-03-13
+- Tweak TravisCI config
+- Add currencies listing (#130)	a89f5d9
+- solve testing wrong files paths (#131)
+- Arrange currencies to return default currency for each country - Sort shortlist and longlist by country code / key & Add currency to shortlist
+- Tweak currency loader to support both longlist & shortlist
+- Update StyleCI config
+- Enforce consistency
+
 ## [v6.1.1] - 2019-09-24
 - Add missing laravel/helpers composer package
 
@@ -102,6 +114,8 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Tag first release.
 
+[v7.0.0]: https://github.com/rinvex/countries/compare/v6.1.2...v7.0.0
+[v6.1.2]: https://github.com/rinvex/countries/compare/v6.1.1...v6.1.2
 [v6.1.1]: https://github.com/rinvex/countries/compare/v6.1.0...v6.1.1
 [v6.1.0]: https://github.com/rinvex/countries/compare/v6.0.0...v6.1.0
 [v6.0.0]: https://github.com/rinvex/countries/compare/v5.0.2...v6.0.0

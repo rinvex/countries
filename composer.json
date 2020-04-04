@@ -47,7 +47,6 @@
     },
     "require-dev": {
         "codedungeon/phpunit-result-printer": "^0.27.0",
-        "laravel/helpers": "^1.2.0",
         "phpunit/phpunit": "^9.0.0"
     },
     "autoload": {

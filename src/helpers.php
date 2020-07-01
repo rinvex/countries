@@ -35,7 +35,7 @@ if (! function_exists('countries')) {
     }
 }
 
-if (! function_exists('curriencies')) {
+if (! function_exists('currencies')) {
     /**
      * Get all countries short-listed.
      *
@@ -44,8 +44,8 @@ if (! function_exists('curriencies')) {
      *
      * @return array
      */
-    function curriencies($longlist = false)
+    function currencies($longlist = false)
     {
-        return CurrencyLoader::curriencies($longlist);
+        return CurrencyLoader::currencies($longlist);
     }
 }

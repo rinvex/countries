@@ -126,21 +126,21 @@ class HelpersTest extends TestCase
     /** @test */
     public function it_returns_courrencies_longlist()
     {
-        $this->assertEquals(165, count(curriencies(true)));
-        $this->assertArrayHasKey('EGP', curriencies());
-        $this->assertIsArray(curriencies(true)['EGP']);
-        $this->assertEquals('EGP', curriencies(true)['EGP']['iso_4217_code']);
-        $this->assertEquals('818', curriencies(true)['EGP']['iso_4217_numeric']);
-        $this->assertEquals('Egyptian Pound', curriencies(true)['EGP']['iso_4217_name']);
-        $this->assertEquals('2', curriencies(true)['EGP']['iso_4217_minor_unit']);
+        $this->assertEquals(165, count(currencies(true)));
+        $this->assertArrayHasKey('EGP', currencies());
+        $this->assertIsArray(currencies(true)['EGP']);
+        $this->assertEquals('EGP', currencies(true)['EGP']['iso_4217_code']);
+        $this->assertEquals('818', currencies(true)['EGP']['iso_4217_numeric']);
+        $this->assertEquals('Egyptian Pound', currencies(true)['EGP']['iso_4217_name']);
+        $this->assertEquals('2', currencies(true)['EGP']['iso_4217_minor_unit']);
     }
 
     /** @test */
     public function it_returns_courrencies_shortlist()
     {
-        $this->assertEquals(165, count(curriencies()));
-        $this->assertArrayHasKey('EGP', curriencies());
-        $this->assertIsString(curriencies()['EGP']);
-        $this->assertEquals('EGP', curriencies()['EGP']);
+        $this->assertEquals(165, count(currencies()));
+        $this->assertArrayHasKey('EGP', currencies());
+        $this->assertIsString(currencies()['EGP']);
+        $this->assertEquals('EGP', currencies()['EGP']);
     }
 }

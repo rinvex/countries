@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v7.2.0] - 2020-07-17
+- Filter, sort, and check currencies uniqueness and fix returned array keys
+- Fix currencies validation rule
+
 ## [v7.1.0] - 2020-07-16
 - Add currency Laravel validation rule
 - Fix wrong currencies method naming
@@ -121,6 +125,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Tag first release.
 
+[v7.2.0]: https://github.com/rinvex/countries/compare/v7.1.0...v7.2.0
 [v7.1.0]: https://github.com/rinvex/countries/compare/v7.0.1...v7.1.0
 [v7.0.1]: https://github.com/rinvex/countries/compare/v7.0.0...v7.0.1
 [v7.0.0]: https://github.com/rinvex/countries/compare/v6.1.2...v7.0.0

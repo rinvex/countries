@@ -5,13 +5,19 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v7.3.0] - 2020-07-17
+- Fix updated ioc codes for Singapore & Lebanon (fix #146)
+- Add test cases for timezones and locales (Thanks @ker0x #66 #11)
+- Add methods getTimezones and getLocales (#66) (Fixes #11)
+- Update dutch reduced VAT rate (#139)
+
 ## [v7.2.0] - 2020-07-17
-- Filter, sort, and check currencies uniqueness and fix returned array keys
+- Filter, sort, and check currencies uniqueness and fix returned array keys (BREAKING CHANGE!)
 - Fix currencies validation rule
 
 ## [v7.1.0] - 2020-07-16
 - Add currency Laravel validation rule
-- Fix wrong currencies method naming
+- Fix wrong currencies method naming (BREAKING CHANGE!)
 
 ## [v7.0.1] - 2020-04-04
 - Drop laravel/helpers usage as it's no longer used
@@ -125,6 +131,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Tag first release.
 
+[v7.3.0]: https://github.com/rinvex/countries/compare/v7.2.0...v7.3.0
 [v7.2.0]: https://github.com/rinvex/countries/compare/v7.1.0...v7.2.0
 [v7.1.0]: https://github.com/rinvex/countries/compare/v7.0.1...v7.1.0
 [v7.0.1]: https://github.com/rinvex/countries/compare/v7.0.0...v7.0.1

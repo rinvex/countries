@@ -21,7 +21,7 @@ class CountryServiceProvider extends ServiceProvider
 
         // Add currency validation rule
         Validator::extend('currency', function ($attribute, $value) {
-            return array_key_exists(mb_strtolower($value), currencies());
+            return array_key_exists($value, currencies());
         }, trans('validation.invalid_currency'));
     }
 }

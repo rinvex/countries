@@ -35,6 +35,12 @@ class CurrencyLoader
             }
         }
 
-        return static::$currencies[$list];
+        $currencies = array_filter(array_unique(static::$currencies[$list]), function ($item) {
+            return is_string($item);
+        });
+
+        sort($currencies);
+
+        return array_combine($currencies, $currencies);
     }
 }

@@ -1283,32 +1283,4 @@ class CountryTest extends PHPUnit_Framework_TestCase
 
         $this->assertNull($this->longCountry->getDivisions());
     }
-
-    /** @test */
-    public function it_returns_timezones()
-    {
-        $this->assertEquals(['Africa/Cairo'], $this->shortCountry->getTimezones());
-    }
-
-    /** @test */
-    public function it_returns_null_when_missing_timezones()
-    {
-        $this->shortCountry->setAttributes([]);
-
-        $this->assertNull($this->shortCountry->getTimezones());
-    }
-
-    /** @test */
-    public function it_returns_locales()
-    {
-        $this->assertEquals(['ar_EG'], $this->shortCountry->getLocales());
-    }
-
-    /** @test */
-    public function it_returns_null_when_missing_locales()
-    {
-        $this->shortCountry->setAttributes([]);
-
-        $this->assertNull($this->shortCountry->getLocales());
-    }
 }

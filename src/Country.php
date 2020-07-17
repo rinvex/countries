@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Rinvex\Country;
 
+use Locale;
 use Exception;
+use DateTimeZone;
+use ResourceBundle;
 
 class Country
 {
@@ -869,5 +872,40 @@ class Country
     {
         return ! empty($this->getDivisions()) && isset($this->getDivisions()[$division])
             ? $this->getDivisions()[$division] : null;
+    }
+
+    /**
+     * Get the timezones.
+     *
+     * @return array|null
+     */
+    public function getTimezones()
+    {
+        if (! ($code = $this->getIsoAlpha2())) {
+            return;
+        }
+
+        return DateTimeZone::listIdentifiers(DateTimeZone::PER_COUNTRY, $code);
+    }
+
+    /**
+     * Get the locales.
+     *
+     * @return array|null
+     */
+    public function getLocales()
+    {
+        if (! ($code = $this->getIsoAlpha2())) {
+            return;
+        }
+
+        $locales = [];
+        foreach (ResourceBundle::getLocales('') as $localeCode) {
+            if ($code === Locale::getRegion($localeCode)) {
+                $locales[] = $localeCode;
+            }
+        }
+
+        return $locales;
     }
 }

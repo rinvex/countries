@@ -1,14 +1,27 @@
 <?php
 
+/*
+ * NOTICE OF LICENSE
+ *
+ * Part of the Rinvex Country Package.
+ *
+ * This source file is subject to The MIT License (MIT)
+ * that is bundled with this package in the LICENSE file.
+ *
+ * Package: Rinvex Country Package
+ * License: The MIT License (MIT)
+ * Link:    https://rinvex.com
+ */
+
 declare(strict_types=1);
 
-namespace Rinvex\Country\Tests\Unit;
+namespace Rinvex\Country\Test;
 
 use Exception;
 use Rinvex\Country\Country;
-use PHPUnit\Framework\TestCase;
+use PHPUnit_Framework_TestCase;
 
-class CountryTest extends TestCase
+class CountryTest extends PHPUnit_Framework_TestCase
 {
     /** @var array */
     protected $shortAttributes;
@@ -22,7 +35,7 @@ class CountryTest extends TestCase
     /** @var \Rinvex\Country\Country */
     protected $longCountry;
 
-    protected function setUp(): void
+    public function setUp()
     {
         parent::setUp();
 
@@ -1212,7 +1225,7 @@ class CountryTest extends TestCase
     /** @test */
     public function it_returns_geojson()
     {
-        $file = __DIR__.'/../../resources/geodata/'.mb_strtolower($this->longCountry->getIsoAlpha2()).'.json';
+        $file = __DIR__.'/../resources/geodata/'.mb_strtolower($this->longCountry->getIsoAlpha2()).'.json';
 
         $this->assertEquals(file_get_contents($file), $this->longCountry->getGeoJson());
     }
@@ -1228,7 +1241,7 @@ class CountryTest extends TestCase
     /** @test */
     public function it_returns_flag()
     {
-        $file = __DIR__.'/../../resources/flags/'.mb_strtolower($this->longCountry->getIsoAlpha2()).'.svg';
+        $file = __DIR__.'/../resources/flags/'.mb_strtolower($this->longCountry->getIsoAlpha2()).'.svg';
 
         $this->assertEquals(file_get_contents($file), $this->longCountry->getFlag());
     }
@@ -1244,7 +1257,7 @@ class CountryTest extends TestCase
     /** @test */
     public function it_returns_divisions()
     {
-        $file = __DIR__.'/../../resources/divisions/'.mb_strtolower($this->longCountry->getIsoAlpha2()).'.json';
+        $file = __DIR__.'/../resources/divisions/'.mb_strtolower($this->longCountry->getIsoAlpha2()).'.json';
 
         $this->assertEquals(json_decode(file_get_contents($file), true), $this->longCountry->getDivisions());
     }

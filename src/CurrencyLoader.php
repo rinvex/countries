@@ -39,7 +39,7 @@ class CurrencyLoader
         }
 
         if (! $longlist) {
-            $currencies = array_filter(array_unique(static::$currencies[$list]), function ($item) {
+            $currencies = array_filter(array_unique($currencies), function ($item) {
                 return is_string($item);
             });
 

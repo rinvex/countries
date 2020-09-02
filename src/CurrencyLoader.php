@@ -21,26 +21,37 @@ class CurrencyLoader
     {
         $list = $longlist ? 'longlist' : 'shortlist';
 
-        if (! isset(static::$currencies[$list])) {
-            $countries = CountryLoader::countries($longlist);
+        if (isset(static::$currencies[$list])) {
+            return static::$currencies[$list];
+        }
 
-            foreach ($countries as $country) {
-                if ($longlist) {
-                    foreach ($country['currency'] as $currency => $details) {
-                        static::$currencies[$list][$currency] = $longlist ? $details : $currency;
-                    }
-                } else {
-                    static::$currencies[$list][] = $country['currency'];
+        $countries = CountryLoader::countries($longlist);
+        $currencies = [];
+
+        foreach ($countries as $country) {
+            if ($longlist) {
+                foreach ($country['currency'] as $currency => $details) {
+                    $currencies[$currency] = $longlist ? $details : $currency;
                 }
+            } else {
+                $currencies[] = $country['currency'];
             }
         }
 
-        $currencies = array_filter(array_unique(static::$currencies[$list]), function ($item) {
-            return is_string($item);
-        });
+        if (! $longlist) {
+            $currencies = array_filter(array_unique(static::$currencies[$list]), function ($item) {
+                return is_string($item);
+            });
 
-        sort($currencies);
+            sort($currencies);
 
-        return array_combine($currencies, $currencies);
+            $currencies = array_combine($currencies, $currencies);
+        } else {
+            ksort($currencies);
+        }
+
+        static::$currencies[$list] = $currencies;
+
+        return $currencies;
     }
 }

@@ -29,26 +29,20 @@ class CurrencyLoader
         $currencies = [];
 
         foreach ($countries as $country) {
+            if (empty($country['currency'])) {
+                continue;
+            }
+
             if ($longlist) {
                 foreach ($country['currency'] as $currency => $details) {
-                    $currencies[$currency] = $longlist ? $details : $currency;
+                    $currencies[$currency] = $details;
                 }
             } else {
-                $currencies[] = $country['currency'];
+                $currencies[$country['currency']] = $country['currency'];
             }
         }
 
-        if (! $longlist) {
-            $currencies = array_filter(array_unique($currencies), function ($item) {
-                return is_string($item);
-            });
-
-            sort($currencies);
-
-            $currencies = array_combine($currencies, $currencies);
-        } else {
-            ksort($currencies);
-        }
+        ksort($currencies);
 
         static::$currencies[$list] = $currencies;
 

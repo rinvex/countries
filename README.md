@@ -262,7 +262,7 @@ $egypt->getDivision("ALX");
     - `fao` - Food and Agriculture Organization
     - `imf` - International Monetary Fund
     - `ar5` - Fifth Assessment Report (AR5)
-    - `address_format` - Address forma
+    - `address_format` - Address format
     - `eu_member` - European Union Member
     - `vat_rates` - Value-Added Tax
     - `emoji` - Emoji Flag

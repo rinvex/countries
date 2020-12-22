@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v7.3.1] - 2020-12-22
+- Typo (#171)
+- Update composer dependencies
+- UK is no longer a EU member state (#164)
+
 ## [v7.3.0] - 2020-07-17
 - Fix updated ioc codes for Singapore & Lebanon (fix #146)
 - Add test cases for timezones and locales (Thanks @ker0x #66 #11)
@@ -131,6 +136,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Tag first release.
 
+[v7.3.1]: https://github.com/rinvex/countries/compare/v7.3.0...v7.3.1
 [v7.3.0]: https://github.com/rinvex/countries/compare/v7.2.0...v7.3.0
 [v7.2.0]: https://github.com/rinvex/countries/compare/v7.1.0...v7.2.0
 [v7.1.0]: https://github.com/rinvex/countries/compare/v7.0.1...v7.1.0

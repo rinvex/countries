@@ -5,6 +5,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v7.3.2] - 2020-12-25
+- Add support for PHP v8
+
 ## [v7.3.1] - 2020-12-22
 - Typo (#171)
 - Update composer dependencies
@@ -136,6 +139,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Tag first release.
 
+[v7.3.2]: https://github.com/rinvex/countries/compare/v7.3.1...v7.3.2
 [v7.3.1]: https://github.com/rinvex/countries/compare/v7.3.0...v7.3.1
 [v7.3.0]: https://github.com/rinvex/countries/compare/v7.2.0...v7.3.0
 [v7.2.0]: https://github.com/rinvex/countries/compare/v7.1.0...v7.2.0

@@ -1,4 +1,5 @@
 preset: recommended
+risky: true
 
 enabled:
   - dir_constant
@@ -28,7 +29,6 @@ enabled:
   - ternary_to_null_coalescing
   - escape_implicit_backslashes
   - fully_qualified_strict_types
-  - phpdoc_return_self_reference
   - no_null_property_initialization
   - multiline_comment_opening_closing
   - not_operator_with_successor_space

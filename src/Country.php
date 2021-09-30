@@ -140,7 +140,7 @@ class Country
         $languageCode = $languageCode ? mb_strtolower($languageCode) : null;
 
         return $this->get("name.native.{$languageCode}.common")
-            ?: (current($this->get('name.native', []))['common'] ?: $this->get('native_name'));
+            ?? (current($this->get('name.native', []))['common'] ?? $this->get('native_name'));
     }
 
     /**
@@ -155,7 +155,7 @@ class Country
         $languageCode = $languageCode ? mb_strtolower($languageCode) : null;
 
         return $this->get("name.native.{$languageCode}.official")
-            ?: (current($this->get('name.native', []))['official'] ?: $this->get('native_official_name'));
+            ?? (current($this->get('name.native', []))['official'] ?? $this->get('native_official_name'));
     }
 
     /**

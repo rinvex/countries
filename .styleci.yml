@@ -40,5 +40,5 @@ disabled:
   - alpha_ordered_imports
 
 finder:
-  exclude:
+  not-name:
   - "src/CountryLoader.php"

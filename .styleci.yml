@@ -38,3 +38,7 @@ enabled:
 disabled:
   - align_double_arrow
   - alpha_ordered_imports
+
+finder:
+  exclude:
+  - "src/CountryLoader.php"

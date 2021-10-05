@@ -27,20 +27,18 @@ class CurrencyLoader
             foreach ($countries as $country) {
                 if ($longlist) {
                     foreach ($country['currency'] as $currency => $details) {
-                        static::$currencies[$list][$currency] = $longlist ? $details : $currency;
+                        ! $currency || static::$currencies[$list][$currency] = $longlist ? $details : $currency;
                     }
                 } else {
-                    static::$currencies[$list][] = $country['currency'];
+                    ! $country['currency'] || static::$currencies[$list][$country['currency']] = $country['currency'];
                 }
             }
         }
 
-        $currencies = array_filter(array_unique(static::$currencies[$list]), function ($item) {
-            return is_string($item);
-        });
+        $currencies = static::$currencies[$list];
 
-        sort($currencies);
+        ksort($currencies);
 
-        return array_combine($currencies, $currencies);
+        return $currencies;
     }
 }

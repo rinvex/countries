@@ -6,10 +6,15 @@ enabled:
   - ereg_to_preg
   - no_useless_else
   - mb_str_functions
+  - set_type_to_cast
+  - logical_operators
   - short_list_syntax
   - no_short_echo_tag
   - strict_comparison
+  - no_homoglyph_names
+  - no_useless_sprintf
   - phpdoc_link_to_see
+  - string_line_ending
   - property_separation
   - no_php4_constructor
   - php_unit_namespaced
@@ -22,6 +27,7 @@ enabled:
   - non_printable_character
   - explicit_string_variable
   - no_unneeded_final_method
+  - ternary_to_elvis_operator
   - blank_line_before_declare
   - combine_consecutive_issets
   - combine_consecutive_unsets
@@ -30,8 +36,10 @@ enabled:
   - escape_implicit_backslashes
   - fully_qualified_strict_types
   - no_null_property_initialization
+  - no_trailing_whitespace_in_string
   - multiline_comment_opening_closing
   - not_operator_with_successor_space
+  - simple_to_complex_string_variable
   - phpdoc_add_missing_param_annotation
   - php_unit_set_up_tear_down_visibility
 

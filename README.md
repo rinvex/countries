@@ -160,8 +160,8 @@ $egypt->getDivisions();                             $egypt->getTranslation();
 // ['Africa/Cairo']                                 // ['ar_EG']
 $egypt->getTimezones();                             $egypt->getLocales();
 
-// {"ara":{"official":"جمهورية مصر العربية","common":"مصر"}}
-$egypt->getNativeNames();
+// Other                                            // {"ara":{"official":"جمهورية مصر العربية","common":"مصر"}}
+$egypt->getDataProtection()                         $egypt->getNativeNames();
 
 // {"iso_4217_code":"EGP","iso_4217_numeric":818,"iso_4217_name":"Egyptian Pound","iso_4217_minor_unit":2}
 $egypt->getCurrency();
@@ -175,7 +175,7 @@ $egypt->getTranslations();
 // {"continent":{"AF":"Africa"},"postal_code":true,"latitude":"27 00 N","latitude_dec":"26.756103515625","longitude":"30 00 E","longitude_dec":"29.86229705810547","max_latitude":"31.916667","max_longitude":"36.333333","min_latitude":"20.383333","min_longitude":"24.7","area":1002450,"region":"Africa","subregion":"Northern Africa","world_region":"EMEA","region_code":"002","subregion_code":"015","landlocked":false,"borders":["ISR","LBY","SDN"],"independent":"Yes"}
 $egypt->getGeodata();
 
-// {"geonameid":357994,"edgar":"H2","itu":"EGY","marc":"ua","wmo":"EG","ds":"ET","fifa":"EGY","fips":"EG","gaul":40765,"ioc":"EGY","cowc":"EGY","cown":651,"fao":59,"imf":469,"ar5":"MAF","address_format":"{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}","eu_member":null,"vat_rates":null,"emoji":"🇪🇬"}
+// {"geonameid":357994,"edgar":"H2","itu":"EGY","marc":"ua","wmo":"EG","ds":"ET","fifa":"EGY","fips":"EG","gaul":40765,"ioc":"EGY","cowc":"EGY","cown":651,"fao":59,"imf":469,"ar5":"MAF","address_format":"{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}","eu_member":null,"data_protection":"Other","vat_rates":null,"emoji":"🇪🇬"}
 $egypt->getExtra();
 
 // {"name":"Al Iskandariyah","alt_names":["El Iskandariya","al-Iskandariyah","al-Iskandarīyah","Alexandria","Alexandrie","Alexandria"],"geo":{"latitude":31.2000924,"longitude":29.9187387,"min_latitude":31.1173177,"min_longitude":29.8233701,"max_latitude":31.330904,"max_longitude":30.0864016}}
@@ -264,6 +264,7 @@ $egypt->getDivision("ALX");
     - `ar5` - Fifth Assessment Report (AR5)
     - `address_format` - Address format
     - `eu_member` - European Union Member
+    - `data_protection` - Data Protection
     - `vat_rates` - Value-Added Tax
     - `emoji` - Emoji Flag
 

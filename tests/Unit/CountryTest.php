@@ -130,6 +130,7 @@ class CountryTest extends TestCase
                 'ar5' => 'MAF',
                 'address_format' => '{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}',
                 'eu_member' => null,
+                'data_ptotection' => true,
                 'vat_rates' => null,
                 'emoji' => '🇪🇬',
             ],
@@ -1173,6 +1174,20 @@ class CountryTest extends TestCase
         $this->longCountry->setAttributes([]);
 
         $this->assertNull($this->longCountry->isEuMember());
+    }
+
+    /** @test */
+    public function it_returns_whether_data_protection()
+    {
+        $this->assertEquals($this->longAttributes['extra']['data_protection'], $this->longCountry->getDataProtection());
+    }
+
+    /** @test */
+    public function it_returns_null_when_missing_data_protection_status()
+    {
+        $this->longCountry->setAttributes([]);
+
+        $this->assertNull($this->longCountry->getDataProtection());
     }
 
     /** @test */

@@ -800,6 +800,16 @@ class Country
     }
 
     /**
+     * Determine whether the country has data protection.
+     *
+     * @return string|null
+     */
+    public function getDataProtection()
+    {
+        return $this->get('extra.data_protection');
+    }
+
+    /**
      * Get the VAT rates.
      *
      * @return array|null

@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v8.1.1] - 2022-05-01
+- Fix currency validator rule to check if the key is 3 capital char string
+- Fix country validator rule to check if the key is 2 lower char string
+- Add country data protection (#217)
+- Rename Belarus country german name from Weißrussland (#214 & #211)
+
 ## [v8.1.0] - 2021-10-05
 - UK is no longer a EU member state (longlist) (#179)
 - Fix letter case for language case (fix #117 & #118)
@@ -163,6 +169,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Tag first release.
 
+[v8.1.1]: https://github.com/rinvex/countries/compare/v8.1.0...v8.1.1
 [v8.1.0]: https://github.com/rinvex/countries/compare/v8.0.0...v8.1.0
 [v8.0.0]: https://github.com/rinvex/countries/compare/v7.3.2...v8.0.0
 [v7.3.2]: https://github.com/rinvex/countries/compare/v7.3.1...v7.3.2

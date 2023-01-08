@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v9.0.0] - 2023-01-09
+- Drop PHP v8.0 support and update composer dependencies
+- Replace strlen with mb_strlen
+
 ## [v8.1.2] - 2022-12-30
 - pl: ISO 3166-2 subdivision codes fixed (#225)
 
@@ -172,6 +176,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Tag first release.
 
+[v9.0.0]: https://github.com/rinvex/countries/compare/v8.1.2...v9.0.0
 [v8.1.2]: https://github.com/rinvex/countries/compare/v8.1.1...v8.1.2
 [v8.1.1]: https://github.com/rinvex/countries/compare/v8.1.0...v8.1.1
 [v8.1.0]: https://github.com/rinvex/countries/compare/v8.0.0...v8.1.0

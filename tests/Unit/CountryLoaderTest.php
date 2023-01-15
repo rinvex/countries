@@ -143,14 +143,14 @@ class CountryLoaderTest extends TestCase
     /** @test */
     public function it_gets_data_with_where_conditions()
     {
-        $this->assertEquals(['as', 'au', 'ck', 'fj', 'fm', 'gu', 'ki', 'mh', 'mp', 'nc', 'nf', 'nu', 'nr', 'nz', 'pn', 'pw', 'pg', 'pf', 'sb', 'tk', 'tl', 'to', 'tv', 'um', 'vu', 'wf', 'ws'], array_keys(CountryLoader::where('geo.continent', ['OC' => 'Oceania'])));
+        $this->assertEquals(['as', 'au', 'ck', 'fj', 'fm', 'gu', 'ki', 'mh', 'mp', 'nc', 'nf', 'nr', 'nu', 'nz', 'pf', 'pg', 'pn', 'pw', 'sb', 'tk', 'tl', 'to', 'tv', 'um', 'vu', 'wf', 'ws'], array_keys(CountryLoader::where('geo.continent', ['OC' => 'Oceania'])));
         $this->assertEquals('Egypt', current(CountryLoader::where('capital', '=', 'Cairo'))['name']['common']);
         $this->assertEquals('Egypt', current(CountryLoader::where('capital', '==', 'Cairo'))['name']['common']);
         $this->assertEquals('Egypt', current(CountryLoader::where('capital', '===', 'Cairo'))['name']['common']);
         $this->assertEquals('Egypt', current(CountryLoader::where('capital', 'invalid-operator', 'Cairo'))['name']['common']);
         $this->assertEquals(['aq', 'ru'], array_keys(CountryLoader::where('geo.area', '>', 12345678)));
         $this->assertEquals(['ru'], array_keys(CountryLoader::where('geo.area', '>=', 17098242)));
-        $this->assertEquals(['sj', 'va', 'bq', 'sh'], array_keys(CountryLoader::where('geo.area', '<=', 1)));
+        $this->assertEquals(['bq', 'sh', 'sj', 'va'], array_keys(CountryLoader::where('geo.area', '<=', 1)));
         $this->assertEquals(55, count(array_keys(CountryLoader::where('geo.independent', '<>', 'Yes'))));
         $this->assertEquals(45, count(array_keys(CountryLoader::where('geo.landlocked', '!=', false))));
         $this->assertEquals(47, count(array_keys(CountryLoader::where('geo.landlocked', '!==', false))));

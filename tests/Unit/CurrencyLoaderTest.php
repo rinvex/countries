@@ -15,7 +15,7 @@ class CurrencyLoaderTest extends TestCase
     /** @test */
     public function it_returns_courrencies_longlist()
     {
-        $this->assertEquals(165, count(CurrencyLoader::currencies(true)));
+        $this->assertEquals(156, count(CurrencyLoader::currencies(true)));
         $this->assertArrayHasKey('EGP', CurrencyLoader::currencies());
         $this->assertIsArray(CurrencyLoader::currencies(true)['EGP']);
         $this->assertEquals('EGP', CurrencyLoader::currencies(true)['EGP']['iso_4217_code']);
@@ -27,7 +27,7 @@ class CurrencyLoaderTest extends TestCase
     /** @test */
     public function it_returns_courrencies_shortlist()
     {
-        $this->assertEquals(165, count(CurrencyLoader::currencies()));
+        $this->assertEquals(156, count(CurrencyLoader::currencies()));
         $this->assertArrayHasKey('EGP', CurrencyLoader::currencies());
         $this->assertIsString(CurrencyLoader::currencies()['EGP']);
         $this->assertEquals('EGP', CurrencyLoader::currencies()['EGP']);

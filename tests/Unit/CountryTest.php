@@ -1313,4 +1313,24 @@ class CountryTest extends TestCase
 
         $this->assertNull($this->shortCountry->getLocales());
     }
+
+    /** @test */
+    public function it_get_calling_code_return_a_string()
+    {
+        $shortList = countries(false, true);
+        $this->assertIsString($shortList['fr']->getCallingCode());
+
+        $longList = countries(true, true);
+        $this->assertIsString($longList['fr']->getCallingCode());
+    }
+
+    /** @test */
+    public function it_get_calling_codes_return_an_array()
+    {
+        $shortList = countries(false, true);
+        $this->assertIsArray($shortList['fr']->getCallingCodes());
+
+        $longList = countries(true, true);
+        $this->assertIsArray($longList['fr']->getCallingCodes());
+    }
 }

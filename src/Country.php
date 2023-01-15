@@ -556,7 +556,7 @@ class Country
      */
     public function getCallingCodes(): ?array
     {
-        return $this->get('dialling.calling_code');
+        return $this->get('dialling.calling_code', []) ?: ($this->get('calling_code', []) ?: null);
     }
 
     /**

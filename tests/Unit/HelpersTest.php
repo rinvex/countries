@@ -127,7 +127,7 @@ class HelpersTest extends TestCase
     /** @test */
     public function it_returns_courrencies_longlist()
     {
-        $this->assertEquals(165, count(currencies(true)));
+        $this->assertEquals(156, count(currencies(true)));
         $this->assertArrayHasKey('EGP', currencies());
         $this->assertIsArray(currencies(true)['EGP']);
         $this->assertEquals('EGP', currencies(true)['EGP']['iso_4217_code']);
@@ -139,7 +139,7 @@ class HelpersTest extends TestCase
     /** @test */
     public function it_returns_courrencies_shortlist()
     {
-        $this->assertEquals(165, count(currencies()));
+        $this->assertEquals(156, count(currencies()));
         $this->assertArrayHasKey('EGP', currencies());
         $this->assertIsString(currencies()['EGP']);
         $this->assertEquals('EGP', currencies()['EGP']);

@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
 ## [v9.0.1] - 2023-05-02
-fd95e94 - Update phpunit to v10.1 from v9.5
+- fd95e94: Update phpunit to v10.1 from v9.5
 
 ## [v9.0.0] - 2023-01-09
 - Drop PHP v8.0 support and update composer dependencies

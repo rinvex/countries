@@ -54,6 +54,11 @@ class CountryLoader
             static::$countries[$list] = json_decode(static::getFile(__DIR__.'/../resources/data/'.$list.'.json'), true);
         }
 
+        // Sort countries by name in ascending order
+        usort(static::$countries[$list], function ($a, $b) {
+            return strcmp($a['name'], $b['name']);
+        });
+
         return $hydrate ? array_map(function ($country) {
             return new Country($country);
         }, static::$countries[$list]) : static::$countries[$list];

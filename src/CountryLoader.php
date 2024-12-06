@@ -122,7 +122,7 @@ class CountryLoader
      *
      * @return array
      */
-    protected static function filter($items, callable $callback = null)
+    protected static function filter($items, ?callable $callback = null)
     {
         if ($callback) {
             return array_filter($items, $callback, ARRAY_FILTER_USE_BOTH);

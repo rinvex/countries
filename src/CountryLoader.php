@@ -54,7 +54,7 @@ class CountryLoader
             static::$countries[$list] = json_decode(static::getFile(__DIR__.'/../resources/data/'.$list.'.json'), true);
         }
 
-        return $hydrate ? array_map(fn($country): Country => new Country($country), static::$countries[$list]) : static::$countries[$list];
+        return $hydrate ? array_map(fn ($country): Country => new Country($country), static::$countries[$list]) : static::$countries[$list];
     }
 
     /**
@@ -94,9 +94,9 @@ class CountryLoader
             switch ($operator) {
                 default:
                 case '=':
-                case '==':  return $retrieved == $value;
+                case '==':  return $retrieved === $value;
                 case '!=':
-                case '<>':  return $retrieved != $value;
+                case '<>':  return $retrieved !== $value;
                 case '<':   return $retrieved < $value;
                 case '>':   return $retrieved > $value;
                 case '<=':  return $retrieved <= $value;
@@ -222,7 +222,7 @@ class CountryLoader
      *
      * @return string
      */
-    protected static function getFile($filePath): string | false
+    protected static function getFile($filePath): string|false
     {
         if (! file_exists($filePath)) {
             throw CountryLoaderException::invalidCountry();

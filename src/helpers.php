@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 use Rinvex\Country\Country;
 use Rinvex\Country\CountryLoader;
 use Rinvex\Country\CurrencyLoader;

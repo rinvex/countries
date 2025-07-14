@@ -5,6 +5,38 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v9.1.0] - 2025-07-14
+- **PHP Version Compatibility & Requirements**
+  - **9a47cc8** - Require PHP v8.2 minimum version
+  - **3416043** - Fix PHP version (#255)
+  - **fa976c0** - Compatibility with PHP 8.4: deprecate implicitly nullable parameter types (#265)
+
+- **Code Quality & Type Safety Improvements**
+  - **ca7abbe** - Use strict type checking in `in_array()` to avoid type juggling bugs
+  - **6fb548b** - MixedTypeRector
+  - **7710c4f** - NullToStrictStringFuncCallArgRector
+
+- **Return Type and Function Signature Improvements**
+  - **f6dcd9e**, **6cd34ad**, **d72ce87**, **fefc087**, **4bf2f6a**, **f2ed70f** - Various rectors to infer/add return types and remove useless tags
+  - **475f754**, **1b3cceb** - Add return types to arrow functions and tests with void returns
+
+- **Code Modernization / Rector Refactors**
+  - **51d3b05** - AnnotationToAttributeRector
+  - **6efcef7** - RenameVariableToMatchNewTypeRector
+  - **383c390** - ClosureToArrowFunctionRector
+  - **db96141** - InlineIfToExplicitIfRector
+  - **a0ea10a** - ImportFQNRector
+
+- **Code Cleanup**
+  - **63b2472** - Remove useless param and return tags
+  - **8b28041** - Drop incomplete and unused tests/services
+  - **460c266** - Use `__()` instead of `trans()` for naming consistency
+  - **ebef160** - Update supplementary files
+
+- **Tooling & Dependency Updates**
+  - **8ed4c3e** - Update `phpunit/phpunit` requirement
+  - **d4f17e3**, **80e1e22** - Apply fixes from StyleCI
+
 ## [v9.0.1] - 2023-05-02
 - fd95e94: Update phpunit to v10.1 from v9.5
 
@@ -179,6 +211,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v1.0.0 - 2016-08-20
 - Tag first release.
 
+[v9.1.0]: https://github.com/rinvex/countries/compare/v9.1.0...v9.1.0
 [v9.0.1]: https://github.com/rinvex/countries/compare/v9.0.0...v9.0.1
 [v9.0.0]: https://github.com/rinvex/countries/compare/v8.1.2...v9.0.0
 [v8.1.2]: https://github.com/rinvex/countries/compare/v8.1.1...v8.1.2

@@ -240,7 +240,7 @@ $egypt->getDivision("ALX");
     - `landlocked` - landlock status
     - `borders` - land borders
     - `independent` - independent status
-- `dialling`
+- `telephone dialing`
     - `calling_code` - calling code(s)
     - `national_prefix` - national prefix
     - `national_number_lengths` - national number lengths

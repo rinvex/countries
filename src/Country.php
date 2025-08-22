@@ -38,7 +38,7 @@ class Country
         }
     }
 	
-	public static function makeFormNafathAppNationalityCode($code): self
+	public static function makeFormNafathAppNationalityCode($code, $hydrate = true): Country|array
 	{
 		// get all countries on the file
 		$countries = json_decode(file_get_contents(__DIR__.'/../resources/data/shortlist.json'), true);
@@ -54,7 +54,7 @@ class Country
 			throw new Exception('Country not found');
 		}
 		
-		return new static($country);
+		return CountryLoader::country($country['iso_3166_1_alpha2'], $hydrate);
 	}
 
     /**
@@ -122,11 +122,6 @@ class Country
 
         return $array;
     }
-	
-	public function getNafathAppNationalityCode(): ?string
-	{
-		return $this->get('nafath_app_nationality_code') ?: null;
-	}
 
     /**
      * Get the common name.

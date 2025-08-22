@@ -393,7 +393,7 @@
 		"calling_code": "975",
 		"currency": "BTN",
 		"emoji": "🇧🇹",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "324"
 	},
 	"bv": {
 		"name": "Bouvet Island",
@@ -573,7 +573,7 @@
 		"calling_code": "86",
 		"currency": "CNY",
 		"emoji": "🇨🇳",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "325"
 	},
 	"co": {
 		"name": "Colombia",
@@ -657,7 +657,7 @@
 		"calling_code": "357",
 		"currency": "EUR",
 		"emoji": "🇨🇾",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "326"
 	},
 	"cz": {
 		"name": "Czech Republic",
@@ -1137,7 +1137,7 @@
 		"calling_code": "852",
 		"currency": "HKD",
 		"emoji": "🇭🇰",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "322"
 	},
 	"hm": {
 		"name": "Heard Island and McDonald Islands",
@@ -1257,7 +1257,7 @@
 		"calling_code": "91",
 		"currency": "INR",
 		"emoji": "🇮🇳",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "321"
 	},
 	"io": {
 		"name": "British Indian Ocean Territory",
@@ -1365,7 +1365,7 @@
 		"calling_code": "81",
 		"currency": "JPY",
 		"emoji": "🇯🇵",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "323"
 	},
 	"ke": {
 		"name": "Kenya",
@@ -1401,7 +1401,7 @@
 		"calling_code": "855",
 		"currency": "KHR",
 		"emoji": "🇰🇭",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "317"
 	},
 	"ki": {
 		"name": "Kiribati",
@@ -1449,7 +1449,7 @@
 		"calling_code": "850",
 		"currency": "KPW",
 		"emoji": "🇰🇵",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "328"
 	},
 	"kr": {
 		"name": "South Korea",
@@ -1461,7 +1461,7 @@
 		"calling_code": "82",
 		"currency": "KRW",
 		"emoji": "🇰🇷",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "318"
 	},
 	"kw": {
 		"name": "Kuwait",
@@ -1509,7 +1509,7 @@
 		"calling_code": "856",
 		"currency": "LAK",
 		"emoji": "🇱🇦",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "329"
 	},
 	"lb": {
 		"name": "Lebanon",
@@ -1557,7 +1557,7 @@
 		"calling_code": "94",
 		"currency": "LKR",
 		"emoji": "🇱🇰",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "313"
 	},
 	"lr": {
 		"name": "Liberia",
@@ -1761,8 +1761,8 @@
 		"calling_code": "976",
 		"currency": "MNT",
 		"emoji": "🇲🇳",
-		"nafath_app_nationality_code":  null
-	},
+		"nafath_app_nationality_code": "330"
+	}
 	"mo": {
 		"name": "Macau",
 		"official_name": "Macao Special Administrative Region of the People's Republic of China",
@@ -1857,7 +1857,7 @@
 		"calling_code": "960",
 		"currency": "MVR",
 		"emoji": "🇲🇻",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "310"
 	},
 	"mw": {
 		"name": "Malawi",
@@ -1893,7 +1893,7 @@
 		"calling_code": "60",
 		"currency": "MYR",
 		"emoji": "🇲🇾",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "319"
 	},
 	"mz": {
 		"name": "Mozambique",
@@ -2013,7 +2013,7 @@
 		"calling_code": "977",
 		"currency": "NPR",
 		"emoji": "🇳🇵",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "320"
 	},
 	"nr": {
 		"name": "Nauru",
@@ -2121,7 +2121,7 @@
 		"calling_code": "63",
 		"currency": "PHP",
 		"emoji": "🇵🇭",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "315"
 	},
 	"pk": {
 		"name": "Pakistan",
@@ -2289,7 +2289,7 @@
 		"calling_code": "7",
 		"currency": "RUB",
 		"emoji": "🇷🇺",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "311"
 	},
 	"rw": {
 		"name": "Rwanda",
@@ -2373,7 +2373,7 @@
 		"calling_code": "65",
 		"currency": "SGD",
 		"emoji": "🇸🇬",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "312"
 	},
 	"sh": {
 		"name": "Saint Helena",
@@ -2613,7 +2613,7 @@
 		"calling_code": "66",
 		"currency": "THB",
 		"emoji": "🇹🇭",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "308"
 	},
 	"tj": {
 		"name": "Tajikistan",
@@ -2697,7 +2697,7 @@
 		"calling_code": "90",
 		"currency": "TRY",
 		"emoji": "🇹🇷",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "309"
 	},
 	"tt": {
 		"name": "Trinidad and Tobago",
@@ -2889,7 +2889,7 @@
 		"calling_code": "84",
 		"currency": "VND",
 		"emoji": "🇻🇳",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "316"
 	},
 	"vu": {
 		"name": "Vanuatu",

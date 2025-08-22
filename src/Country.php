@@ -37,6 +37,25 @@ class Country
             throw new Exception('Missing mandatory country attributes!');
         }
     }
+	
+	public static function makeFormNafathAppNationalityCode($code): self
+	{
+		// get all countries on the file
+		$countries = json_decode(file_get_contents(__DIR__.'/../resources/data/shortlist.json'), true);
+		
+		// make it as a laravel collection
+		$countries = collect($countries);
+		
+		// search on the collection using nafath app code
+		$country = $countries->where('nafath_app_nationality_code', $code)->first();
+		
+		// get all the attributes and construct the object or throw exception country not found
+		if(!$country) {
+			throw new Exception('Country not found');
+		}
+		
+		return new static($country);
+	}
 
     /**
      * Set the attributes.
@@ -103,6 +122,11 @@ class Country
 
         return $array;
     }
+	
+	public function getNafathAppNationalityCode(): ?string
+	{
+		return $this->get('nafath_app_nationality_code') ?: null;
+	}
 
     /**
      * Get the common name.

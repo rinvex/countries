@@ -189,7 +189,7 @@
 		"calling_code": "994",
 		"currency": "AZN",
 		"emoji": "🇦🇿",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "343"
 	},
 	"ba": {
 		"name": "Bosnia and Herzegovina",
@@ -285,7 +285,7 @@
 		"calling_code": "257",
 		"currency": "BIF",
 		"emoji": "🇧🇮",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "404"
 	},
 	"bj": {
 		"name": "Benin",
@@ -417,7 +417,7 @@
 		"calling_code": "267",
 		"currency": "BWP",
 		"emoji": "🇧🇼",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "403"
 	},
 	"by": {
 		"name": "Belarus",
@@ -825,7 +825,7 @@
 		"calling_code": "251",
 		"currency": "ETB",
 		"emoji": "🇪🇹",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "401"
 	},
 	"fi": {
 		"name": "Finland",
@@ -1389,7 +1389,7 @@
 		"calling_code": "996",
 		"currency": "KGS",
 		"emoji": "🇰🇬",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "340"
 	},
 	"kh": {
 		"name": "Cambodia",
@@ -1497,7 +1497,7 @@
 		"calling_code": "76",
 		"currency": "KZT",
 		"emoji": "🇰🇿",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "336"
 	},
 	"la": {
 		"name": "Laos",
@@ -1766,14 +1766,14 @@
 	"mo": {
 		"name": "Macau",
 		"official_name": "Macao Special Administrative Region of the People's Republic of China",
-		"native_name": "Macau",
-		"native_official_name": "Região Administrativa Especial de Macau da República Popular da China",
+		"native_name": "澳門",
+		"native_official_name": "中華人民共和國澳門特別行政區",
 		"iso_3166_1_alpha2": "MO",
 		"iso_3166_1_alpha3": "MAC",
 		"calling_code": "853",
 		"currency": "MOP",
 		"emoji": "🇲🇴",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "331"
 	},
 	"mp": {
 		"name": "Northern Mariana Islands",
@@ -2577,7 +2577,7 @@
 		"calling_code": "235",
 		"currency": "XAF",
 		"emoji": "🇹🇩",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "405"
 	},
 	"tf": {
 		"name": "French Southern and Antarctic Lands",
@@ -2601,7 +2601,7 @@
 		"calling_code": "228",
 		"currency": "XOF",
 		"emoji": "🇹🇬",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "407"
 	},
 	"th": {
 		"name": "Thailand",
@@ -2618,14 +2618,14 @@
 	"tj": {
 		"name": "Tajikistan",
 		"official_name": "Republic of Tajikistan",
-		"native_name": "Таджикистан",
-		"native_official_name": "Республика Таджикистан",
+		"native_name": "Тоҷикистон",
+		"native_official_name": "Ҷумҳурии Тоҷикистон",
 		"iso_3166_1_alpha2": "TJ",
 		"iso_3166_1_alpha3": "TJK",
 		"calling_code": "992",
 		"currency": "TJS",
 		"emoji": "🇹🇯",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "339"
 	},
 	"tk": {
 		"name": "Tokelau",
@@ -2649,19 +2649,19 @@
 		"calling_code": "670",
 		"currency": "USD",
 		"emoji": "🇹🇱",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "349"
 	},
 	"tm": {
 		"name": "Turkmenistan",
 		"official_name": "Turkmenistan",
-		"native_name": "Туркмения",
-		"native_official_name": "Туркменистан",
+		"native_name": "Türkmenistan",
+		"native_official_name": "Türkmenistan",
 		"iso_3166_1_alpha2": "TM",
 		"iso_3166_1_alpha3": "TKM",
 		"calling_code": "993",
 		"currency": "TMT",
 		"emoji": "🇹🇲",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "338"
 	},
 	"tn": {
 		"name": "Tunisia",
@@ -2745,7 +2745,7 @@
 		"calling_code": "255",
 		"currency": "TZS",
 		"emoji": "🇹🇿",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "406"
 	},
 	"ua": {
 		"name": "Ukraine",
@@ -2769,7 +2769,7 @@
 		"calling_code": "256",
 		"currency": "UGX",
 		"emoji": "🇺🇬",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "402"
 	},
 	"um": {
 		"name": "United States Minor Outlying Islands",
@@ -2810,14 +2810,14 @@
 	"uz": {
 		"name": "Uzbekistan",
 		"official_name": "Republic of Uzbekistan",
-		"native_name": "Узбекистан",
-		"native_official_name": "Республика Узбекистан",
+		"native_name": "O'zbekiston",
+		"native_official_name": "O'zbekiston Respublikasi",
 		"iso_3166_1_alpha2": "UZ",
 		"iso_3166_1_alpha3": "UZB",
 		"calling_code": "998",
 		"currency": "UZS",
 		"emoji": "🇺🇿",
-		"nafath_app_nationality_code":  null
+		"nafath_app_nationality_code": "337"
 	},
 	"va": {
 		"name": "Vatican City",

@@ -39,11 +39,11 @@ class Country
     }
 
     public static function makeFormNafathAppNationalityCode($code, $hydrate = true): self|array
-     {
-         // throw exception code not found
-         if (! $code) {
-             throw new Exception('Nationality code not found');
-         }
+    {
+        // throw exception code not found
+        if (! $code) {
+            throw new Exception('Nationality code not found');
+        }
 
         // get all countries on the file
 		$countries = json_decode(file_get_contents(__DIR__.'/../resources/data/shortlist.json'), true);
@@ -60,7 +60,7 @@ class Country
 		}
 
 		return CountryLoader::country($country['iso_3166_1_alpha2'], $hydrate);
-	 }
+    }
 
     /**
      * Set the attributes.

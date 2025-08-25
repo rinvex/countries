@@ -38,14 +38,14 @@ class Country
         }
     }
 
-	public static function makeFormNafathAppNationalityCode($code, $hydrate = true): self|array
+    public static function makeFormNafathAppNationalityCode($code, $hydrate = true): self|array
 	{
         // throw exception code not found
-        if (!$code) {
+        if (! $code) {
             throw new Exception('Nationality code not found');
         }
 
-		// get all countries on the file
+        // get all countries on the file
 		$countries = json_decode(file_get_contents(__DIR__.'/../resources/data/shortlist.json'), true);
 
 		// make it as a laravel collection
@@ -55,7 +55,7 @@ class Country
 		$country = $countries->where('nafath_app_nationality_code', $code)->first();
 
 		// get all the attributes and construct the object or throw exception country not found
-		if(!$country) {
+		if(! $country) {
 			throw new Exception('Country not found');
 		}
 

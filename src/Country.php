@@ -59,7 +59,7 @@ class Country
             throw new Exception('Country not found');
         }
 
-		 return CountryLoader::country($country['iso_3166_1_alpha2'], $hydrate);
+        return CountryLoader::country($country['iso_3166_1_alpha2'], $hydrate);
     }
 
     /**

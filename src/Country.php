@@ -38,7 +38,7 @@ class Country
         }
     }
 
-	public static function makeFormNafathAppNationalityCode($code, $hydrate = true): Country|array
+	public static function makeFormNafathAppNationalityCode($code, $hydrate = true): self|array
 	{
         // throw exception code not found
         if (!$code) {

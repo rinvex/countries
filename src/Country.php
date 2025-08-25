@@ -48,8 +48,8 @@ class Country
         // get all countries on the file
         $countries = json_decode(file_get_contents(__DIR__.'/../resources/data/shortlist.json'), true);
 
-		 // make it as a laravel collection
-         $countries = collect($countries);
+        // make it as a laravel collection
+        $countries = collect($countries);
 
 		// search on the collection using nafath app code
         $country = $countries->where('nafath_app_nationality_code', $code)->first();

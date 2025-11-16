@@ -13,7 +13,7 @@ if (! function_exists('country')) {
      * @param string $code
      * @param bool   $hydrate
      *
-     * @return Country|array
+     * @return ($hydrate is true ? Country : array)
      */
     function country($code, $hydrate = true)
     {
@@ -28,7 +28,7 @@ if (! function_exists('countries')) {
      * @param bool $longlist
      * @param bool $hydrate
      *
-     * @return array
+     * @return ($hydrate is true ? array<string, Country> : array<string, array>)
      */
     function countries($longlist = false, $hydrate = false)
     {

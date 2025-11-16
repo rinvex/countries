@@ -23,7 +23,7 @@ class CountryLoader
      *
      * @throws CountryLoaderException
      *
-     * @return Country|array
+     * @return ($hydrate is true ? Country : array)
      */
     public static function country($code, $hydrate = true)
     {
@@ -44,7 +44,7 @@ class CountryLoader
      *
      * @throws CountryLoaderException
      *
-     * @return array
+     * @return ($hydrate is true ? array<string, Country> : array<string, array>)
      */
     public static function countries($longlist = false, $hydrate = false)
     {

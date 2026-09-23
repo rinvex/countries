@@ -2,3 +2,7 @@
 composer.lock
 composer.phar
 phpunit.xml
+.idea
+.DS_Store
+__pycache__/
+*.py[cod]
